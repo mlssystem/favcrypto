@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Favorito de Crypto</title>
+	<meta name="description" content="">
+	<link rel="icon" type="image/png" href="imgs/favicon.png"/>
+	<meta name="theme-color" content="#FDE047">
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<!--0b10f5/025afc-->
+	<header x-data="{ open: false, hidden: true }">
+		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">			
+		</div>
+		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
+			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
+				<div class="flex justify-end">
+					<button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+				</div>
+				<div class="flex flex-col flex-grow text-lg">
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#noticias">Notícias</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#precos">Preços</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#exchanges">Exchanges</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#capitalizacao">Capitalização</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#faq">FAQs</a>
+				</div>
+			</nav>
+		</aside>			
+		<div class="bg-blue-75 relative z-30">
+			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">		
+			<a href="" class="focus:outline-none"><img src="imgs/logo.png" class="w-auto h-10 lg:h-14" alt="E-COIN"></a>
+			<div class="flex items-center">		
+			<div class="hidden lg:flex items-center space-x-6 text-base">
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#noticias">Notícias</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#precos">Preços</a>		
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#exchanges">Exchanges</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#capitalizacao">Capitalização</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#faq">FAQs</a>
+			</div>		
+			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
+				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
+				<span>Sites</span>
+				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+				</button>
+				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">		
+					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="https://bibliasagrada.github.io" title="Telegram" target="_blank">
+							<svg width="20" height="20" class="w-6 h-6" viewBox="0 0 20 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><img src="imgs/bs.png">
+							</svg>
+							<span class="ml-3" style="color: #5a5a5a;">Bíblia</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="https://mlssystem.github.io/bitblockdig" title="Twitter" target="_blank">
+							<svg width="20" height="20" class="w-6 h-6" viewBox="0 0 20 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><img src="imgs/bbd.png"></svg>				
+							<span class="ml-3" style="color: #5a5a5a;">BitBlockDig</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="https://mlssystem.github.io" title="Twitter" target="_blank">
+							<svg width="20" height="20" class="w-6 h-6" viewBox="0 0 20 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><img src="imgs/mls.png"></svg>				
+							<span class="ml-3" style="color: #5a5a5a;">MLSSystem</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="https://mlssystem.github.io/trabalhadoresdaseara" title="Telegram" target="_blank">
+							<svg width="20" height="20" class="w-6 h-6" viewBox="0 0 20 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><img src="imgs/ts.png">
+							</svg>
+							<span class="ml-3" style="color: #5a5a5a;">Trab_Seara</span>
+						</a>
+					</div>
+				</div>
+			</div>		
+			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="overflow-x-hidden">
+		<section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
+			<div class="max-w-3xl text-center flex flex-col items-center"><h2 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #0b10f5;" id="font">FAVORITO DE CRYPTO</span></h2>
+			</div>
+			<div x-data="{selected:0}" class="w-full max-w-4xl">
+				<ul class="divide-y-2 divide-gray-200 content-block">
+					<li id="noticias" class="relative"><button type="button" class="w-full py-7 lg:py-8 text-left focus:outline-none text-gray-900 flex items-center justify-between text-xl lg:text-2xl" @click="selected !== 9 ? selected = 9 : selected = null"><h3 class="text-lg lg:text-xl font-medium">Notícias</h3><svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: selected == 9, &#39;rotate-0&#39;: selected != 9}" class="inline w-6 h-6 lg:w-7 lg:h-7 ml-4 lg:ml-5 flex-shrink-0 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+						<div class="relative overflow-hidden transition-all max-h-0 duration-300" x-ref="container9" x-bind:style="selected == 9 ? &#39;max-height: &#39; + $refs.container9.scrollHeight + &#39;px&#39; : &#39;&#39;" style="">		      
+							<div class="pb-8 lg:pb-9 text-sm lg:text-base text-gray-700" style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin-bottom: 10px; color: #184abb;">
+								<ol class="how_to_buy" style="min-height: 220px;">
+									<li><a href="https://beincrypto.com.br/" target="_blank">Bencrypto </a></li>
+									<li><a href="https://www.coindesk.com/" target="_blank">Coindesk </a></li>
+									<li><a href="https://cointelegraph.com.br/" target="_blank">Cointelegraph </a></li>
+									<li><a href="https://www.criptofacil.com/" target="_blank">Criptofácil </a></li>
+									<li><a href="https://www.crypto-news-flash.com/pt-pt/" target="_blank">Crypto News Flash </a></li>
+									<li><a href="https://decrypt.co/" target="_blank">Decrypt </a></li>
+									<li><a href="https://guiadobitcoin.com.br/" target="_blank">Guia do Bitcoin </a></li>
+									<li><a href="https://livecoins.com.br/" target="_blank">LiveCoins </a></li>
+									<li><a href="https://moneyinvest.com.br/" target="_blank">MoneyInvest </a></li>
+									<li><a href="https://portaldobitcoin.uol.com.br/" target="_blank">Portal do Bitcoin </a></li>
+								</ol>
+							</div>
+						</div>
+					</li>					
+					<li id="precos" class="relative"><button type="button" class="w-full py-7 lg:py-8 text-left focus:outline-none text-gray-900 flex items-center justify-between text-xl lg:text-2xl" @click="selected !== 1 ? selected = 1 : selected = null"><h3 class="text-lg lg:text-xl font-medium">Preços</h3><svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: selected == 1, &#39;rotate-0&#39;: selected != 1}" class="inline w-6 h-6 lg:w-7 lg:h-7 ml-4 lg:ml-5 flex-shrink-0 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button><div class="relative overflow-hidden transition-all max-h-0 duration-300" x-ref="container1" x-bind:style="selected == 1 ? &#39;max-height: &#39; + $refs.container1.scrollHeight + &#39;px&#39; : &#39;&#39;" style="">
+						<div class="pb-8 lg:pb-9 text-sm lg:text-base text-gray-700" style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin-bottom: 10px; color: #184abb;">
+							<ol class="how_to_buy" style="min-height: 220px;">					
+								<li><a href="https://mlssystem.github.io/bitblockdig/values.html" target="_blank">BitBlockDig </a></li>
+								<li><a href="https://coinmarketcal.com/pt/coin-ranking" target="_blank">Coinmarketcal </a></li>
+								<li><a href="https://www.crypto-news-flash.com/pt-pt/capitalizacao-de-mercado/" target="_blank">Crypto News Flash </a></li>
+								<li><a href="https://onchainfx.com/" target="_blank">Onchainfx </a></li>
+								<li><a href="https://www.worldcoinindex.com/pt" target="_blank">Worldcoinindex </a></li>
+							</ol>
+						</div>
+					</li>					
+					<li id="exchanges" class="relative"><button type="button" class="w-full py-7 lg:py-8 text-left focus:outline-none text-gray-900 flex items-center justify-between text-xl lg:text-2xl" @click="selected !== 2 ? selected = 2 : selected = null"><h3 class="text-lg lg:text-xl font-medium">Exchanges</h3><svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: selected == 2, &#39;rotate-0&#39;: selected != 2}" class="inline w-6 h-6 lg:w-7 lg:h-7 ml-4 lg:ml-5 flex-shrink-0 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button><div class="relative overflow-hidden transition-all max-h-0 duration-300" x-ref="container2" x-bind:style="selected == 2 ? &#39;max-height: &#39; + $refs.container2.scrollHeight + &#39;px&#39; : &#39;&#39;" style="">
+						<div class="pb-8 lg:pb-9 text-sm lg:text-base text-gray-700" style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin-bottom: 10px; color: #184abb;">
+							<ol class="how_to_buy" style="min-height: 220px;">
+								<li><a href="https://www.binance.com/pt-BR" target="_blank">Binance </a></li>
+								<li><a href="https://www.mercadobitcoin.com.br/" target="_blank">Mercado Bitcoin </a></li>
+								<li><a href="https://www.coinbase.com/pt/" target="_blank">Coinbase </a></li>
+								<li><a href="https://brasilbitcoin.com.br/" target="_blank">Brasil Bitcoin </a></li>
+								<li><a href="https://usdsports.io/" target="_blank">USD Sports </a></li>
+								<li><a href="https://www.bithumb.pro/en-us" target="_blank">Bithumb </a></li>
+								<li><a href="https://exchange.pancakeswap.finance/#/swap" target="_blank">PancakeSwap </a></li>
+							</ol>
+						</div>
+					</li>					
+					<li id="capitalizacao" class="relative"><button type="button" class="w-full py-7 lg:py-8 text-left focus:outline-none text-gray-900 flex items-center justify-between text-xl lg:text-2xl" @click="selected !== 3 ? selected = 3 : selected = null"><h3 class="text-lg lg:text-xl font-medium">Plataformas de Capitalização</h3><svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: selected == 3, &#39;rotate-0&#39;: selected != 3}" class="inline w-6 h-6 lg:w-7 lg:h-7 ml-4 lg:ml-5 flex-shrink-0 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button><div class="relative overflow-hidden transition-all max-h-0 duration-300" x-ref="container3" x-bind:style="selected == 3 ? &#39;max-height: &#39; + $refs.container3.scrollHeight + &#39;px&#39; : &#39;&#39;" style="">
+						<div class="pb-8 lg:pb-9 text-sm lg:text-base text-gray-700" style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin-bottom: 10px; color: #184abb;">
+							<ol class="how_to_buy" style="min-height: 220px;">
+								<li><a href="https://coinmarketcap.com/pt-br/" target="_blank">CoinMarketCap </a></li>
+								<li><a href="https://www.coingecko.com/pt" target="_blank">CoinGecko </a></li>
+							</ol>
+						</div>
+					</li>			
+				</ul>
+			</div>
+			</div>
+		</section>
+	</main>
+
+	<!--<footer class="border-t-2 border-gray-200" style="background: #f5f5f5">
+	<div class="container py-6 md:py-10 lg:py-12 flex flex-col items-center justify-between text-center">
+		<div class="text-base text-gray-600">
+	        <div>Built with <span style="color: #E8181B">❤</span> to you - <span class="text-sm mt-3 text-gray-500">E-COIN Token © 2021</span></div>
+		</div>
+	</div>
+	</footer>-->
+	
+</body>
+</html>
