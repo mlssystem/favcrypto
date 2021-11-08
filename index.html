@@ -16,31 +16,13 @@
 	<!--0b10f5/025afc-->
 	<header x-data="{ open: false, hidden: true }">
 		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">			
-		</div>
-		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
-			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
-				<div class="flex justify-end">
-					<button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-				</div>
-				<div class="flex flex-col flex-grow text-lg">
-					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#noticias">Notícias</a>
-					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#precos">Preços</a>
-					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#exchanges">Exchanges</a>
-					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#capitalizacao">Capitalização</a>
-					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="#arbitragem">Arbitragem</a>
-				</div>
-			</nav>
-		</aside>			
+		</div>		
 		<div class="bg-blue-75 relative z-30">
 			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">		
 			<a href="" class="focus:outline-none"><img src="imgs/logo.png" class="w-auto h-10 lg:h-14" alt="E-COIN"></a>
 			<div class="flex items-center">		
 			<div class="hidden lg:flex items-center space-x-6 text-base">
-				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#noticias">Notícias</a>
-				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#precos">Preços</a>		
-				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#exchanges">Exchanges</a>
-				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#capitalizacao">Capitalização</a>
-				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="#arbitragem">Arbitragem</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
 			</div>		
 			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
 				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
@@ -140,7 +122,15 @@
 								<li><a href="https://cointradermonitor.com/arbitragem/" target="_blank">CointraderMonitor </a></li>
 							</ol>
 						</div>
-					</li>			
+					</li>					
+					<li id="arbitragem" class="relative"><button type="button" class="w-full py-7 lg:py-8 text-left focus:outline-none text-gray-900 flex items-center justify-between text-xl lg:text-2xl" @click="selected !== 5 ? selected = 5 : selected = null"><h3 class="text-lg lg:text-xl font-medium">Investimentos</h3><svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: selected == 5, &#39;rotate-0&#39;: selected != 5}" class="inline w-6 h-6 lg:w-7 lg:h-7 ml-4 lg:ml-5 flex-shrink-0 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button><div class="relative overflow-hidden transition-all max-h-0 duration-300" x-ref="container4" x-bind:style="selected == 5 ? &#39;max-height: &#39; + $refs.container4.scrollHeight + &#39;px&#39; : &#39;&#39;" style="">
+						<div class="pb-8 lg:pb-9 text-sm lg:text-base text-gray-700" style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin-bottom: 10px; color: #184abb;">
+							<ol class="how_to_buy" style="min-height: 220px;">
+								<li><a href="https://coinarbitragebot.com/pt/" target="_blank">CoinArbitrageBot </a></li>
+								<li><a href="https://cointradermonitor.com/arbitragem/" target="_blank">CointraderMonitor </a></li>
+							</ol>
+						</div>
+					</li>						
 				</ul>
 			</div>
 			</div>
