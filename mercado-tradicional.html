@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Mercado Tradicional</title>
 	<meta name="description" content="">
-	<link rel="icon" type="image/png" href="imgs/favicon.png"/>
+	<link rel="icon" type="image/png" href="imgs/logo-favoritos.png"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com/">
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -16,10 +16,20 @@
 	<!--0b10f5/025afc-->
 	<header x-data="{ open: false, hidden: true }">
 		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">			
-		</div>		
-		<div class="bg-blue-75 relative z-30">
+		</div>
+		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
+			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
+				<div class="flex justify-end">
+					<button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+				</div>
+				<div class="flex flex-col flex-grow text-lg">
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="index.html">Mercado Crypto</a>
+				</div>
+			</nav>
+		</aside>		
+		<div class="bg-green-78 relative z-30">
 			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">		
-			<a href="" class="focus:outline-none"><img src="imgs/logo.png" class="w-auto h-10 lg:h-14" alt="E-COIN"></a>
+			<a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
 			<div class="flex items-center">		
 			<div class="hidden lg:flex items-center space-x-6 text-base">
 				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
@@ -61,7 +71,7 @@
 
 	<main class="overflow-x-hidden">
 		<section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
-			<div class="max-w-3xl text-center flex flex-col items-center"><h2 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #0b10f5;" id="font">MERCADO TRADICIONAL</span></h2>
+			<div class="max-w-3xl text-center flex flex-col items-center"><h2 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #1d9e04;" id="font">MERCADO TRADICIONAL</span></h2>
 			</div>
 			<div x-data="{selected:0}" class="w-full max-w-4xl">
 				<ul class="divide-y-2 divide-gray-200 content-block">
