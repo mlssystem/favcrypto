@@ -9,6 +9,7 @@
 	<link rel="icon" type="image/png" href="imgs/logo-favoritos.png"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com/">
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -36,28 +37,25 @@
 			</div>		
 			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
 				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
-				<span>Sites</span>
+				<span>Mercado Tradicional</span>
 				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
 				</button>
 				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">		
 					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">						
-						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="https://bibliasagrada.github.io" title="Telegram" target="_blank">
-							<svg width="20" height="20" class="w-6 h-6" viewBox="0 0 20 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><img src="imgs/bs.png">
-							</svg>
-							<span class="ml-3" style="color: #5a5a5a;">Bíblia</span>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="renda-fixa.html">
+							<span id="renda-fixa" class="ml-3" style="color: #5a5a5a;">Renda Fixa</span>
 						</a>
-						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="https://mlssystem.github.io/bitblockdig" title="Twitter" target="_blank">
-							<svg width="20" height="20" class="w-6 h-6" viewBox="0 0 20 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><img src="imgs/bbd.png"></svg>				
-							<span class="ml-3" style="color: #5a5a5a;">BitBlockDig</span>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="renda-variavel.html" title="Twitter">				
+							<span id="renda-variavel" class="ml-3" style="color: #5a5a5a;">Renda Variável</span>
 						</a>						
-						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="https://mlssystem.github.io" title="Twitter" target="_blank">
-							<svg width="20" height="20" class="w-6 h-6" viewBox="0 0 20 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><img src="imgs/mls.png"></svg>				
-							<span class="ml-3" style="color: #5a5a5a;">MLSSystem</span>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="renda-fixa-renda-variavel.html" title="Twitter">				
+							<span id="fixa-variavel" class="ml-3" style="color: #5a5a5a;">Renda fixa e Renda variável</span>
 						</a>						
-						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="https://mlssystem.github.io/trabalhadoresdaseara" title="Telegram" target="_blank">
-							<svg width="20" height="20" class="w-6 h-6" viewBox="0 0 20 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><img src="imgs/ts.png">
-							</svg>
-							<span class="ml-3" style="color: #5a5a5a;">Trab_Seara</span>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="perfil-investidor.html" title="Telegram">
+							<span id="perfil" class="ml-3" style="color: #5a5a5a;">Perfil do investidor</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="indices.html" title="Telegram">
+							<span id="indices" class="ml-3" style="color: #5a5a5a;">Índices</span>
 						</a>
 					</div>
 				</div>
@@ -158,5 +156,73 @@
 			</div>
 		</section>
 	</main>
+    
+<footer>
+ <div class="content-footer">
+   <div class="left box">
+     <div class="upper">
+       <div class="topic">Links</div>  
+          <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
+
+          <div class="banner-footer">
+              <p>
+              	<a href="index.html"><img alt="Páginas" src="imgs/logo-1.png"></a>
+				<a href="https://mlssystem.github.io/favcrypto/#noticias">Notícias</a>
+				<a href="https://mlssystem.github.io/favcrypto/#precos">Preços</a>
+				<a href="https://mlssystem.github.io/favcrypto/#exchanges">Exchanges</a>
+				<a href="https://mlssystem.github.io/favcrypto/#capitalizacao">Capitalização</a>
+				<a href="https://mlssystem.github.io/favcrypto/#arbitragem">Arbitragem</a>
+				<em>Outros Sites:</em>
+				<a href="https://mlssystem.github.io" target="_blank">MLSSystem</a>
+				<a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a>
+				<a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a>
+				<a href="https://mlssystem.github.io/linksuteis" target="_blank">Links Úteis</a>
+				<a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a>
+              </p>
+          </div>
+     </div>
+   </div>
+   <div class="middle box">
+     <div class="topic">Favoritos</div>
+     	<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html"><img alt="Páginas" src="imgs/logo-favoritos-64.PNG"></a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-fixa" target="_blank">Renda Fixa</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-variavel" target="_blank">Renda Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#fixa-variavel" target="_blank">Fixa e Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#perfil" target="_blank">Perfil do Investidor</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#indices" target="_blank">Índices</a></div>
+		<em>Outros Sites:</em>
+		<div><a href="https://mlssystem.github.io" target="_blank">MLSSystem</a></div>
+		<div><a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a></div>
+		<div><a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a></div>
+		<div><a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a></div>
+   </div>
+   <div class="right box">
+     <div class="topic">Inscreva-se</div>
+     <form action="#">
+       <input type="text" placeholder="Em desenvolvimento">
+       <input type="submit" name="" value="Inativo">
+       <div class="media-icons">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       </div>
+     </form>
+     <div class="lower">
+       <div class="topic">Contato</div>
+       <div class="phone">
+         <a href="#"><i class="fas fa-phone-volume"></i>+55 DD 98765 4321</a>
+       </div>
+       <div class="email">
+         <a href="#"><i class="fas fa-envelope"></i>abc@email.com</a>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="bottom">
+   <p>Copyright © 2021 <a href="https://github.com/mlssystem">MLSSystem</a> Todos direitos reservados</p>
+ </div>
+</footer>
 </body>
 </html>

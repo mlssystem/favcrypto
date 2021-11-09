@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Renda Fixa</title>
+	<meta name="description" content="">
+	<link rel="icon" type="image/png" href="imgs/logo-favoritos.png"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<!--0b10f5/025afc-->
+	<header x-data="{ open: false, hidden: true }">
+		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">			
+		</div>
+		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
+			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
+				<div class="flex justify-end">
+					<button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+				</div>
+				<div class="flex flex-col flex-grow text-lg">
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="index.html">Mercado Crypto</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="mercado-tradicional.html">Mercado Tradicional</a>
+				</div>
+			</nav>
+		</aside>		
+		<div class="bg-green-78 relative z-30">
+			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">		
+			<a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
+			<div class="flex items-center">		
+			<div class="hidden lg:flex items-center space-x-6 text-base">
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
+			</div>		
+			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
+				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
+				<span>Renda Fixa</span>
+				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+				</button>
+				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">		
+					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="tesouro-direto.html">
+							<span class="ml-3" style="color: #5a5a5a;">Tesouro Direto</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">				
+							<span class="ml-3" style="color: #5a5a5a;">CDB e LC</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">				
+							<span class="ml-3" style="color: #5a5a5a;">CRI e CRA</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="lci-lca.html" title="Telegram">
+							<span class="ml-3" style="color: #5a5a5a;">LCI e LCA</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="debentures.html" title="Telegram">
+							<span class="ml-3" style="color: #5a5a5a;">Debêntures</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="letra-financeira.html" title="Telegram">
+							<span class="ml-3" style="color: #5a5a5a;">Letra Financeira</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="titulos-publicos.html" title="Telegram">
+							<span class="ml-3" style="color: #5a5a5a;">Títulos públicos</span>
+						</a>
+					</div>
+				</div>
+			</div>	
+			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="overflow-x-hidden">
+		<section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
+			<div class="max-w-3xl text-center flex flex-col items-center"><h2 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #1d9e04;" id="font">RENDA FIXA</span></h2>
+			</div>
+			</div>
+		<article class="conteudo-mercado-tradicional">
+			<p>É o investimento realizado diretamente em Títulos Públicos e Privados de Renda Fixa. Quando você compra um título de Renda Fixa, você está emprestando dinheiro ao emissor do papel, que pode ser um banco, uma empresa ou mesmo o Governo. Em troca, recebe uma remuneração por um determinado prazo, na forma de juros e/ou correção monetária, podendo receber, ainda, parcelas chamadas amortizações.</p>
+
+			<p>Com a revolução digital hoje podemos operar em diveras Plataforma que oferecem negociações de Renda Fixa aplicando em Títulos Públicos, CDBs, LCIs, CRIs, LCAs, CRAs e Debêntures de maneira diferenciada.</p> 
+
+			<p>Todas elas trás conteúdo educacional onde podemos nos informar melhor a respeito dos produtos disponíveis, como comprar e vender com autonomia, transparência e agilidade, além de administrar sua carteira com facilidade. Tudo isso sem sair da frente do seu computador.</p>
+
+			<p>Rentabilidade garantida? Risco zero de perda? Você talvez esteja se perguntando o que é renda fixa, afinal. A resposta está em um conceito fácil de entender: nos investimentos em renda fixa, o cálculo da remuneração é previamente definido e conhecido desde o momento da aplicação.</p>
+
+			<p>Em linhas gerais, quem compra um título de renda fixa “empresta” dinheiro para alguém. Em troca, espera receber o valor aplicado de volta no futuro acrescido de juros, que são a remuneração pelo tempo em que o recurso ficou emprestado. As condições dessa transação – como prazos, taxas, índices de referência e detalhes quanto à negociação dos papéis – são acertadas desde o início.</p>
+
+			<p>Os emissores de títulos de renda fixa – em outras palavras, quem toma o dinheiro emprestado – podem ser bancos, empresas e o próprio governo. O funcionamento geral dos papéis é parecido, não importa a origem. O que é importante pontuar é que renda fixa não é sinônimo de retorno garantido. Esses investimentos também estão sujeitos a riscos, tanto de crédito quanto de mercado. Em algumas situações, o valor de um papel pode variar tanto quanto uma ação.</p>
+
+			<h1>O que é Renda Fixa?</h1>
+			<p>Renda Fixa é um tipo de investimento onde as pessoas conhecem ou podem prever a rentabilidade, antes mesmo de realizar a operação. Diferente da renda variável, como a Bolsa de Valores, onde a rentabilidade não é garantida e é preciso lidar com alguns riscos. </p>
+
+			<p>Para investir em Renda Fixa não existe mistério, muito pelo contrário, é bastante simples. E o investidor ainda conta com a segurança do Fundo Garantidor de Crédito (FGC) - o mesmo seguro da Poupança.</p>
+
+			<div class="comentario">
+					<p>&nbsp;Além da segurança, a Renda Fixa tem ótima rentabilidade.<br>&nbsp;Como todo mundo já sabe, a poupança rende muito pouco.</p>
+			</div>
+
+			<table style="height: 503px; width: 100%; border-width: 0px; margin-bottom: 20px; margin-top: 20px;" width="100%" cellspacing="8">
+					<tbody>
+							<tr style="height: 47px;">
+							<td style="width: 772px; background-color: #1d9e04; text-align: center; padding: 8px; height: 47px; border-width: 0px;" colspan="5"><span style="color: #ffffff; font-size: 16px;"><strong>Investimentos melhores que a Poupança - Rentabilidade Anual (sem descontar a inflação)</strong></span></td>
+							</tr>
+							<tr style="height: 47px;">
+							<td style="width: 386px; background-color: #2cd00c; text-align: center; padding: 8px; height: 47px; border-width: 0px;"><span style="color: #ffffff; font-size: 16px;"><strong>Ano</strong></span></td>
+							<td style="width: 386px; background-color: #2cd00c; text-align: center; padding: 8px; height: 47px; border-width: 0px;"><span style="color: #ffffff; font-size: 16px;"><strong>Poupança</strong></span></td>
+							<td style="width: 386px; background-color: #2cd00c; text-align: center; padding: 8px; height: 47px; border-width: 0px;"><span style="color: #ffffff; font-size: 16px;"><strong>Tesouro Direto</strong></span></td>
+							<td style="width: 386px; background-color: #2cd00c; text-align: center; padding: 8px; height: 47px; border-width: 0px;"><span style="color: #ffffff; font-size: 16px;"><strong>**CDB</strong></span></td>
+							<td style="width: 386px; background-color: #2cd00c; text-align: center; padding: 8px; height: 47px; border-width: 0px;"><span style="color: #ffffff; font-size: 16px;"><strong>***LCI/LCA</strong></span></td>
+							</tr>
+							<tr style="height: 43px;">
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">2020</span></td>
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">2,11%</span></td>
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">2,75%&nbsp;</span></td>
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">&nbsp;3,03%</span></td>
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">&nbsp;2,61%</span></td>
+							</tr>
+							<tr style="height: 43px;">
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">2019</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">4,26%</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">5,94%&nbsp;</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">6,57%&nbsp;</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">5,65%&nbsp;</span></td>
+							</tr>
+							<tr style="height: 43px;">
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">2018</span></td>
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">4,62%</span></td>
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">6,42%&nbsp;</span></td>
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">&nbsp;7,08%</span></td>
+							<td style="width: 386px; background-color: #ffffff; padding: 8px; text-align: center; height: 43px; border-width: 0px;"><span style="font-size: 16px;">&nbsp;6,09%</span></td>
+							</tr>
+							<tr style="height: 40px;">
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; height: 40px; text-align: center; border-width: 0px;"><span style="font-size: 16px;">2017*</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; height: 40px; text-align: center; border-width: 0px;"><span style="font-size: 16px;">6,61%</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; height: 40px; text-align: center; border-width: 0px;"><span style="font-size: 16px;">6,12%</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; height: 40px; text-align: center; border-width: 0px;"><span style="font-size: 16px;">6,18%</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; padding: 8px; height: 40px; text-align: center; border-width: 0px;"><span style="font-size: 16px;">5,32%</span></td>
+							</tr>
+							<tr style="height: 40px;">
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">2016</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">8,30%</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">14,20%</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">15,50%</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">13,25%</span></td>
+							</tr>
+							<tr style="height: 40px;">
+							<td style="width: 386px; background-color: #9dfd8a; text-align: center; padding: 8px; height: 40px; border-width: 0px;"><span style="font-size: 16px;">2015</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; text-align: center; padding: 8px; height: 40px; border-width: 0px;"><span style="font-size: 16px;">8,15%</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; text-align: center; padding: 8px; height: 40px; border-width: 0px;"><span style="font-size: 16px;">13,27%</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; text-align: center; padding: 8px; height: 40px; border-width: 0px;"><span style="font-size: 16px;">14,59%</span></td>
+							<td style="width: 386px; background-color: #9dfd8a; text-align: center; padding: 8px; height: 40px; border-width: 0px;"><span style="font-size: 16px;">12,48%</span></td>
+							</tr>
+							<tr style="height: 40px;">
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">2014</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">7,16%</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">10,90%</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">11,90%</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">10,20%</span></td>
+							</tr>
+							<tr style="height: 40px;">
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">2013</span></td>
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">6,37%</span></td>
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">8,22%</span></td>
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">8,86%</span></td>
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">7,61%</span></td>
+							</tr>
+							<tr style="height: 40px;">
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">2012</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">6,47%</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">8,49%</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">9,24%</span></td>
+							<td style="width: 386px; text-align: center; padding: 8px; height: 40px; background-color: #ffffff; border-width: 0px;"><span style="font-size: 16px;">7,93%</span></td>
+							</tr>
+							<tr style="height: 40px;">
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">2011</span></td>
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">7,50%</span></td>
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">11,62%</span></td>
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">12,83%</span></td>
+							<td style="width: 386px; padding: 8px; height: 40px; background-color: #9dfd8a; text-align: center; border-width: 0px;"><span style="font-size: 16px;">10,98%</span></td>
+							</tr>
+					</tbody>
+			</table>
+
+			<h2>Como funciona o investimento em Renda Fixa?</H2>
+			<p>Como qualquer outra empresa, os bancos, as instituições financeiras e até mesmo o governo, precisam captar recursos para financiar projetos e continuar em atividade. É aí que entra o investimento em Renda Fixa.</p>
+
+			<p>Investir em Renda Fixa é como emprestar seu dinheiro para essas instituições. Então, elas utilizam o dinheiro para financiar suas atividades e, em troca, devolvem o dinheiro acrescido de uma taxa de juros.</p>
+
+			<p>Como a Renda Fixa possui diversos tipos de títulos. Você tem inúmeras possibilidades diferentes para investir. Pode escolher um título que tenha mais a ver com seu perfil de investidor, objetivos, com o momento que você está vivendo e, até mesmo, combinar várias modalidades em uma carteira de investimentos diversificada.</p>
+
+			<p>O que muita gente não sabe é que essa diversificação pode proporcionar ainda mais segurança e rentabilidade.</p>
+
+			<p>Por isso, antes de começar a investir, você precisa conhecer melhor as alternativas de investimento. Assim, você poderá escolher o melhor título para o seu objetivo nesse momento.</p>
+
+			<h2 class="origem">Fontes:</h2>
+			<p><a class="origem" href="https://www.infomoney.com.br/guias/renda-fixa/">Infomoney</a></p>
+			<p><a class="origem" href="https://www.xpi.com.br/investimentos/renda-fixa/">XPI</a></p>
+			<p><a class="origem" href="https://blog.toroinvestimentos.com.br/o-que-e-renda-fixa-como-funciona">Toro Investimentos</a></p>
+
+
+		</article>
+		</section>
+	</main>
+    
+<footer>
+ <div class="content-footer">
+   <div class="left box">
+     <div class="upper">
+       <div class="topic">Links</div>  
+          <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
+
+          <div class="banner-footer">
+              <p>
+              	<a href="index.html"><img alt="Páginas" src="imgs/logo-1.png"></a>
+				<a href="https://mlssystem.github.io/favcrypto/#noticias">Notícias</a>
+				<a href="https://mlssystem.github.io/favcrypto/#precos">Preços</a>
+				<a href="https://mlssystem.github.io/favcrypto/#exchanges">Exchanges</a>
+				<a href="https://mlssystem.github.io/favcrypto/#capitalizacao">Capitalização</a>
+				<a href="https://mlssystem.github.io/favcrypto/#arbitragem">Arbitragem</a>
+				<em>Outros Sites:</em>
+				<a href="https://mlssystem.github.io" target="_blank">MLSSystem</a>
+				<a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a>
+				<a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a>
+				<a href="https://mlssystem.github.io/linksuteis" target="_blank">Links Úteis</a>
+				<a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a>
+              </p>
+          </div>
+     </div>
+   </div>
+   <div class="middle box">
+     <div class="topic">Favoritos</div>
+     	<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html"><img alt="Páginas" src="imgs/logo-favoritos-64.PNG"></a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-fixa" target="_blank">Renda Fixa</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-variavel" target="_blank">Renda Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#fixa-variavel" target="_blank">Fixa e Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#perfil" target="_blank">Perfil do Investidor</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#indices" target="_blank">Índices</a></div>
+		<em>Outros Sites:</em>
+		<div><a href="https://mlssystem.github.io" target="_blank">MLSSystem</a></div>
+		<div><a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a></div>
+		<div><a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a></div>
+		<div><a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a></div>
+   </div>
+   <div class="right box">
+     <div class="topic">Inscreva-se</div>
+     <form action="#">
+       <input type="text" placeholder="Em desenvolvimento">
+       <input type="submit" name="" value="Inativo">
+       <div class="media-icons">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       </div>
+     </form>
+     <div class="lower">
+       <div class="topic">Contato</div>
+       <div class="phone">
+         <a href="#"><i class="fas fa-phone-volume"></i>+55 DD 98765 4321</a>
+       </div>
+       <div class="email">
+         <a href="#"><i class="fas fa-envelope"></i>abc@email.com</a>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="bottom">
+   <p>Copyright © 2021 <a href="https://github.com/mlssystem">MLSSystem</a> Todos direitos reservados</p>
+ </div>
+</footer>
+</body>
+</html>

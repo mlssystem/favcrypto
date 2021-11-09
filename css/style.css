@@ -3,6 +3,14 @@
     font-family: 'FonteLogo';
     src: url("../fonts/bubblegum-sans-regular.otf");
 }
+@font-face {
+        font-family: 'JosefinSans-Bold';
+        src: url("../fonts/josefin_sans/JosefinSans-Bold.ttf");
+}
+@font-face {
+        font-family: 'JosefinSans-Regular';
+        src: url("../fonts/josefin_sans/JosefinSans-Regular.ttf");
+}
 
 #font {
     font-family: 'FonteLogo';
@@ -17,6 +25,28 @@
     -o-tab-size: 4;
     tab-size: 4
 }
+article.conteudo-mercado-tradicional {
+    text-align: justify !important;
+    width: 80% ;
+    margin: auto;
+    padding-top: 40px;
+}
+article.conteudo-mercado-tradicional p {
+    line-height: 1.8em;
+    padding-bottom: 5px;
+}
+article a.origem {
+    color: #1d9e04;;
+}
+h2.origem {
+    font-size: 16px;
+    padding-top: 20px;
+} 
+.comentario {
+    border-left: 3px solid #1d9e04; 
+    color:#1d9e04;
+    margin-bottom: 15px;
+}   
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%
@@ -229,6 +259,12 @@ video {
         padding-right: 2.5rem;
         padding-left: 2.5rem
     }
+article.conteudo-mercado-tradicional {
+    text-align: justify !important;
+    width: 80% ;
+    margin: auto;
+    padding-top: 40px;
+}
 }
 @media(min-width:768px) {
     .container {
@@ -1810,3 +1846,201 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
    text-align: center;
    display: inline-block;
  }
+/*-- RODAPÉ --*/
+footer{
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background-color: #1d9e04;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .content-footer{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content-footer: space-between;
+}
+footer .content-footer p,a{
+  color: #000;/*f4f4f4*/
+}
+footer .content-footer .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content-footer .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+}
+footer .content-footer p{
+  text-align: justify;
+}
+footer .content-footer .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .content-footer .lower i{
+  padding-right: 16px;
+}
+footer .content-footer .middle{
+  padding-left: 80px;
+}
+footer .content-footer .middle a{
+  line-height: 32px;
+}
+footer .content-footer .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  /*background: url("../imgs/dourado_houver.jpg");*/
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .content-footer .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #000;
+  background: #1d9e04;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #fff; /*f5ff82*/
+  transition: all 0.3s ease-in-out;
+}
+.content-footer .right input[type="submit"]:hover{
+  background: none;
+  color: #1d9e04; /*f5ff82*/
+  font-weight: bold;
+  background: url("../imgs/cinza.jpg") no-repeat;
+}
+footer .content-footer .media-icons a{
+  font-size: 16px;
+  color: #fff; /*f5ff82*/
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.content-footer .media-icons a:hover{
+  border-color: #fff; /*f5ff82*/
+  color: #000;/*f4f4f4*/
+}
+footer .bottom{
+  width: 100%;
+  text-align: right;
+  color: #a4a4a4;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #fff; /*f5ff82*/
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #fff; /*f5ff82*/
+}
+footer div.banner-footer {
+    margin: 0;
+    margin-bottom: 2px;
+    font-weight: bold;
+    line-height: 2.1;
+    text-align: center;
+    position: all;
+    top: 2em;
+    left: auto;
+    width: 12em;
+    right: 1em;
+    }
+footer div.banner-footer p {
+    margin: 0;
+    padding: .1em .1em;
+    font-family: 'JosefinSans-Regular', sans-serif;
+    background-color: #0b10f5;
+    border: thin outset rgb(245,225,130);
+    color: white;
+    }
+footer div.banner-footer a, div.banner-footer em { 
+    display: block; 
+    margin: 0 0.5em 
+}
+footer div.banner-footer a, div.banner-footer em { 
+    border-top: 2px groove rgb(245,225,130)
+}
+div.banner-footer a:first-child { 
+    border-top: none 
+}
+div.banner-footer em { 
+    color: yellow 
+}
+footer div.banner-footer a:link { 
+    text-decoration: none; 
+    color: white 
+}
+footer div.banner-footer a:visited { 
+    text-decoration: none; 
+    color: #ccc 
+}
+footer div.banner-footer a:hover { 
+    background-image: url("../img/bg/dourado_houver.jpg");
+    color: black; 
+}
+footer div.banner-footer p{
+    font-size: 16px;
+    padding:8px;
+}
+#ico {                                                                   
+    float:right;    
+}    
+@media (max-width:1100px) {
+  footer .content-footer .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .content-footer .box{
+    width: 50%;
+  }
+  .content-footer .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .content-footer .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content-footer .middle{
+    padding-left: 0;
+  }
+} 
+.meditar-refletir {
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+footer#topo {
+    /*position:absolute;*/
+    float:right;
+    margin-bottom: -10px;
+    padding-bottom: 0px;
+}
