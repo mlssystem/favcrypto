@@ -41,12 +41,31 @@ article a.origem {
 h2.origem {
     font-size: 16px;
     padding-top: 20px;
+}
+
+h1.font-25px {
+    font-size: 25px;
+    line-height: 50px;
+}
+
+h2.font-20px {
+    font-size: 20px;
+    line-height: 50px;
+    color: #1d9e04;
+    font-weight: bold;
 } 
 .comentario {
     border-left: 3px solid #1d9e04; 
     color:#1d9e04;
     margin-bottom: 15px;
-}   
+}
+.lis-rfx {
+    text-indent: 20px;
+}
+.hr-rfx {
+    margin: 10px 0px;
+}
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%
@@ -2023,6 +2042,10 @@ footer div.banner-footer p{
   }
 }
 @media (max-width:560px){
+  .overflow-x-hidden{
+    padding: 0px;
+    margin: -20px;
+  }  
   footer{
     position: relative;
   }
@@ -2033,14 +2056,18 @@ footer div.banner-footer p{
   footer .content-footer .middle{
     padding-left: 0;
   }
+ #tbl-comp-rfx .tbl-comp-rfx{
+    font-size: 13px !important;
+ }
 } 
-.meditar-refletir {
+ .meditar-refletir {
     padding-bottom: 40px;
     padding-top: 10px;
-}
-footer#topo {
+ }
+ footer#topo {
     /*position:absolute;*/
     float:right;
     margin-bottom: -10px;
     padding-bottom: 0px;
+ }
 }
