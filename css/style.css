@@ -65,7 +65,9 @@ h2.font-20px {
 .hr-rfx {
     margin: 10px 0px;
 }
-
+.incluir {
+    opacity: 0.3;
+}
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%
