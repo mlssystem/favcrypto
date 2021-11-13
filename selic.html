@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Taxa Selic</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="imgs/logo-favoritos.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <!--0b10f5/025afc-->
+    <header x-data="{ open: false, hidden: true }">
+        <div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">            
+        </div>
+        <aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
+            <nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
+                <div class="flex justify-end">
+                    <button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="flex flex-col flex-grow text-lg">
+                    <a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="index.html">Mercado Crypto</a>
+                    <a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="mercado-tradicional.html">Mercado Tradicional</a>
+                    <a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="renda-fixa.html">Renda Fixa</a>
+                </div>
+            </nav>
+        </aside>        
+        <div class="bg-green-78 relative z-30">
+            <div class="container flex flex-row items-center justify-between py-4 lg:py-5">     
+            <a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
+            <div class="flex items-center">     
+            <div class="hidden lg:flex items-center space-x-6 text-base">
+                <a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
+                <a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
+                <a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="renda-Fixa.html">Renda Fixa</a>
+            </div>      
+            <div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
+                <button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
+                <span>Índices</span>
+                <svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">  
+                    <div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">                      
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#">
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">CDI</span>
+                        </a>
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Twitter">                
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">IPCA</span>
+                        </a>                         
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Twitter">               
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">IBOVESPA</span>
+                        </a>                        
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="selic.html" title="Telegram">
+                            <span class="ml-3" style="color: #5a5a5a;">SELIC</span>
+                        </a>                        
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Telegram">
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">TX CAMBIO</span>
+                        </a>                        
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Telegram">
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">S&P 500</span>
+                        </a>                       
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Telegram">
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">NIKEI 225</span>
+                        </a>                       
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Telegram">
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">Índice Brasil</span>
+                        </a>                       
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Telegram">
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">IFIX</span>
+                        </a>                       
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Telegram">
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">ISE</span>
+                        </a>                       
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Telegram">Índices setoriais da Bolsa</span>
+                        </a>                       
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Telegram">
+                            <span class="ml-3 incluir" style="color: #5a5a5a;">Ptax</span>
+                        </a>
+                    </div>
+                </div>
+            </div>  
+            <button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="overflow-x-hidden">
+        <section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
+            <div class="max-w-3xl text-center flex flex-col items-center"><h1 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #1d9e04;" id="font">TAXA SELIC</span></h1>
+            </div>
+            </div>
+        <article class="conteudo-mercado-tradicional">
+            <h2 class="font-20px">O que é Taxa Selic e qual sua relação com a renda fixa?</h2>
+            <p>A Taxa Selic é a taxa básica de juros da economia brasileira e um dos principais instrumentos da política monetária do Banco Central. Ela serve de referência para o CDI e, por tabela, para o rendimento de muitos dos ativos de renda fixa.</p>
+
+            <p>O termo Selic é uma sigla que significa Sistema Especial de Liquidação e Custódia. É um sistema utilizado pelo Banco Central para controlar a emissão, a compra e a venda de títulos públicos e, assim, conduzir a política econômica e controlar a inflação. </p>
+
+            <h2 class="font-20px">Como a Selic é definida</h2>
+            <p>A meta da taxa Selic é definida em uma reunião que acontece a cada 45 dias, do Comitê de Política Monetária, o Copom, do Banco Central. Nesse encontro são levados em conta as projeções e os estudos da atividade econômica e da inflação.</p>
+
+            <p>A cada reunião, o Copom publica uma ata explicando as razões que levaram o Comitê a manter, aumentar ou reduzir os juros. A Ata do Copom também explica qual é a visão da autoridade monetária para o cenário futuro, o que ajuda a prever as próximas movimentações da Selic.</p>
+
+            <h2 class="font-20px">Para que serve a Taxa Selic</h2>
+            <p>Explicando de maneira simplificada, a Selic é usada para controlar o fluxo de emissão e de circulação de recursos financeiros no país. O governo federal custeia seu funcionamento por duas formas principais: a arrecadação de impostos e a emissão de dívida. A Selic é usada para estabelecer o custo dessa dívida e de todas as outras operações de crédito do país.</p>
+
+            <p>Por essa razão, o Banco Central monitora os indicadores de endividamento do governo e das famílias e a movimentação dos preços dos produtos e serviços. Quando há um descontrole em qualquer desses índices, o Copom pode intervir para controlar o volume de dinheiro em circulação.</p>
+
+            <p>Para entender essa dinâmica, basta observar o que aconteceu em 2015. Naquele ano, o aumento da dívida do governo federal fez com que o volume de dinheiro em circulação aumentasse. A inflação subiu para mais de 10% e o Banco Central decidiu realizar uma série de reajustes na Selic, até que a taxa chegasse a 14,25% no final do ano.</p>
+
+            <p><strong>Sendo assim, é possível afirmar que:</strong></p>
+            <ul>
+                <li>• Quando o Banco Central aumenta a taxa Selic, a tendência é de queda na inflação e de desaceleração da economia, pois há um desestímulo ao consumo;</li>
+                <li>• Quando o Banco Central reduz a taxa Selic, a tendência é de alta na inflação e aceleração da economia, pois há um estímulo ao consumo;</li>
+            </ul>    
+            <p>O exemplo que citamos é recente, mas a relação entre inflação e Selic é de longa data. A taxa básica de juros foi criada em 1979, período em que o reajuste de preços estava fora de controle no Brasil. Ao longo do tempo, a ideia de usar a taxa para controle monetário ficou ainda mais forte.</p>
+
+            <p>Nas últimas duas décadas, diversos governantes brasileiros utilizaram a composição de juros e inflação em sua política econômica. Durante o governo de Fernando Henrique Cardoso surgiu o chamado tripé macroeconômico, que orientou a política fiscal do governo nas últimas duas décadas.
+
+            <p>O tripé é composto por três fatores: juros, inflação e câmbio.
+            Basicamente, o BC equilibra a cotação do dólar pelos leilões de moeda estrangeira e pelos juros, que por sua vez influenciam diretamente a inflação. Por ser uma dinâmica em que um fator depende do outro para se manter estável, a política foi chamada de tripé macroeconômico.</p>
+
+            <h2 class="font-20px">Como a Selic afeta os juros dos financiamentos?</h2>
+            <p>A Selic é uma ferramenta de controle monetário, pois regula o fluxo de dinheiro na economia. Isso é feito de duas formas principais.</p>
+
+            <p>Por estabelecer o custo da dívida do governo, a taxa básica de juros tem influência sobre o volume de dinheiro público injetado na economia (seja por transferência direta de renda, como o pagamento de salários e benefícios, ou por investimento em obras e outros projetos).</p>
+
+            <p>Além disso, por determinar o custo de emissão de recursos no país, a Selic é a grande referência para as taxas dos financiamentos de empresas e consumidores.</p>
+
+            <p>Uma taxa de juros mais baixa indica que o crédito será mais barato, e uma taxa mais alta implica em um crédito mais caro.</p>
+
+            <p>No entanto, a Selic não é o único componente do custo dos juros cobrados pelos bancos. Além do custo de emissão, há ainda o risco de crédito (ou seja, a chance de o empréstimo não ser pago) e o spread (a margem de lucro da instituição financeira).</p>
+
+            <p>Financiamentos sem garantia, como o crédito pessoal, cartão de crédito e cheque especial, têm taxas de juros mais altas em razão do risco de inadimplência.</p>
+
+            <h2 class="font-20px">Como a Selic influencia os investimentos?</h2>
+            <p>Como a Selic é a taxa básica de juros da economia, ela serve de base para diversas taxas de abrangência nacional - não só as cobradas em empréstimos e financiamentos, mas também nas taxas de retorno em aplicações financeiras, como o CDI, que é o Certificado de Depósito Interbancário.</p>
+
+            <p>O CDI é um mecanismo de lastro (garantia) para operações realizadas diariamente por instituições financeiras. Ele reflete diretamente o custo dos empréstimos feitos entre os bancos, e por isso costuma acompanhar de perto a própria taxa Selic.</p>
+
+            <p>No mundo dos investimentos, o CDI é usado para calcular o retorno de diversoas aplicações pós-fixadas de renda fixa. como:</p>
+            <ul>
+                <li>• Certificado de Depósito Bancário (CDB);</li>
+                <li>• Letra de Crédito Imobiliário (LCI);</li>
+                <li>• Letra de Crédito do Agronegócio (LCA);</li>
+                <li>• Certificado de Recebíveis Imobiliários (CRI);</li>
+                <li>• Certificado de Recebíveis do Agronegócio (CRA);</li>
+                <li>• Recibo de Depósito Bancário (RDB);</li>
+                <li>• Debêntures;</li>
+                <li>• Fundos de investimento;</li>
+                <li>• Poupança.</li>
+            </ul>
+            <p>Em geral, o rendimento dessas aplicações é apresentado como um percentual do CDI - por exemplo: 110% do CDI. Levando em conta o cenário atual, em que os juros básicos estão na casa dos 2%, uma aplicação cujo retorno é de 110% do CDI irá render 2,2% em um ano.</p>
+            
+            <p>É importante lembrar que, em tempos de Selic baixa, os investimentos de renda fixa tendem a ter rentabilidade menor.</p>
+
+            <p>Se o Banco Central decidir aumentar ou reduzir a Selic, o rendimento da aplicação será diferente a partir do mês em que houve a mudança na taxa básica de juros.</p>
+
+            <p>Existem, ainda, ativos como os títulos do Tesouro Selic que são diretamente impactados pela variação da taxa básica de juros.</p> 
+
+            <p>Por fim, como a Selic tem relação direta com a inflação, os investidores que aplicam em títulos cujo rendimento é calculado pelo indicador oficial de inflação, o Índice de Preços ao Consumidor Amplo (IPCA), devem observar as movimentações da taxa básica de juros.</p>
+
+            <p>Alguns dos investimentos indexados pelo IPCA são o Tesouro IPCA+, debêntures, LCIs, LCAs, CRIs, CRAs e fundos de renda fixa.</p>
+
+            <h2 class="font-20px">Selic e CDI</h2>
+            <p>Com a queda recente na taxa básica de juros, as instituições financeiras passaram a oferecer aplicações com percentuais maiores de retorno calculado pelo CDI. É possível encontrar títulos que pagam mais de 140% do CDI no mercado, algo que era raro até dois ou três anos atrás.</p>
+
+            <p>Mas antes de ceder aos encantos dos altos percentuais, vale lembrar que o CDI reflete a taxa básica de juros, que atualmente encontra-se no menor patamar da história. Sendo assim, dez ou vinte pontos percentuais do CDI representam, no final das contas, menos de 1% a mais de retorno em uma aplicação anual.</p>
+
+            <p>Em geral, as instituições que oferecem percentuais maiores de retorno são as que têm um risco maior de crédito. É importante que o investidor avalie a relação de risco e retorno da aplicação, e que não atenha-se somente ao percentual do CDI ofertado.</p>
+
+            <h2 class="font-20px">Selic e poupança</h2>
+            <p>A taxa básica de juros também tem relação direta com a caderneta de poupança. O rendimento da poupança pode ser calculado pelo CDI, mas isso depende do valor atual da taxa Selic. <strong>Veja abaixo a regra:</strong></p>
+                <ul>
+                    <li>• Quando a taxa Selic estiver abaixo de 8,5%, a poupança renderá 70% do CDI + a Taxa Referencial (TR), que é determinada pelo Banco Central. Atualmente a TR está zerada.</li>
+                    <li>• Quando a Selic estiver acima de 8,5%, a poupança renderá 0,5% ao mês + a Taxa Referencial.</li>
+                </ul>
+            <p>A regra de rendimento da poupança mudou em 2012. Todas as aplicações feitas na caderneta antes de maio daquele ano têm o rendimento mensal de 0,5% + a TR, mesmo que a taxa Selic seja maior do que 8,5%.
+
+            <h2 class="font-20px">Selic e renda variável</h2>
+            <p>Os investimentos de renda variável não contam com um indexador, como a Selic, o CDI ou o IPCA, para calcular seu retorno. No entanto, existe uma relação indireta da taxa básica de juros e as aplicações de maior risco, como ações, opções e fundos imobiliários.</p>
+
+            <p>Como já vimos aqui, quando os juros básicos caem, o retorno das aplicações de renda fixa também fica menor. Os investidores que desejam multiplicar os ganhos de sua carteira devem buscar aplicações de maior risco, que não se relacionam diretamente com a Selic.</p>
+
+            <p>Durante o ciclo de queda dos juros da economia brasileira, muitas modalidades de investimento de renda variável tiveram um importante ganho. É o caso, por exemplo, da bolsa de valores brasileira, que triplicou o número de investidores ativos entre 20.</p>
+
+            <p>Em razão da alta na procura por esses ativos, períodos de juros mais baixos tendem a gerar ganhos para investidores que têm parte do patrimônio alocado em renda variável.</p>
+                
+            <h2 class="font-20px">Como a Selic influencia o consumo doméstico?</h2>
+            <p>Existe uma relação direta entre a taxa básica de juros e o ritmo de crescimento da economia. Isso porque a Selic pode ser um grande fator para o estímulo ou desestímulo ao consumo das famílias e empresas.</p>
+
+            <p>Se a Selic é baixa, o governo tem um custo menor para endividar-se, e por isso pode transferir mais recursos para a população e fazer investimentos, como em obras de infraestrutura, saúde e educação, o que gera mais empregos e mais renda.</p>
+
+            <p>Os juros baixos também facilitam o crédito para as famílias, já que os financiamentos bancários para aquisição de bens e serviços ficam mais baratos.</p>
+
+            <p>No entanto, é importante lembrar que a alta no consumo gera uma pressão da demanda no país, o que pode resultar em uma inflação maior, algo prejudicial para o poder de compra da população.</p>
+
+            <p>Se esse efeito inflacionário foge do controle, o Banco Central pode aumentar a taxa Selic para desestimular o crédito e as despesas do governo, o que reduz o ritmo de crescimento de toda a economia.</p>
+            
+            <div>
+                <h2 class="origem">Fontes:</h2>
+                <p><a class="origem" href="https://invest.exame.com/guia/o-que-e-taxa-selic-e-qual-sua-relacao-com-a-renda-fixa" target="_blank">Exame invest</a></p>
+            </div>
+
+        </article>
+        </section>
+    </main>
+    
+<footer>
+ <div class="content-footer">
+   <div class="left box">
+     <div class="upper">
+       <div class="topic">Links</div>  
+          <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
+
+          <div class="banner-footer">
+              <p>
+                <a href="index.html"><img alt="Páginas" src="imgs/logo-1.png"></a>
+                <a href="https://mlssystem.github.io/favcrypto/#noticias">Notícias</a>
+                <a href="https://mlssystem.github.io/favcrypto/#precos">Preços</a>
+                <a href="https://mlssystem.github.io/favcrypto/#exchanges">Exchanges</a>
+                <a href="https://mlssystem.github.io/favcrypto/#capitalizacao">Capitalização</a>
+                <a href="https://mlssystem.github.io/favcrypto/#arbitragem">Arbitragem</a>
+                <em>Outros Sites:</em>
+                <a href="https://mlssystem.github.io" target="_blank">MLSSystem</a>
+                <a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a>
+                <a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a>
+                <a href="https://mlssystem.github.io/linksuteis" target="_blank">Links Úteis</a>
+                <a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a>
+              </p>
+          </div>
+     </div>
+   </div>
+   <div class="middle box">
+     <div class="topic">Favoritos</div>
+        <div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html"><img alt="Páginas" src="imgs/logo-favoritos-64.PNG"></a></div>
+        <div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-fixa" target="_blank">Renda Fixa</a></div>
+        <div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-variavel" target="_blank">Renda Variável</a></div>
+        <div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#fixa-variavel" target="_blank">Fixa e Variável</a></div>
+        <div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#perfil" target="_blank">Perfil do Investidor</a></div>
+        <div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#indices" target="_blank">Índices</a></div>
+        <em>Outros Sites:</em>
+        <div><a href="https://mlssystem.github.io" target="_blank">MLSSystem</a></div>
+        <div><a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a></div>
+        <div><a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a></div>
+        <div><a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a></div>
+   </div>
+   <div class="right box">
+     <div class="topic">Inscreva-se</div>
+     <form action="#">
+       <input type="text" placeholder="Em desenvolvimento">
+       <input type="submit" name="" value="Inativo">
+       <div class="media-icons">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       </div>
+     </form>
+     <div class="lower">
+       <div class="topic">Contato</div>
+       <div class="phone">
+         <a href="#"><i class="fas fa-phone-volume"></i>+55 DD 98765 4321</a>
+       </div>
+       <div class="email">
+         <a href="#"><i class="fas fa-envelope"></i>abc@email.com</a>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="bottom">
+   <p>Copyright © 2021 <a href="https://github.com/mlssystem">MLSSystem</a> Todos direitos reservados</p>
+ </div>
+</footer>
+</body>
+</html>
