@@ -11,6 +11,55 @@
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css">
+		#rendimento-cdi {
+			max-width: 100%;
+			background-color: transparent;
+			border-collapse: collapse;
+			border-spacing: 0;
+			font-family: arial;
+		}
+		.table {
+		    border-bottom: #999999 solid 1px;
+		    width: 100%;
+		    margin-bottom: 20px;
+		  }  
+		.table th,
+		.table td {
+		    border-right: #999999 solid 1px;
+		    font-size: 12px;
+		    padding: 8px;
+		    line-height: 20px;
+		    text-align: left;
+		    vertical-align: middle;
+		}
+
+		.table td:last-child {
+		    border-right: 0;
+		}
+
+		.table thead th {
+		   font-weight: normal;
+		   background-color: #005dab;
+		   color: #fff;
+		   font-size: 15px;
+		}
+        table#rend-cdi {
+            border-collapse: collapse;
+            border-radius: 1px;
+        }
+        #rend-cdi tr,td {
+            border: 1px solid;
+            padding: 5px;
+            background-color: #9dfd8a;
+        }
+        #rend-cdi th {
+            background-color: #1d9e04;
+            color: #fff;
+        }
+    </style>
+	</style>
 </head>
 
 <body>
@@ -137,10 +186,10 @@
 			<p>As decisões do Banco Central para a Selic influenciam diretamente o CDI, principal indicador para a renda fixa. Ao contrário da taxa Selic, cuja meta é definida para o ano, o CDI tem valores diários e mensais.</p>
 
 			<p><strong>Veja abaixo a tabela com o rendimento mensal do CDI em 2021:</strong>
-			<table>
+			<table id="rend-cdi">
 				<tr>
-					<td>Mês</td>
-					<td>Taxa do CDI</td>
+					<th>Mês</th>
+					<th>Taxa do CDI</th>
 				</tr>
 				<tr>
 					<td>Janeiro</td>
