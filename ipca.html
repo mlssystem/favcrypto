@@ -4,15 +4,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Taxa Selic</title>
-    <meta name="description" content="A Taxa Selic é a taxa básica de juros da economia brasileira e um dos principais instrumentos da política monetária do Banco Central. Ela serve de referência para o CDI e, por tabela, para o rendimento de muitos dos ativos de renda fixa.">
-    <meta name="keywords" content="Selic, CDI, CDB, IPCA">
+    <title>IPCA</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <meta name="author" content="marcus">
     <link rel="icon" type="image/png" href="imgs/logo-favoritos.png"/>
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style type="text/css">
+        table#tbl-rend {
+            border-collapse: collapse;
+            border-radius: 1px;
+            text-align: center;
+            width: 50%;
+            margin-top: 07px;
+            margin-bottom: 07px;
+        }
+        #tbl-rend tr,td {
+            border: 1px solid;
+            padding: 5px;
+            background-color: #9dfd8a;
+        }
+        #tbl-rend th {
+            background-color: #1d9e04;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,8 +70,8 @@
                         <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdi.html">
                             <span class="ml-3" style="color: #5a5a5a;">CDI</span>
                         </a>
-                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Twitter">                
-                            <span class="ml-3 incluir" style="color: #5a5a5a;">IPCA</span>
+                        <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="ipca.html" title="Twitter">                
+                            <span class="ml-3" style="color: #5a5a5a;">IPCA</span>
                         </a>                         
                         <a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="#" title="Twitter">               
                             <span class="ml-3 incluir" style="color: #5a5a5a;">IBOVESPA</span>
@@ -96,119 +115,291 @@
 
     <main class="overflow-x-hidden">
         <section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
-            <div class="max-w-3xl text-center flex flex-col items-center"><h1 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #1d9e04;" id="font">TAXA SELIC</span></h1>
+            <div class="max-w-3xl text-center flex flex-col items-center"><h1 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #1d9e04;" id="font">IPCA</span></h1>
             </div>
             </div>
         <article class="conteudo-mercado-tradicional">
-            <h2 class="font-20px">O que é Taxa Selic e qual sua relação com a renda fixa?</h2>
-            <p>A Taxa Selic é a taxa básica de juros da economia brasileira e um dos principais instrumentos da política monetária do Banco Central. Ela serve de referência para o CDI e, por tabela, para o rendimento de muitos dos ativos de renda fixa.</p>
+            <h2 class="font-20px">O que é IPCA?</h2>
+            <p>O Índice Nacional de Preços ao Consumidor Amplo (IPCA) mede a variação dos preços de produtos e serviços para o consumidor final.</p>
+            <p>O IPCA é também considerado como o principal indicador para a <strong>taxa de inflação do Brasil</strong>.</p>
 
-            <p>O termo Selic é uma sigla que significa Sistema Especial de Liquidação e Custódia. É um sistema utilizado pelo Banco Central para controlar a emissão, a compra e a venda de títulos públicos e, assim, conduzir a política econômica e controlar a inflação. </p>
+            <h2 class="font-20px">IPCA Acumulado e inflação anual</h2>
+            <p>O IPCA é obtido a partir da coleta de preços ao longo dos dias de um mês. Esses valores são comparados com o período base anterior, sendo calculada a taxa que indica a inflação no país.</p>
 
-            <h2 class="font-20px">Como a Selic é definida</h2>
-            <p>A meta da taxa Selic é definida em uma reunião que acontece a cada 45 dias, do Comitê de Política Monetária, o Copom, do Banco Central. Nesse encontro são levados em conta as projeções e os estudos da atividade econômica e da inflação.</p>
+            <p>Os valores mensais do índice vão se acumulando, e assim, se obtém a taxa de aumento dos preços para o ano, ou seja, a <strong>inflação acumulada dentro do período anual.</strong></p>
 
-            <p>A cada reunião, o Copom publica uma ata explicando as razões que levaram o Comitê a manter, aumentar ou reduzir os juros. A Ata do Copom também explica qual é a visão da autoridade monetária para o cenário futuro, o que ajuda a prever as próximas movimentações da Selic.</p>
+            <h2 class="font-20px">Tabela IPCA acumulado</h2>
+            <p>Os valores atuais da inflação brasileira podem ser acompanhados na tabela abaixo:</p>
 
-            <h2 class="font-20px">Para que serve a Taxa Selic</h2>
-            <p>Explicando de maneira simplificada, a Selic é usada para controlar o fluxo de emissão e de circulação de recursos financeiros no país. O governo federal custeia seu funcionamento por duas formas principais: a arrecadação de impostos e a emissão de dívida. A Selic é usada para estabelecer o custo dessa dívida e de todas as outras operações de crédito do país.</p>
+            <p><strong>Tabela IPCA 2021</strong></p>
+            
+            <table id="tbl-rend">
+            <tr>
+            <th>Mês</th>
+            <th>Valor mensal (%)</th>
+            <th>Acumulado no ano (%)</th>
+            <th>Acumulado em 12 meses (%)</th>
+            </tr>
+            <tr>
+            <td>JAN</td> 
+            <td>0,25</td>
+            <td>0,25</td>
+            <td>4,56</td>
+            </tr>
+            <tr>
+            <td>FEV</td>  
+            <td>0,86</td>     
+            <td>1,11</td>     
+            <td>5,20</td> 
+            </tr>
+            <tr>
+            <td>MAR</td>  
+            <td>0,93</td> 
+            <td>2,05</td>     
+            <td>6,10</td> 
+            </tr>
+            <tr>
+            <td>ABR</td>  
+            <td>0,31</td>     
+            <td>2,37</td>     
+            <td>6,76</td> 
+            </tr>
+            <tr>
+            <td>MAI</td>  
+            <td>0,83</td>     
+            <td>3,22</td> 
+            <td>8,06</td> 
+            </tr>
+            <tr>
+            <td>JUN</td>  
+            <td>0,53</td>     
+            <td>3,77</td>     
+            <td>8,35</td> 
+            </tr>
+            <tr>
+            <td>JUL</td>  
+            <td>0,96</td> 
+            <td>4,76</td> 
+            <td>8,99</td> 
+            </tr>
+            <tr>
+            <td>AGO</td>  
+            <td>0,87</td>     
+            <td>5,67</td>     
+            <td>9,68</td> 
+            </tr>
+            <tr>
+            <td>SET</td>  
+            <td>1,16</td>     
+            <td>6,90</td>     
+            <td>10,25</td> 
+            </tr>
+            <tr>
+            <td>OUT</td>  
+            <td>1,25</td>     
+            <td>8,24</td>     
+            <td>10,67</td> 
+            </tr>
+            </table>
 
-            <p>Por essa razão, o Banco Central monitora os indicadores de endividamento do governo e das famílias e a movimentação dos preços dos produtos e serviços. Quando há um descontrole em qualquer desses índices, o Copom pode intervir para controlar o volume de dinheiro em circulação.</p>
+            <p>O IBGE disponibiliza os valores para o IPCA do mês, analisado no mês anterior, apresentando também o acumulado no ano e o dos últimos 12 meses.</p>
 
-            <p>Para entender essa dinâmica, basta observar o que aconteceu em 2015. Naquele ano, o aumento da dívida do governo federal fez com que o volume de dinheiro em circulação aumentasse. A inflação subiu para mais de 10% e o Banco Central decidiu realizar uma série de reajustes na Selic, até que a taxa chegasse a 14,25% no final do ano.</p>
+            <p>Em 2020 o acumulado da inflação brasileira foi de 4,52%. Confira os resultados na tabela:</p>
 
-            <p><strong>Sendo assim, é possível afirmar que:</strong></p>
+            <p><strong>Tabela IPCA 2020</strong></p>
+            
+            <table id="tbl-rend">
+            <tr>
+            <th>Mês</th> 
+            <th>Valor mensal (%)</th>    
+            <th>Acumulado no ano (%)</th>    
+            <th>Acumulado em 12 meses (%)</th>
+            </tr>
+            <tr>
+            <td>JAN</td> 
+            <td>0,21</td>
+            <td>0,21</td>
+            <td>4,19</td>
+            </tr>
+            <tr>
+            <td>FEV</td>
+            <td>0,25</td>
+            <td>0,46</td>
+            <td>4,01</td>
+            </tr>
+            <tr>
+            <td>MAR</td>
+            <td>0,07</td>
+            <td>0,53</td>
+            <td>3,30</td>
+            </tr>
+            <tr>
+            <td>ABR</td>
+            <td>-0,31</td>   
+            <td>0,22</td>    
+            <td>2,40</td>
+            </tr>
+            <tr>
+            <td>MAI</td>
+            <td>-0,38</td>
+            <td>0,16</td>
+            <td>1,88</td>
+            </tr>
+            <tr>
+            <td>JUN</td> 
+            <td>0,26</td>    
+            <td>0,10</td>    
+            <td>2,13</td>
+            </tr>
+            <tr>
+            <td>JUL</td>
+            <td>0,36</td>
+            <td>0,46</td>    
+            <td>2,31</td>
+            </tr>
+            <tr>
+            <td>AGO</td> 
+            <td>0,24</td>    
+            <td>0,70</td>    
+            <td>2,44</td>
+            </tr>
+            <tr>
+            <td>SET</td> 
+            <td>0,64</td>    
+            <td>1,34</td>       
+            <td>3,14</td>
+            </tr>
+            <tr>
+            <td>OUT</td> 
+            <td>0,86</td>    
+            <td>2,22</td>
+            <td>3,92</td>
+            </tr>
+            <tr>
+            <td>NOV</td> 
+            <td>0,89</td>
+            <td>3,13</td>
+            <td>4,31</td>
+            </tr>
+            <tr>
+            <td>DEZ</td> 
+            <td>1,35</td>
+            <td>4,52</td>
+            <td>4,52</td>
+            </tr>
+            </table>
+
+            <p>Além de definir a inflação para o país, o IPCA também serve como meta a ser seguida pela política monetária do Banco Central. Em 2021 a meta de inflação é de 3,75% no ano, com um mínimo de 2,25% e máximo de 5,25% considerando a margem de 1.5 pontos percentuais.</p>
+
+            <p>Os valores dos últimos anos são apresentados abaixo:</p>
+
+            <p><strong>IPCA nos últimos anos</strong></p>
+
+            <table id="tbl-rend">
+            <tr>
+            <th>Ano</th>
+            <th>Inflação acumulada (%)</th>
+            </tr>
+            <tr>    
+            <td>2019</td>    
+            <td>4,31</td>
+            </tr>
+            <tr>
+            <td>2018</td>    
+            <td>3,75</td>
+            </tr>
+            <tr>
+            <td>2017</td>    
+            <td>2,95</td>
+            </tr>
+            <tr>
+            <td>2016</td>    
+            <td>6,29</td>
+            </tr>
+            <tr>
+            <td>2015</td>    
+            <td>10,67</td>
+            </tr>
+            <tr>
+            <td>2014</td>    
+            <td>6,41</td>
+            </tr>
+            <tr>
+            <td>2013</td>    
+            <td>5,91</td>
+            </tr>
+            <tr>
+            <td>2012</td>    
+            <td>5,84</td>
+            </tr>
+            <tr>
+            <td>2011</td>    
+            <td>6,50</td>
+            </tr>
+            <tr>
+            <td>2010</td>    
+            <td>5,91</td>
+            </tr>
+            <tr>
+            <td>2009</td>    
+            <td>4,31</td>
+            </tr>
+            <tr>
+            <td>2008</td>    
+            <td>5,90</td>
+            </tr>
+            <tr>
+            <td>2007</td>    
+            <td>4,46</td>
+            </tr>
+            <tr>
+            <td>2006</td>   
+            <td>3,14</td>
+            </tr>
+            <tr>
+            <td>2005</td>    
+            <td>5,69</td>
+            </tr>
+            </table>
+
+            <p>Vale lembrar que a maior inflação brasileira foi de <strong>2.477,15%</strong> no ano de 1993, pouco antes do Plano Real.</p>
+
+            <h2 class="font-20px">Como é medido o IPCA</h2>
+            <p>Este índice é produzido pelo IBGE a partir do Sistema Nacional de Índices de Preços ao Consumidor (SNIPC). Ele analisa estabelecimentos comerciais e de prestações de serviços, em diferentes regiões metropolitanas do Brasil.</p>
+
+            <p>O foco deste índice feito pelo IBGE, são os bens destinados a consumidores e suas famílias, com rendas entre 1 e 40 salários mínimos e suas despesas no mês.</p>
+
+            <p>As despesas consideradas são divididas em grupos que fazem parte do orçamento familiar:</p>
+
             <ul>
-                <li>• Quando o Banco Central aumenta a taxa Selic, a tendência é de queda na inflação e de desaceleração da economia, pois há um desestímulo ao consumo;</li>
-                <li>• Quando o Banco Central reduz a taxa Selic, a tendência é de alta na inflação e aceleração da economia, pois há um estímulo ao consumo;</li>
-            </ul>    
-            <p>O exemplo que citamos é recente, mas a relação entre inflação e Selic é de longa data. A taxa básica de juros foi criada em 1979, período em que o reajuste de preços estava fora de controle no Brasil. Ao longo do tempo, a ideia de usar a taxa para controle monetário ficou ainda mais forte.</p>
-
-            <p>Nas últimas duas décadas, diversos governantes brasileiros utilizaram a composição de juros e inflação em sua política econômica. Durante o governo de Fernando Henrique Cardoso surgiu o chamado tripé macroeconômico, que orientou a política fiscal do governo nas últimas duas décadas.
-
-            <p>O tripé é composto por três fatores: juros, inflação e câmbio.
-            Basicamente, o BC equilibra a cotação do dólar pelos leilões de moeda estrangeira e pelos juros, que por sua vez influenciam diretamente a inflação. Por ser uma dinâmica em que um fator depende do outro para se manter estável, a política foi chamada de tripé macroeconômico.</p>
-
-            <h2 class="font-20px">Como a Selic afeta os juros dos financiamentos?</h2>
-            <p>A Selic é uma ferramenta de controle monetário, pois regula o fluxo de dinheiro na economia. Isso é feito de duas formas principais.</p>
-
-            <p>Por estabelecer o custo da dívida do governo, a taxa básica de juros tem influência sobre o volume de dinheiro público injetado na economia (seja por transferência direta de renda, como o pagamento de salários e benefícios, ou por investimento em obras e outros projetos).</p>
-
-            <p>Além disso, por determinar o custo de emissão de recursos no país, a Selic é a grande referência para as taxas dos financiamentos de empresas e consumidores.</p>
-
-            <p>Uma taxa de juros mais baixa indica que o crédito será mais barato, e uma taxa mais alta implica em um crédito mais caro.</p>
-
-            <p>No entanto, a Selic não é o único componente do custo dos juros cobrados pelos bancos. Além do custo de emissão, há ainda o risco de crédito (ou seja, a chance de o empréstimo não ser pago) e o spread (a margem de lucro da instituição financeira).</p>
-
-            <p>Financiamentos sem garantia, como o crédito pessoal, cartão de crédito e cheque especial, têm taxas de juros mais altas em razão do risco de inadimplência.</p>
-
-            <h2 class="font-20px">Como a Selic influencia os investimentos?</h2>
-            <p>Como a Selic é a taxa básica de juros da economia, ela serve de base para diversas taxas de abrangência nacional - não só as cobradas em empréstimos e financiamentos, mas também nas taxas de retorno em aplicações financeiras, como o CDI, que é o Certificado de Depósito Interbancário.</p>
-
-            <p>O CDI é um mecanismo de lastro (garantia) para operações realizadas diariamente por instituições financeiras. Ele reflete diretamente o custo dos empréstimos feitos entre os bancos, e por isso costuma acompanhar de perto a própria taxa Selic.</p>
-
-            <p>No mundo dos investimentos, o CDI é usado para calcular o retorno de diversoas aplicações pós-fixadas de renda fixa. como:</p>
-            <ul>
-                <li>• Certificado de Depósito Bancário (CDB);</li>
-                <li>• Letra de Crédito Imobiliário (LCI);</li>
-                <li>• Letra de Crédito do Agronegócio (LCA);</li>
-                <li>• Certificado de Recebíveis Imobiliários (CRI);</li>
-                <li>• Certificado de Recebíveis do Agronegócio (CRA);</li>
-                <li>• Recibo de Depósito Bancário (RDB);</li>
-                <li>• Debêntures;</li>
-                <li>• Fundos de investimento;</li>
-                <li>• Poupança.</li>
+                <li class="lis-rfx">• Alimentação e bebidas;</li>
+                <li class="lis-rfx">• Transportes;</li>
+                <li class="lis-rfx">• Habitação;</li>
+                <li class="lis-rfx">• Saúde e cuidados pessoais;</li>
+                <li class="lis-rfx">• Despesas pessoais;</li>
+                <li class="lis-rfx">• Vestuário;</li>
+                <li class="lis-rfx">• Comunicação;</li>
+                <li class="lis-rfx">• Artigos de residência;</li>
+                <li class="lis-rfx">• Educação.</li>
             </ul>
-            <p>Em geral, o rendimento dessas aplicações é apresentado como um percentual do CDI - por exemplo: 110% do CDI. Levando em conta o cenário atual, em que os juros básicos estão na casa dos 2%, uma aplicação cujo retorno é de 110% do CDI irá render 2,2% em um ano.</p>
-            
-            <p>É importante lembrar que, em tempos de Selic baixa, os investimentos de renda fixa tendem a ter rentabilidade menor.</p>
 
-            <p>Se o Banco Central decidir aumentar ou reduzir a Selic, o rendimento da aplicação será diferente a partir do mês em que houve a mudança na taxa básica de juros.</p>
+            <p>Além da variação dos preços, também são considerados os pesos que cada uma dessas despesas possuem no orçamento familiar.</p>
 
-            <p>Existem, ainda, ativos como os títulos do Tesouro Selic que são diretamente impactados pela variação da taxa básica de juros.</p> 
+            <p>Pelos valores do IPCA dizemos que, quando ele aumenta, os preços aumentaram com mais intensidade, e quando diminui significa que os preços cresceram com menor intensidade. Se acontecerem valores negativos, houve uma deflação, ou seja, os preços realmente caíram.</p>
 
-            <p>Por fim, como a Selic tem relação direta com a inflação, os investidores que aplicam em títulos cujo rendimento é calculado pelo indicador oficial de inflação, o Índice de Preços ao Consumidor Amplo (IPCA), devem observar as movimentações da taxa básica de juros.</p>
+            <h2 class="font-20px">Importância dos valores do IPCA</h2>
+            <p>Ao servir como a inflação oficial, indica o quanto alterou o poder de compra dos consumidores no período estabelecido. O mesmo serve como indicador para quem faz uma aplicação financeira, por exemplo.</p>
 
-            <p>Alguns dos investimentos indexados pelo IPCA são o Tesouro IPCA+, debêntures, LCIs, LCAs, CRIs, CRAs e fundos de renda fixa.</p>
+            <p>O IPCA serve, por exemplo, para a determinação da taxa básica de juros, SELIC. A partir dela é que se determina a remuneração de investimentos ou as taxas de empréstimos.</p>
 
-            <h2 class="font-20px">Selic e CDI</h2>
-            <p>Com a queda recente na taxa básica de juros, as instituições financeiras passaram a oferecer aplicações com percentuais maiores de retorno calculado pelo CDI. É possível encontrar títulos que pagam mais de 140% do CDI no mercado, algo que era raro até dois ou três anos atrás.</p>
+            <h2 class="font-20px">Diferenças entre IPCA e o INPC</h2>
+            <p>O sistema de coleta do IBGE também realiza nos estabelecimentos o levantamento dos preços para o Índice Nacional de Preços ao Consumidor (INPC). A diferença é que a população pesquisada apresenta rendimentos entre 1 e 5 salários mínimos.</p>
 
-            <p>Mas antes de ceder aos encantos dos altos percentuais, vale lembrar que o CDI reflete a taxa básica de juros, que atualmente encontra-se no menor patamar da história. Sendo assim, dez ou vinte pontos percentuais do CDI representam, no final das contas, menos de 1% a mais de retorno em uma aplicação anual.</p>
+            <p>Ao considerar uma faixa salarial menor, existe mais intensidade na variação dos preços às famílias de rendas mais baixas, principalmente entre setores mais básicos, como o de alimentação.</p>
 
-            <p>Em geral, as instituições que oferecem percentuais maiores de retorno são as que têm um risco maior de crédito. É importante que o investidor avalie a relação de risco e retorno da aplicação, e que não atenha-se somente ao percentual do CDI ofertado.</p>
-
-            <h2 class="font-20px">Selic e poupança</h2>
-            <p>A taxa básica de juros também tem relação direta com a caderneta de poupança. O rendimento da poupança pode ser calculado pelo CDI, mas isso depende do valor atual da taxa Selic. <strong>Veja abaixo a regra:</strong></p>
-                <ul>
-                    <li>• Quando a taxa Selic estiver abaixo de 8,5%, a poupança renderá 70% do CDI + a Taxa Referencial (TR), que é determinada pelo Banco Central. Atualmente a TR está zerada.</li>
-                    <li>• Quando a Selic estiver acima de 8,5%, a poupança renderá 0,5% ao mês + a Taxa Referencial.</li>
-                </ul>
-            <p>A regra de rendimento da poupança mudou em 2012. Todas as aplicações feitas na caderneta antes de maio daquele ano têm o rendimento mensal de 0,5% + a TR, mesmo que a taxa Selic seja maior do que 8,5%.
-
-            <h2 class="font-20px">Selic e renda variável</h2>
-            <p>Os investimentos de renda variável não contam com um indexador, como a Selic, o CDI ou o IPCA, para calcular seu retorno. No entanto, existe uma relação indireta da taxa básica de juros e as aplicações de maior risco, como ações, opções e fundos imobiliários.</p>
-
-            <p>Como já vimos aqui, quando os juros básicos caem, o retorno das aplicações de renda fixa também fica menor. Os investidores que desejam multiplicar os ganhos de sua carteira devem buscar aplicações de maior risco, que não se relacionam diretamente com a Selic.</p>
-
-            <p>Durante o ciclo de queda dos juros da economia brasileira, muitas modalidades de investimento de renda variável tiveram um importante ganho. É o caso, por exemplo, da bolsa de valores brasileira, que triplicou o número de investidores ativos entre 20.</p>
-
-            <p>Em razão da alta na procura por esses ativos, períodos de juros mais baixos tendem a gerar ganhos para investidores que têm parte do patrimônio alocado em renda variável.</p>
-                
-            <h2 class="font-20px">Como a Selic influencia o consumo doméstico?</h2>
-            <p>Existe uma relação direta entre a taxa básica de juros e o ritmo de crescimento da economia. Isso porque a Selic pode ser um grande fator para o estímulo ou desestímulo ao consumo das famílias e empresas.</p>
-
-            <p>Se a Selic é baixa, o governo tem um custo menor para endividar-se, e por isso pode transferir mais recursos para a população e fazer investimentos, como em obras de infraestrutura, saúde e educação, o que gera mais empregos e mais renda.</p>
-
-            <p>Os juros baixos também facilitam o crédito para as famílias, já que os financiamentos bancários para aquisição de bens e serviços ficam mais baratos.</p>
-
-            <p>No entanto, é importante lembrar que a alta no consumo gera uma pressão da demanda no país, o que pode resultar em uma inflação maior, algo prejudicial para o poder de compra da população.</p>
-
-            <p>Se esse efeito inflacionário foge do controle, o Banco Central pode aumentar a taxa Selic para desestimular o crédito e as despesas do governo, o que reduz o ritmo de crescimento de toda a economia.</p>
-            
             <div>
                 <h2 class="origem">Fontes:</h2>
-                <p><a class="origem" href="https://invest.exame.com/guia/o-que-e-taxa-selic-e-qual-sua-relacao-com-a-renda-fixa" target="_blank">Exame invest</a></p>
+                <p><a class="origem" href="https://www.dicionariofinanceiro.com/ipca/" target="_blank">Dicionário Financeiro</a></p>
             </div>
 
         </article>
