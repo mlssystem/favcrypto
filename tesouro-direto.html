@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Tesouro Direto</title>
+	<meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="marcus">
+	<link rel="icon" type="image/png" href="imgs/logo-favoritos.png"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css">
+        table.tbl-rend {
+            border-collapse: collapse;
+            border-radius: 1px;
+            text-align: center;
+            width: 50%;
+            margin-top: 07px;
+            margin-bottom: 07px;
+        }
+        .tbl-rend tr,td {
+            border: 1px solid;
+            padding: 5px;
+            background-color: #9dfd8a;
+        }
+        .tbl-rend th {
+            background-color: #1d9e04;
+            color: #fff;
+        }
+	</style>
+</head>
+
+<body>
+	<!--0b10f5/025afc-->
+	<header x-data="{ open: false, hidden: true }">
+		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">			
+		</div>
+		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
+			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
+				<div class="flex justify-end">
+					<button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+				</div>
+				<div class="flex flex-col flex-grow text-lg">
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="index.html">Mercado Crypto</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="mercado-tradicional.html">Mercado Tradicional</a>
+				</div>
+			</nav>
+		</aside>		
+		<div class="bg-green-78 relative z-30">
+			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">		
+			<a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
+			<div class="flex items-center">		
+			<div class="hidden lg:flex items-center space-x-6 text-base">
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
+			</div>		
+			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
+				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
+				<span>Renda Fixa</span>
+				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+				</button>
+				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">		
+					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="tesouro-direto.html">
+							<span class="ml-3" style="color: #5a5a5a;">Tesouro Direto</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">				
+							<span class="ml-3 incluir" style="color: #5a5a5a;">CDB e LC</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">				
+							<span class="ml-3 incluir" style="color: #5a5a5a;">CRI e CRA</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="lci-lca.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">LCI e LCA</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="debentures.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Debêntures</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="letra-financeira.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Letra Financeira</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="titulos-publicos.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Títulos públicos</span>
+						</a>
+					</div>
+				</div>
+			</div>	
+			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="overflow-x-hidden">
+		<section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
+			<div class="max-w-3xl text-center flex flex-col items-center"><h1 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #1d9e04;" id="font">TESOURO DIRETO</span></h1>
+			</div>
+			</div>
+		<article class="conteudo-mercado-tradicional">
+			<h2 class="font-20px">Veja tudo sobre o Tesouro Direto e saiba como investir passo a passo</h2>
+			<p class="comentario">&nbsp;"O conteúdo das páginas contém informações extraídas de alguns sites <br>&nbsp;para uma leitura comparativa e melhor fixação do conteúdo e obter um entendimento satisfatório".</p>
+
+			<h2 class="font-20px">O que é o Tesouro Direto?</h2>
+
+			<p>Pelo Tesouro Direto, pessoas físicas podem investir em títulos públicos e todo o processo pode ser feito pela internet.</p>
+
+			<p>Por esse meio, é possível investir em títulos públicos a partir de valores que rondam os R$ 30, além de possuir taxas bem mais reduzidas em comparação a outros tipos de investimentos.</p>
+
+			<p>Ao investir no Tesouro Direto, o dinheiro é emprestado ao governo e posteriormente devolvido com o rendimento da aplicação. Esta remuneração é em <strong>Renda Fixa</strong> e o investidor conhece as condições de rentabilidade no momento de investir.</p>
+
+			<p>A rentabilidade destes títulos podem estar atreladas à inflação, por meio do <a style="color:#1d9e04; text-decoration: underline;" href="ipca.html">IPCA</a>, à taxa básica de juros <a style="color:#1d9e04; text-decoration: underline;" href="selic.html">Selic</a> ou em uma taxa prefixada.</p>
+
+			<p>Por serem emitidos pelo governo, é considerado como um investimento com risco praticamente nulo. Isto porque é muito mais fácil uma instituição privada falir do que todo o país.</p>
+
+			<h2 class="font-20px">Passo a passo para investir no Tesouro Direto</h2>
+			<p><strong>1. Escolha uma instituição financeira para intermediar o investimento;</strong></p>
+
+			<p>Para começar a investir pelo Tesouro Direto, é preciso escolher uma agência de custódia, que pode ser um banco ou uma corretora, para realizar o intermédio na operação.</p>
+
+			<p>As instituições financeiras habilitadas estão listadas na própria página do Tesouro Direto, incluindo as taxas cobradas por cada uma.</p>
+
+			<p>Se o processo for feito por uma corretora, basta transferir o dinheiro a partir de uma conta bancária para começar a investir.</p>
+
+			<p><strong>2. Registre-se no Tesouro Direto por meio da agência de custódia;</strong></p>
+
+			<p>Por meio da instituição escolhida, normalmente pelo site ou aplicativo de investimentos, deve ser feito um cadastro junto ao Tesouro Direto. Uma conta será vinculada para que as operações de investimento possam acontecer.</p>
+
+			<p>Algumas corretoras facilitam essa etapa e o investimento pode ser feito diretamente pela plataforma oferecida pela instituição.</p>
+
+			<p><strong>3. Receba a senha provisória da BM&FBovespa e cadastre uma senha nova;</strong></p>
+
+			<p>No passo seguinte ao cadastro, uma senha provisória será enviada pela Bolsa de Valores de São Paulo, atualmente conhecida como B3. Esta senha dá acesso aos locais em que a movimentação financeira deve acontecer.</p>
+
+			<p>Altere a senha por uma nova que contenha entre 8 e 16 dígitos, composta por letras, números e caracteres especiais.</p>
+
+			<p><strong>4. Analise as melhores opções para investir conforme o seu perfil;</strong></p>
+
+			<p>Os títulos do Tesouro Direto possuem liquidez diária. Isto significa que o resgate do valor investido pode acontecer a qualquer dia a partir da aplicação. Apesar dessa segurança, isso faz com que as maiores rentabilidades estejam para títulos em que o dinheiro deve ficar mais tempo aplicado.</p>
+
+			<p>Por conta disso, é preciso conhecer as opções disponíveis e comparar com seu perfil de investidor e seus objetivos, como uma viagem a curto prazo ou a aposentadoria a longo prazo. Entenda abaixo quais são esses tipos.</p>
+
+			<h2 class="font-20px">Tipos de investimentos no Tesouro Direto</h2>
+			<p>Os títulos do Tesouro são oferecidos em duas modalidades, o Prefixado e o Pós-fixado. No primeiro, podemos saber qual será a rentabilidade no momento da aplicação. No segundo, a rentabilidade varia com um indexador enquanto o dinheiro estiver aplicado.</p>
+
+			<p><strong>Tesouro Direto Prefixado</strong></p>
+
+			<p>Quando este título é adquirido, todas as condições e a rentabilidade final são conhecidas. À frente é denominado o ano em que o investimento vence, como "Tesouro Prefixado 2022", por exemplo.</p>
+
+			<p>Existem, ainda, títulos prefixados do Tesouro em que a rentabilidade é remunerada semestralmente, conhecidos como "Tesouro Prefixado com Juros Semestrais".</p>
+
+			<p id="pos-fixado-selic" ><strong>Tesouro Direto Pós-fixado</strong></p>
+
+			<p>Parte da rentabilidade destes títulos depende de um indexador da economia. Este pode ser a taxa básica de juros Selic ou o IPCA, o indicador oficial de inflação.</p>
+
+			<p>O "<a style="color: blue;" href="#tesouro-selic">Tesouro Selic</a>" tem como indexador a taxa Selic e o "<a style="color: blue;" href="#tesouro-ipca+">Tesouro IPCA+</a>", uma parte fixa mais a variação da inflação brasileira.</p>
+
+			<p>Em títulos pós-fixados existem também versões com juros remunerados semestralmente.</p>
+
+			<h2 class="font-20px">Custos para investir no Tesouro Direto</h2>
+			<p>Investir no Tesouro Direto acarreta em custos ao investidor, que deve estar atento para não comprometer a rentabilidade do título.</p>
+
+			<p>O primeiro dos custos são as taxas, uma cobrada semestralmente pela Bovespa em 0,125% do valor investido e a taxa administrativa da corretora, que em muitos casos pode não existir.</p>
+
+			<p>Por outro lado, existem os impostos. O Imposto sobre Operações Financeiras (IOF) incide apenas quando o prazo da aplicação é de 30 dias. Já o Imposto de Renda se aplica de maneira regressiva sobre o rendimento do título, pelos prazos e taxas a seguir:</p> 
+			<table class="tbl-rend">
+				<tr>
+					<th>Prazo do investimento</th>	
+					<th>Alíquota de IR</th>
+				</tr>
+				<tr>
+					<td>Até 180 dias</td>
+					<td>22,50%</td>
+				</tr>
+				<tr>
+					<td>181 até 360 dias</td>
+					<td>20,00%</td>
+				</tr>			
+				<tr>
+					<td>361 até 720 dias</td>
+					<td>17,50%</td>
+				</tr>			
+				<tr>
+					<td>Acima de 720 dias</td>
+					<td>15,00%</td>
+				</tr>
+			</table>
+
+			<h2 class="font-20px">Prazos para os investimentos</h2>
+			<p>As aplicações no Tesouro Direto podem ser feitas todos os dias entre as 9h30 às 5h do dia seguinte, incluindo fins de semana e feriados.</p>
+
+			<p>Quando um título é adquirido, o prazo para a finalização da compra (liquidação) é conhecida como D+2 ou simplesmente dois dias após a compra, com o encerramento do mercado às 17h.</p>
+
+			<p>Um exemplo: se a compra for feita entre 9h30 de segunda-feira e 5h na madrugada de terça-feira, estará disponível ao investidor às 17h de quarta-feira.</p>
+
+			<p>Se o caso for uma venda antecipada do título, ou seja, antes de seu vencimento, o dinheiro da venda estará disponível na conta do investidor às 13h do próximo dia.</p>
+
+			<p>Já os rendimentos dos títulos podem ser recebidos no mesmo dia do vencimento ou dos juros semestrais, quando é o caso, pela conta da instituição financeira.</p>
+
+			<h2 class="font-20px">Vantagens e desvantagens do Tesouro Direto</h2>
+			<p>O Tesouro Direto possui como vantagens os riscos mínimos que oferecem e o fácil acesso por aplicações entre os R$ 30. Além disso, possui poucos custos em relação às taxas cobradas.</p>
+
+			<p>Apesar disso, outros ativos de renda fixa podem ser mais interessantes que os títulos públicos e devem ser comparados antes de investir. já que mesmo a poupança com taxas tão reduzidas pode apresentar maior retorno no final por não ter incidência de Imposto de Renda.</p>
+
+			<p>Para facilitar o processo de decisão, é possível encontrar um simulador no próprio site do Tesouro Direto, que inclusive faz essa comparação.</p>
+
+			<p>Um outro fator a se considerar é a liquidez diária destes títulos, pois é possível desistir do investimento antes de vencer. Porém, isso depende do preço cotado em mercado no dia pelo qual o Tesouro Direto o recompra. Neste caso o retorno pode ser maior ou menor do que o investido.</p>
+
+			<h2 class="font-20px">Como rende o Tesouro Direto?</h2>
+			<p>O investimento no Tesouro Direto pode ter diferentes rentabilidades, dependendo do tipo de título escolhido. As diferenças acontecem inicialmente pelas modalidades prefixada e pós-fixada.</p>
+
+			<p>Além disso, a rentabilidade dos títulos públicos podem ser definidas pelo prazo do investimento ou pelo preço de mercado, em caso de venda antes do vencimento.</p>
+
+			<p><strong>Prefixado</strong></p>
+
+			<p>Nos títulos públicos prefixados, o investidor sabe exatamente a rentabilidade durante o tempo em que deixar o seu dinheiro investido.</p>
+
+			<p>Durante o período que fica aplicado, a rentabilidade fixada pode ser maior ou menor do que indexadores como a taxa Selic ou o índice de inflação IPCA. Se o investidor acredita que a taxa fixada poderá ser maior que estes índices, a aplicação pode valer a pena.</p>
+
+			<p>Os prefixados são oferecidos com a rentabilidade somente na data de vencimento ou distribuída em juros semestrais. O primeiro é conhecido como Letra do Tesouro Nacional (LTN) e o segundo como Notas do Tesouro Nacional Série F (NTN-F).</p>
+
+			<p><strong>Pós-fixado</strong></p>
+
+			<p>Nos títulos pós-fixados, o investidor conhece a taxa a qual o título irá receber rentabilidade, sendo que o valor final apenas fica conhecido na data de vencimento.</p>
+
+			<p>As taxas que remuneram esta modalidade vêm de indexadores da nossa economia, podendo ser a taxa Selic, a taxa básica de juros do Brasil, ou do índice de inflação IPCA. Além do indexador, a rentabilidade é acompanhada por uma parte fixa, como por exemplo "taxa Selic + 0,03%".</p>
+
+			<p>No caso do Tesouro IPCA+, atrelado à inflação, é possível investir na modalidade com pagamento de juros semestrais.</p>
+
+			<p><strong>Prazo do investimento</strong></p>
+
+			<p>Além de diferentes modalidades, os títulos do Tesouro são negociados com diferentes vencimento dentro de cada modalidade. O ano de vencimento do título acompanha o nome que o título recebe, como por exemplo Tesouro IPCA+ 2035.</p>
+
+			<p>É possível perceber que, quanto maior o prazo do investimento, maior a taxa que remunera o título. Esta remuneração acontecerá se o investidor aguardar até à respectiva data.</p>
+
+			<p>Por outro lado, é possível resgatar o que foi investido antes do prazo de vencimento. Neste caso o Tesouro Nacional recompra o título pelo preço de mercado do dia.</p>
+
+			<p><strong>Preço de mercado</strong></p>
+
+			<p>Antes do vencimento, os títulos do governo são negociados diariamente no mercado de títulos e recebem diferentes valores conforme a oferta e procura.</p>
+
+			<p>O investidor que necessite em ter de volta parte do dinheiro investido, ou que tenha uma estratégia de investimento, pode vender o título de volta ao Tesouro.</p>
+
+			<p>Quando um resgate é feito, é preciso levar em consideração os custos que acarretam, como os impostos e uma taxa da B3, a Bolsa de Valores brasileira.</p>
+
+			<p>Sendo feito o resgate em menos de 30 dias do investimento, existe incidência de IOF. Já no Imposto de Renda, a tributação é feita de maneira regressiva, começando nos 22,5% sobre o lucro para menos de 6 meses de aplicação.</p>
+
+			<h2 class="font-20px">Como calcular a rentabilidade do Tesouro Direto</h2>
+			<p>A rentabilidade de títulos prefixados pode ser calculada imediatamente com a taxa prometida ao título desde o começo da aplicação.</p>
+
+			<p>Para os pós-fixados já não é possível prever a sua rentabilidade, pois os indexadores utilizados deverão tomar diferentes valores durante o investimento.</p>
+
+			<p>O próprio Tesouro Nacional disponibiliza uma <a style="color:blue;" href="https://www.tesourodireto.com.br/titulos/calculadora.htm">calculadora</a> online que permite realizar uma simulação dos valores investidos para o título selecionado.</p>
+
+			<p>Neste site é disponibilizada uma tabela com os títulos negociados e os vencimentos de cada título, bem como as suas taxas atuais. Se a opção é por um pós-fixado, será preciso preencher os valores atuais da taxa Selic ou do IPCA.</p>
+
+			<h2 id="tesouro-selic" class="font-20px">O que é Tesouro Direto Selic?<a style="color: blue; font-size: 12px;" href="#pos-fixado-selic"><sub> pós-fixado</sub></a></h2>
+			<p>Através dos Títulos Públicos Federais, o governo consegue arrecadar recursos para serem investidos em projetos do setor público.</p>
+
+			<p>A emissão destes títulos funciona como um empréstimo feito ao Estado, onde o investidor recebe uma rentabilidade após um período. Neste caso, é considerado um investimento em renda fixa.</p>
+
+			<p>Esta rentabilidade em renda fixa pode ser totalmente definida (prefixada) ou ser um misto de uma taxa fixa mais um indicador da economia, conhecida como pós fixada.</p>
+
+			<p>O "Tesouro Selic" é um dos que podem ser encontrados entre os pós-fixados. Sua rentabilidade vem de uma componente fixa mais a taxa Selic, conhecida por ser a taxa básica de juros da economia, decidida pelo Banco Central.</p>
+
+			<h2 class="font-20px">Como funciona o Tesouro Selic</h2>
+			<p>Tesouro Selic é como é mais conhecida a Letra Financeira do Tesouro Nacional (LFT) que pode ser adquirida na plataforma do Tesouro Direto. Esta é uma forma muito simples de se investir em títulos do governo, sendo que pode ser feito por meio da internet para qualquer pessoa física.</p>
+
+			<p>A rentabilidade deste título é pós-fixada, o que significa que o rendimento real só será conhecida ao final do período após alterações da taxa básica de juros do Banco Central. Este valor é dado pela variação da taxa Selic entre a compra e o vencimento do título.</p>
+
+			<p>Este e outros títulos do Tesouro são classificados de acordo com as suas rentabilidades e o ano de vencimento. Alguns ainda são identificados pelo pagamento de juros semestrais, e não só ao final no seu vencimento, porém este não é o caso dos títulos remunerados à Selic.</p>
+
+			<p>A rentabilidade da LFT ainda acompanha uma taxa fixa que pode aumentar ou diminuir o rendimento final do título. Havendo muita procura, o Tesouro pode fixar esta taxa de modo a criar um ágio e diminuir o seu rendimento. Do contrário, a taxa acresce um rendimento acima da taxa efetiva da Selic no período.</p>
+
+			<h2 class="font-20px">Como investir no Tesouro Selic</h2>
+			<p>O Tesouro Selic é um dos títulos encontrados na plataforma online do Tesouro Direto. Os outros são os Prefixados (LTN), Prefixados com juros semestrais (NTN-F) e pós-fixado com base no IPCA, a inflação oficial do Brasil. Este último pode ser encontrado com juros semestrais (NTN-B) ou deixando o capital todo para o vencimento (NTN-B Principal).</p>
+
+			<p>Para investir no Tesouro Direto é preciso estar cadastrado através de um banco ou corretora autorizados. Este cadastro pode ser feito pela plataforma da instituição financeira escolhida, sendo o mesmo local onde é possível começar a investir.</p>
+
+			<p>Os títulos são negociados a preço unitário, porém é possível ao investidor adquirir apenas uma parte do título. Por este motivo é que o Tesouro Direto é considerado acessível, pois permite investir com valores bem reduzidos a partir dos R$ 30.</p>
+
+			<p>Além disso, uma das vantagens ao investidor é a liquidez oferecida. Isso porque o próprio Tesouro adquire os títulos através do mercado de títulos quando, por exemplo, o investidor precisa reaver o dinheiro antes do vencimento.</p>
+
+			<p>No final, quando é chegada a data do vencimento, o investidor recebe de volta o valor investido (principal) mais a rentabilidade. O valor líquido é obtido após descontos ao imposto de renda e as taxas da financeira e da B3.</p>
+
+			<h2 class="font-20px">Taxa Selic</h2>
+			<p>A taxa <a style="color:#1d9e04; text-decoration: underline;" href="selic.html">Selic</a> é a taxa de juros básica da economia brasileira, decidida habitualmente a cada 45 dias pelo Banco Central através do Comitê de Política Monetária (COPOM).</p>
+
+			<p>Essa taxa vem do Sistema Especial de Liquidação e de Custódia (SELIC) do Banco Central. Este sistema funciona de maneira informatizada e se destina às operações de registro, custódia e liquidação dos títulos públicos federais.</p>
+
+			<p>A decisão desta taxa de juros afeta a economia de diferentes formas e serve como referência para as taxas do mercado financeiro. Mesmo a tradicional poupança possui a sua rentabilidade atrelada a esta taxa, porém a uma proporção inferior.</p>
+
+			<p>Na economia, a taxa Selic pode influenciar a taxa de inflação, as taxas de câmbio e até mesmo o consumo da população.</p>
+
+			<h2 id="tesouro-ipca+" class="font-20px"> O que é Tesouro IPCA? Saiba como funciona e como investir<a style="color: blue; font-size: 12px;" href="#pos-fixado-selic"><sub> pós-fixado</sub></a></h2>
+			<p>Os Títulos Públicos Federais são uma das formas que o governo federal utiliza para arrecadar recursos para serem utilizados em projetos públicos.</p>
+
+			<p>Quem compra estes títulos empresta dinheiro ao governo, obtendo em troca uma rentabilidade fixa até o vencimento estabelecido. Sendo assim, acaba por ser um investimento em renda fixa para o investidor.</p>
+
+			<p>Esta rentabilidade em renda fixa pode ser totalmente definida (prefixada) ou ser um misto de uma taxa fixa mais um indicador da economia. Um destes indicadores é o IPCA, a taxa de inflação oficial do Brasil.</p>
+
+			<h2 class="font-20px">Como funciona o Tesouro IPCA</h2>
+			<p>O Tesouro Direto é uma das formas mais práticas que o público geral consegue adquirir títulos do governo e pode ser feito por meio da internet. Os títulos oferecidos são classificados de acordo com as rentabilidades e os seus vencimentos.</p>
+
+			<p>Títulos como o Tesouro IPCA são conhecidos como pós-fixados, já que além da componente fixa sua rentabilidade varia com a inflação observada durante o tempo.</p>
+
+			<p>Os juros do Tesouro IPCA são pagos em duas modalidades: somente no final do período anunciado ou em juros semestrais, conhecidos como os cupons. No primeiro, os juros vão se acumulando até o ano de vencimento do título.</p>
+
+			<p>Já com o pagamento de cupons, estes são feitos a cada 6 meses e funcionam como juros antecipados. No final do período, são pagos o último cupom e o valor investido com a sua rentabilidade.</p>
+
+			<p>Na classificação do Tesouro, os títulos indexados ao IPCA que pagam cupons semestrais são conhecidos como NTN-B (Notas do Tesouro Nacional-Série B). O título sem pagamento de cupons é conhecido como NTN-B Principal.</p>
+
+			<p>Essa forma de investimento em renda fixa pode ser indicada para investidores de perfil conservador, que buscam uma rentabilidade a longo prazo. Além disso, este título oferece sempre um rendimento real, acima da inflação, dado pela componente fixa dos juros.</p>
+
+			<p>Uma das vantagens do investimento nestes títulos é a sua liquidez. Isso porque o próprio Tesouro faz a recompra dos títulos antes do vencimento, podendo o investidor recuperar o dinheiro com facilidade caso seja preciso.</p>
+
+			<h2 class="font-20px">Como investir no Tesouro IPCA</h2>
+			<p>O Tesouro IPCA é um dos títulos encontrados na plataforma online do Tesouro Direto. Os outros são os Prefixados (LTN), Prefixados com juros semestrais (NTN-F) e pós-fixado com base na taxa Selic (LFT).</p>
+
+			<p>Os títulos do Tesouro são negociados a preços unitários, porém permite ao investidor adquirir apenas uma parte do título. Com isso, é possível investir no Tesouro Direto com valores bem acessíveis, normalmente a partir dos R$ 30.</p>
+
+			<p>O investimento no Tesouro Direto é feito através de uma conta bancária ou em uma corretora pelo qual é movimentado o aporte inicial. O cadastro do investidor no Tesouro Direto é feito pela plataforma da instituição financeira escolhida, sendo o mesmo local onde é possível começar a investir.</p>
+
+			<h2 class="font-20px">Índice IPCA</h2>
+			<p>O <a style="color:#1d9e04; text-decoration: underline;" href="ipca.html">IPCA</a> é o Índice de Preços ao Consumidor Amplo medido pelo IBGE. Este é o índice considerado como a inflação oficial da economia brasileira.</p>
+
+			<p>Assim como outros índices de preços, o IPCA é obtido a partir do nível de preços de uma cesta de bens escolhida pelo instituto.</p>
+
+			<p>Para este índice são coletados, durante os dias de cada mês, os preços dos bens adquiridos por famílias que possuem de 1 a 40 salários mínimos.</p>
+
+			<p>Cada produto ou serviço observado possui um peso categorizado e com estes valores são definidos um nível. No primeiro período de análise o índice recebe o valor de 100.</p>
+
+			<p>Nos períodos seguintes, observando os preços da mesma cesta de bens o índice pode receber outro valor que considera o seu novo nível. Se este novo valor é maior que o anterior, significa que houve inflação no período.</p>
+
+			<p>A porcentagem de variação deste índice é o que conhecemos como a taxa de inflação, ou simplesmente inflação, que faz parte do rendimento do Tesouro IPCA junto de sua componente fixa.</p>
+
+			<hr>
+
+			<h2 class="font-20px">O que é o Tesouro Direto?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Exame invest</sub></h2>
+			<p>O <strong>Tesouro Direto</strong> é um programa do governo federal para democratizar o acesso aos investimentos em títulos da dívida pública. A iniciativa surgiu de uma parceria entre o Tesouro Nacional e a B3, em 2002. Desde então, mais de 9 milhões de brasileiros aplicaram recursos nos títulos públicos.</p>
+
+			<p>Na prática, investir no Tesouro Direto <strong>é como emprestar dinheiro para o governo</strong>. São títulos de renda fixa que envolvem risco mínimo, já que são emitidos pelo Tesouro Nacional, oferecendo alta liquidez e exigindo aporte mínimo de baixo valor, de cerca de 40 reais.</p>
+
+			<p>Por causa desse conjunto de características, o Tesouro Direto se tornou uma das principais portas de <strong>saída da poupança para quem quer começar a investir</strong> na renda fixa com segurança.</p>
+
+			<h2 class="font-20px">Como investir no Tesouro Direto?</h2>
+			<p>Para investir no Tesouro Direto é necessário ter uma conta em uma corretora de investimentos ou em um banco. O passo seguinte é fazer o cadastro para o acesso à plataforma do Tesouro Direto.</p>
+
+			<p>Com o cadastro feito, basta que o investidor escolha o título e o valor a ser investido. É possível fazer aplicações e acompanhar os investimentos na própria corretora ou banco, no site e no aplicativo oficial do Tesouro Direto.</p>
+
+			<h2 class="font-20px">É possível ter prejuízo no Tesouro Direto?</h2>
+			<p>Os títulos do Tesouro Direto possuem vencimento em datas pré-estabelecidas, mas são investimentos de liquidez diária. Isso significa que é possível resgatá-los antes do prazo. No entanto, o investidor que decide se desfazer de seus títulos antes do vencimento estará, na verdade, revendendo esses ativos no mercado secundário.</p>
+
+			<p>O valor de cada título será definido pelas condições econômicas no momento da revenda, e o cálculo desse preço é chamado de <strong>marcação a mercado</strong>. Na prática, a marcação a mercado define quanto o investidor está disposto a pagar na compra de um título de outro investidor.</p>
+
+			<p>Existem diversos fatores que influenciam direta ou indiretamente o valor dos títulos do Tesouro Direto no mercado. Os principais são o valor da taxa Selic, usada para calcular o rendimento dos títulos do Tesouro Selic, e o IPCA, indexador de retorno dos títulos do tipo IPCA+.</p>
+
+			<p>Embora não sejam indexados por nenhum indicador, os títulos prefixados também sofrem influência do cenário de juros básicos do país. Quando há uma tendência de queda nos juros, os títulos prefixados tendem a ter condições melhores de venda. Quando o oposto acontece, o investidor que decide se desfazer dos títulos antes do prazo pode recolher um retorno menor.</p>
+
+			<p>Períodos de instabilidade que tornam mais difícil prever a trajetória dos juros e da inflação tendem a penalizar todos os títulos do Tesouro Direto. Se não conseguem estimar o rendimento das aplicações, os investidores tendem a exigir "prêmios" maiores na compra dos títulos, o que faz com que o valor dos ativos caia no mercado secundário.</p>
+
+			<h2 class="font-20px">É seguro investir no Tesouro Direto?</h2>
+			<p>Por serem emitidos pelo governo federal, os títulos do Tesouro Direto são considerados a aplicação mais segura do mercado. O pagamento da dívida pública é tarefa primordial da União, e por isso a chance de default (não pagamento) dos títulos é mínima.</p>
+
+			<p>Por terem essa garantia forte já na origem, os títulos do Tesouro Direto não são cobertos pelo Fundo Garantidor de Crédito. Outras aplicações, como os CDBs, são cobertos por esse fundo, que serve como um seguro para os recursos dos investidores.</p>
+
+			<p>Dito isso, é importante que o investidor entenda que a própria volatilidade dos títulos pode incorrer em perdas a depender das condições de resgate, conforme já explicamos.</p>
+
+			<h2 class="font-20px">Quais são os custos, os tributos e as taxas para investir no Tesouro Direto?</h2>
+			<p>No Tesouro Direto, o desconto de Imposto de Renda é regressivo e cobrado sobre o rendimento do título, seguindo a tabela de prazos abaixo:</p>
+			<table class="tbl-rend">
+				<tr>
+					<th>Prazo</th>	
+					<th>Alíquota</th>
+				</tr>
+				<tr>
+					<td>Até 180 dias</td>	
+					<td>22,5%</td>
+				</tr>
+				<tr>
+					<td>Entre 180 e 360 dias</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Entre 360 e 720 dias</td>
+					<td>17,5%</td>
+				</tr>
+				<tr>
+					<td>Acima de 720 dias</td>
+					<td>15%</td>
+				</tr>
+			</table>
+
+			<p>Em caso de retiradas antes de completar 30 dias, os rendimentos também sofreram a incidência do IOF, o Imposto sobre Operações Financeiras. A tabela possui alíquotas regressivas de acordo com o prazo de permanência e começa com 96%. A partir do 30º dia do investimento, o resgate fica isento de cobrança de IOF.</p>
+
+			<h2 class="font-20px">Taxas para investir no Tesouro Direto</h2>
+			<p>Os títulos do Tesouro Direto estão sujeitos ao pagamento de:</p>
+
+			<p><strong>Taxa de custódia da B3</strong></p>
+
+			<p>Quem investe no Tesouro Direto precisa pagar uma taxa no valor de 0,25% ao ano sobre todo o valor aplicado, cobrada semestralmente, na ocorrência de resgate antecipado ou no pagamento de juros semestrais.<p>
+
+			<p>Essa taxa é referente aos serviços de guarda dos títulos e às informações e movimentações do saldo e será cobrada proporcional ao período em que o investidor carregar o título. Ela é cobrada até o saldo de 5 milhões de reais por conta de custódia. Investimentos de até 10.000 reais por investidor no Tesouro Selic estão isentos.<p> 
+
+			<p><strong>Taxa de custódia da instituição financeira</strong></p>
+			<p>A taxa cobrada pela instituição financeira que faz a custódia dos títulos é livremente acordada com o investidor. Essa taxa pode ser anual ou por operação.</p>
+
+			<p>A maioria das corretoras e bancos não exige uma taxa de custódia dos investidores, cobrando apenas a tarifa que é determinada pela B3. É importante que o investidor busque instituições que não fazem essa cobrança, já que a operação dos títulos é a mesma em qualquer plataforma.</p>	
+
+			<h2 class="font-20px">Quais são os títulos do Tesouro Direto?</h2>
+			<p>Em 2015, o Tesouro Nacional mudou algumas regras de investimento do Tesouro Direto, para atrair mais investidores. A liquidez dos títulos passou a ser diária e os nomes dos papéis foram alterados.</p> 
+
+			<p>Existem cinco tipos de títulos do Tesouro Direto negociados para pessoas físicas:</p>
+
+			<p style="color: #292827;" class="lis-rfx"><strong>• Tesouro Prefixado</strong></p>
+			<p style="color: #292827;" class="lis-rfx"><strong>(antiga Letra do Tesouro Nacional, ou LTN)</strong></p>
+			<p>Como o próprio nome sugere, esses títulos têm o rendimento determinado no momento da contratação. Ou seja: os investidores já conhecem a taxa de retorno no momento da aplicação de recursos e podem calcular quanto receberão no vencimento do título.</p>
+
+			<p>Atualmente, existem dois tipos de LTN disponíveis no mercado: um com vencimento em 2024 e outro em 2026.</p>
+
+			<p style="color: #292827;" class="lis-rfx"><strong>• Tesouro Prefixado com juros semestrais</strong></p>
+			<p style="color: #292827;" class="lis-rfx"><strong>(antiga Nota do Tesouro Nacional - Série F, ou NTN-F)</strong></p>
+
+			<p>Assim como as LTNs, os títulos prefixados com juros semestrais também firmam a taxa de retorno no momento da aplicação. A diferença, no entanto, é o pagamento desse rendimento.</p>
+
+			<p>Nas NTN-Fs há o pagamento dos juros semestrais. Os juros semestrais são o rendimento acumulado do título nos últimos seis meses. Isso significa que o investidor recebe parte do retorno periodicamente, ao invés de receber tudo no vencimento ou no resgate do título.</p>
+
+			<p>Vale lembrar que esse juro semestral é tributado de acordo com a tabela regressiva do Imposto de Renda, e que por ser um rendimento de curto prazo sofre a cobrança máxima de 22,5%.</p>
+
+			<p>Existe apenas um tipo de NTN-F negociada no mercado, com vencimento em 2031.</p>
+
+			<p style="color: #292827;" class="lis-rfx"><strong>• Tesouro Selic</strong></p>
+			<p>O Tesouro Selic (antiga Letra Financeira do Tesouro, ou LFT) é um título com rendimento pós-fixado determinado pela taxa básica de juros da economia, a Selic. A fórmula de cálculo é: a meta estabelecida para a Selic no período + um pequeno percentual de prêmio. Esse percentual costuma ficar abaixo de 0,5%, o que significa que as LFTs acompanham de perto o valor do juro básico.</p>
+
+			<p>Esses títulos possuem alta liquidez e pouca volatilidade, e por isso são bastante requisitados para a composição da reserva de emergência. Caso decida vender o título antes do resgate, dificilmente o investidor terá um retorno menor que o da própria taxa básica de juros.</p>
+
+			<p>O Tesouro negocia LFTs com vencimento em 20, atualmente.</p>
+
+			<p style="color: #292827;" class="lis-rfx"><strong>• Tesouro IPCA+</strong></p>
+			<p>Antiga Nota do Tesouro Nacional - Série B Principal, ou NTN-B Principal, esses são os títulos mais diversos e com maior volume de aplicações do Tesouro, correspondendo a aproximadamente 40% de todo o valor custodiado. O rendimento do Tesouro IPCA+ é pós-fixado, e seu valor é determinado pelo Índice de Preços ao Consumidor Amplo (IPCA), calculado mensalmente pelo IBGE, somado a um prêmio percentual.</p>
+
+			<p>Por estarem atrelados ao principal indicador inflacionário do país, esses títulos oferecem ao investidor a defesa contra o reajuste de preços de produtos e serviços. Isso significa que o patrimônio desse investidor estará protegido da própria desvalorização da moeda -- isso, claro, se ele carregar o título até o vencimento.</p>
+
+			<p>Os títulos Tesouro IPCA+ negociados atualmente têm data de resgate em 2026, 20. Os que vencem em prazo maior possuem mais volatilidade e, por isso, não são indicados para os investidores conservadores ou para quem vislumbra um resgate em curtíssimo prazo.</p>
+
+			<p style="color: #292827;" class="lis-rfx"><strong>• Tesouro IPCA+ com juros semestrais</strong></p>
+			<p>Também chamados de antiga Nota do Tesouro Nacional - Série B, ou NTN-B. A fórmula de cálculo do rendimento das NTN-Bs é a mesma dos títulos IPCA+, o que muda é a forma de pagamento do rendimento. O investidor que detêm títulos desse tipo receberá semestralmente o retorno proporcional acumulado, já com o desconto do Imposto de Renda.</p>
+
+			<p>Atualmente, os títulos do Tesouro IPCA+ com juros semestrais negociados no mercado têm vencimento em 2030, 20.</p>
+
+			<p style="color: #292827;" class="lis-rfx"><strong>• Tesouro IGP-M+ com juros semestrais</strong></p>
+			<p>O Tesouro IGP-M+ (antiga Nota do Tesouro Nacional - Série C, ou NTN-C) é um título pós-fixado, cujo retorno é calculado pelo Índice Geral de Preços ao Mercado, mensurado mensalmente pela Fundação Getulio Vargas. Por ser um título indexado a um índice inflacionário, os títulos do Tesouro IGP-M+ também oferecem ao investidor a proteção contra o avanço dos preços e serviços no país.</p>
+
+			<p>É importante dizer, no entanto, que as NTN-Cs não são mais emitidas pelo Tesouro e, por isso, só podem ser encontradas no mercado secundário. As opções disponíveis têm vencimento em 2021 e em 2031.</p>
+
+			<p>Ainda assim, o investidor que tiver interesse nesses ativos vai passar por uma verdadeira "caça ao Tesouro", pois o volume disponível é muito pequeno (correspondendo a aproximadamente 0,1% dos títulos custodiados no Tesouro Direto).</p>	
+
+			<h2 class="font-20px">Qual a diferença entre o Tesouro IPCA+ e o Tesouro IGP-M+?</h2>
+			<p>A diferença essencial entre os títulos IPCA+ e IGP-M+ é o índice usado para calcular o rendimento. Ambos têm como referência um índice inflacionário: o IPCA é o indexador das NTN-Bs e o IGP-M é o indexador das NTN-Cs.</p>
+
+			</p>Apesar de terem a mesma função -- a de medir o custo dos produtos e serviços no país -- esses índices possuem desempenho diferente.</p>
+
+			<p>Como o gráfico mostra, o IGP-M tem uma trajetória bem mais volátil que o IPCA, chegando a fechar no negativo em alguns anos, como 20. Por outro lado, o IGP-M acelerou frente ao IPCA em diversas ocasiões, como em 1999, 20. No ano passado, o índice registrou alta de 23,1%.</p>
+
+			<p>Essa alta alimentou a busca pelos títulos IGP-M+  do Tesouro Direto em 2020, o que turbinou o valor dos títulos no mercado secundário. As NTN-Cs com rendimento em 2021 tiveram uma valorização de 23% e as com vencimento em 2031 subiram 21%, de acordo com o balanço de rentabilidade informado pelo Tesouro.</p>
+
+			<p>Para decifrar a disparada do IGP-M é importante entender a composição do índice. Por acompanhar os custos para o mercado, o IGP-M sofre uma influência maior do câmbio. Ou seja: em anos em que o dólar dispara, o indicador tende a subir junto, e o oposto acontece quando o real se valoriza.</p>
+
+			<p>Já o IPCA tem um peso maior de produtos e serviços ligados ao dia-a-dia dos brasileiros, como alimentação, transporte e moradia. O indicador do IBGE costuma ser um retrato mais fiel do custo de vida nacional.</p>
+
+			<h2 class="font-20px">Estatísticas do Tesouro Direto</h2>
+			<p>Em balanço divulgado no final de 2020, o Tesouro informou que mais de 9,2 milhões de brasileiros tinham cadastro no programa de negociação de títulos públicos, sendo que aproximadamente 1,5 milhão estão ativos -- ou seja, ainda possuem algum saldo investido no Tesouro Direto.</p>
+
+			<p>A maioria dos investidores cadastrados é composta por homens (67% do total) e tem entre 26 e 35 anos (36% do total). As regiões que concentram mais brasileiros com aplicações em títulos públicos são o Sudeste (58%) e o Sul (15%).</p>
+
+			<p>Os títulos com maior representatividade no Tesouro Direto são os indexados pelo IPCA.</p>
+
+			<h2 class="font-20px">Simulador de Tesouro Direto</h2>
+			<p>O Tesouro Nacional oferece uma plataforma online para os investidores que querem entender melhor como funcionam as aplicações em títulos públicos. O Simulador do Tesouro Direto informa quais aplicações estão disponíveis atualmente no mercado, quais são as taxas, o retorno, o valor mínimo de aplicação e o preço unitário de cada título.</p>
+
+			<p>O rendimento dos títulos varia diariamente e acompanha uma série de indicadores (inflação, Selic e curva futura de juros). Embora sejam aplicações de renda fixa, a maioria dos títulos do Tesouro Direto possui volatilidade e pode, inclusive, ter rendimento negativo no mercado de revenda.</p>
+
+			<p>Embora os títulos tenham preço unitário que parte de 700 reais, é possível investir no Tesouro com aplicações a partir dos 40 reais. Isso porque a B3 permite a compra de frações de um título.</p>
+
+			<p>Confira o <a style="color: blue;" href="https://www.tesourodireto.com.br/simulador/">Simulador do Tesouro Direto no site do Tesouro Nacional</a>.</p>
+
+			<h2 class="font-20px">Tesouro Direto ou poupança?</h2>
+			<p>A caderneta de poupança continua sendo preferência de boa parte dos investidores conservadores, apesar de ser uma opção com menos vantagens. Veja abaixo as principais diferenças do Tesouro Direto e da poupança.</p>
+
+			<p><strong>Emissão</strong></p>
+			<p>A poupança é um produto ofertado pelos bancos para financiar o Sistema Financeiro de Habitação (SFH). Os recursos captados pelas instituições financeiras são usados para custear o financiamento de imóveis para pessoas físicas. Portanto, assim como os CDBs, por trás da poupança estão as instituições financeiras.</p>
+
+			<p><strong>Liquidez</strong></p>
+			<p>Tanto a poupança quanto o Tesouro Direto possuem liquidez diária. No entanto, as aplicações na caderneta não estão sujeitas à volatilidade.</p>
+
+			<p><strong>Rendimento</strong></p>
+			<p>O retorno das aplicações da poupança é determinado por duas regras. São elas:</p>
+
+			<ul class="lis-rfx">
+				<li>• Quando a taxa Selic estiver abaixo de 8,5% ao ano, todas as aplicações da poupança feitas a partir de maio de 2012 rendem o equivalente a 70% do CDI + a Taxa Referencial, que atualmente está zerada.</li>
+				<li>• Quando a Selic estiver acima de 8,5% ao ano, as aplicações renderão 0,5% ao mês + a Taxa Referencial. Essa regra vale também para as aplicações feitas antes de maio de 2012, independentemente do valor atual da taxa Selic.</li>
+			</ul>
+
+			<p>No entanto, é importante lembrar que a poupança remunera de acordo com os aniversários. Isso significa que o investidor só colherá os ganhos mensalmente. Se ele fizer uma aplicação no 1º dia e sacar no 29º, não haverá o pagamento de rendimentos.</p>
+
+			<p>No Tesouro Direto, o cálculo do rendimento acontece em qualquer período.</p>
+
+			<p><strong>Risco</strong></p>
+			<p>O risco da poupança é similar ao dos CDBs, já que as instituições que ofertam a caderneta são os bancos. Os depósitos na poupança também são cobertos pelo FGC.</p>
+
+			<p><strong>Tributação</strong></p>
+			<p>Ao contrário do Tesouro Direto, o rendimento da poupança é isento de Imposto de Renda. No entanto, por oferecer um percentual menor de retorno, a isenção não costuma oferecer benefício no cálculo do rendimento líquido da aplicação.</p>
+
+			<h2 class="font-20px">Quais são os horários para investir no Tesouro Direto?</h2>
+			<p>A B3, plataforma que operacionaliza a negociação dos títulos públicos, definiu horários para que os investidores façam resgates e aplicações no Tesouro Direto. É possível fazer a compra e venda de títulos das 9h30 às 18h de dias úteis, e os preços serão determinados no momento da operação.</p>
+
+			<p>Também é possível fazer ordens de compra e venda das 18h às 5h, mas a operação só será concluída na abertura do mercado, às 9h30 do próximo dia útil, com os preços vigentes nesse horário.</p>
+
+			<p>O sistema do Tesouro Direto entra em manutenção diária das 5h às 9h30, e não é possível negociar durante esse intervalo.</p>
+
+			<p>A B3 pode suspender a negociação de títulos a qualquer momento, de acordo com condições do mercado. Isso acontece, por exemplo, quando há uma discrepância grande entre as taxas de compra (oferecidas por quem tem interesse na aquisição dos títulos) e as taxas de venda (oferecidas por quem tem interesse na venda dos títulos).</p>
+
+			<p>Nesse caso, a negociação pode ser paralisada até que haja normalização das taxas. É um mecanismo parecido com o <em>circuit breaker</em>, acionado quando há uma alta ou queda intensa das ações da bolsa de valores. No entanto, ao contrário do <em>circuit breaker</em> a suspensão da negociação do Tesouro Direto não tem prazo definido e pode durar horas.</p>
+
+			<h2 class="font-20px">Tesouro Direto ou CDB?</h2>
+
+			<p>É comum que os investidores fiquem na dúvida de qual aplicação escolher na hora de formar a reserva de emergência ou de compor a parcela de renda fixa da carteira. Os títulos do Tesouro Direto e os Certificados de Depósito Bancário (CDB) podem servir para os dois propósitos, mas guardam uma série de diferenças.</p>
+
+			<p><strong>Emissão</strong></p>
+			<p>Enquanto os títulos do Tesouro do Direto são emitidos pelo governo federal, os CDBs são emitidos por instituições financeiras, como bancos, financeiras e entidades de crédito. O propósito dos dois ativos é o mesmo: financiar a operação de seus emissores.</p>
+
+			<p><strong>Liquidez</strong></p>
+			<p>Tanto os títulos públicos quanto os CDBs têm prazos determinados de vencimento. No entanto, o Tesouro Direto oferece liquidez diária para suas aplicações, mesmo aquelas que vencem no longo prazo, em 20 ou 30 anos. Já os CDBs são diferentes: o prazo de vencimento pode ser um impeditivo para o resgate antecipado.</p>
+
+			<p>Existem muitas opções de CDBs com liquidez diária, mas a maioria dos títulos possui vencimento em períodos que variam de 1 a 5 anos. Não existe um resgate antecipado dessas aplicações. O que as corretoras fazem é tentar repassar os títulos de um investidor para o outro no mercado secundário.</p>
+
+			<p>O resgate de CDBs antes do prazo não é recomendado, pois pode resultar em perdas até mesmo do valor investido inicialmente, a depender da procura pelo ativo.</p>
+
+			<p><strong>Rendimento</strong></p>
+			<p>Assim como os títulos do Tesouro Direto, os CDBs podem ter rendimento prefixado e pós-fixado. Existem CDBs com rendimento calculado pelo IPCA, mas a maioria dos pós-fixados tem como referência o CDI, índice usado para determinar o retorno de aplicações de renda fixa.</p>
+
+			<p>O cálculo do rendimento dos CDBs é apresentado como um percentual do CDI -- por exemplo: 100%, 110%, 120% do CDI.</p>
+
+			<p>O CDI acompanha as flutuações da taxa básica de juros, e por isso seu valor costuma ser bem próximo ao da própria Selic. Com a Selic em 2% ao ano, um CDB com retorno de 110% do CDI deverá render aproximadamente 2,2% em 12 meses.</p>
+
+			<p>Já o Tesouro Direto usa a taxa Selic, o IPCA e o IGP-M como indexadores para os títulos pós-fixados.</p>
+
+			<p><strong>Risco</strong></p>
+			<p>Como já mencionamos, os títulos do Tesouro Direto são considerados os mais seguros do mercado, justamente por terem como garantia o próprio governo federal. Isso significa que mesmo os CDBs emitidos pelos maiores bancos têm um risco maior do que os títulos públicos.</p>
+
+			<p>Apesar disso, é importante dizer que os CDBs contam com a cobertura do Fundo Garantidor de Crédito. O FGC garante a restituição de valores de aplicações financeiras com valor de até 250 mil reais por CPF ou por CNPJ em caso de falência das instituições financeiras.</p>
+
+			<p><strong>Tributação</strong></p>
+			<p>Tanto os CDBs quanto os títulos do Tesouro Direto sofrem tributação no resgate ou no pagamento de juros semestrais, de acordo com a tabela regressiva do Imposto de Renda.</p>
+
+			<div>
+				<h2 class="origem">Fontes:</h2>
+				<p><a class="origem" href="https://www.dicionariofinanceiro.com/tesouro-direto/" target="_blank">Dicionário Financeiro</a></p>
+				<p><a class="origem" href="https://invest.exame.com/guia/o-que-e-o-tesouro-direto" target="_blank">Exame invest</a></p>
+			</div>
+
+		</article>
+		</section>
+	</main>
+    
+<footer>
+ <div class="content-footer">
+   <div class="left box">
+     <div class="upper">
+       <div class="topic">Links</div>  
+          <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
+
+          <div class="banner-footer">
+              <p>
+              	<a href="index.html"><img alt="Páginas" src="imgs/logo-1.png"></a>
+				<a href="https://mlssystem.github.io/favcrypto/#noticias">Notícias</a>
+				<a href="https://mlssystem.github.io/favcrypto/#precos">Preços</a>
+				<a href="https://mlssystem.github.io/favcrypto/#exchanges">Exchanges</a>
+				<a href="https://mlssystem.github.io/favcrypto/#capitalizacao">Capitalização</a>
+				<a href="https://mlssystem.github.io/favcrypto/#arbitragem">Arbitragem</a>
+				<em>Outros Sites:</em>
+				<a href="https://mlssystem.github.io" target="_blank">MLSSystem</a>
+				<a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a>
+				<a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a>
+				<a href="https://mlssystem.github.io/linksuteis" target="_blank">Links Úteis</a>
+				<a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a>
+              </p>
+          </div>
+     </div>
+   </div>
+   <div class="middle box">
+     <div class="topic">Favoritos</div>
+     	<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html"><img alt="Páginas" src="imgs/logo-favoritos-64.PNG"></a></div>
+		<div><a href="renda-fixa.html" target="_blank">Renda Fixa</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-variavel" target="_blank">Renda Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#fixa-variavel" target="_blank">Fixa e Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#perfil" target="_blank">Perfil do Investidor</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#indices" target="_blank">Índices</a></div>
+		<em>Outros Sites:</em>
+		<div><a href="https://mlssystem.github.io" target="_blank">MLSSystem</a></div>
+		<div><a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a></div>
+		<div><a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a></div>
+		<div><a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a></div>
+   </div>
+   <div class="right box">
+     <div class="topic">Inscreva-se</div>
+     <form action="#">
+       <input type="text" placeholder="Em desenvolvimento">
+       <input type="submit" name="" value="Inativo">
+       <div class="media-icons">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       </div>
+     </form>
+     <div class="lower">
+       <div class="topic">Contato</div>
+       <div class="phone">
+         <a href="#"><i class="fas fa-phone-volume"></i>+55 DD 98765 4321</a>
+       </div>
+       <div class="email">
+         <a href="#"><i class="fas fa-envelope"></i>abc@email.com</a>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="bottom">
+   <p>Copyright © 2021 <a href="https://github.com/mlssystem">MLSSystem</a> Todos direitos reservados</p>
+ </div>
+</footer>
+</body>
+</html>
