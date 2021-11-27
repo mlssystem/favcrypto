@@ -8,7 +8,7 @@
 	<meta name="description" content="Conteúdo referente ao mercado de criptomoedas, e o mercaddo financeiro tradicional">
     <meta name="keywords" content="Mercado Financeiro, Mercado Tradicional, Criptomoedas, Noticias, Preços Plataformas de capitalizacao, Exchanges">
     <meta name="author" content="marcus">
-	<link rel="icon" type="image/png" href="imgs/favicon.png"/>
+	<link rel="icon" href="imgs/logo_fav_crypto.ico"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com/">
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
@@ -138,6 +138,14 @@
 							<ol class="how_to_buy" style="min-height: 220px;">
 								<li><a href="https://coinarbitragebot.com/pt/" target="_blank">CoinArbitrageBot </a></li>
 								<li><a href="https://cointradermonitor.com/arbitragem/" target="_blank">CointraderMonitor </a></li>
+							</ol>
+						</div>
+					</li>
+					<li id="arbitragem" class="relative"><button type="button" class="w-full py-7 lg:py-8 text-left focus:outline-none text-gray-900 flex items-center justify-between text-xl lg:text-2xl" @click="selected !== 5 ? selected = 5 : selected = null"><h3 class="text-lg lg:text-xl font-medium">Etherscan</h3><svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: selected == 5, &#39;rotate-0&#39;: selected != 5}" class="inline w-6 h-6 lg:w-7 lg:h-7 ml-4 lg:ml-5 flex-shrink-0 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button><div class="relative overflow-hidden transition-all max-h-0 duration-300" x-ref="container4" x-bind:style="selected == 5 ? &#39;max-height: &#39; + $refs.container4.scrollHeight + &#39;px&#39; : &#39;&#39;" style="">
+						<div class="pb-8 lg:pb-9 text-sm lg:text-base text-gray-700" style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin-bottom: 10px; color: #184abb;">
+							<ol class="how_to_buy" style="min-height: 220px;">
+								<li><a href="https://bscscan.com/" target="_blank">BscScan </a></li>
+								<li><a href="https://etherscan.io/" target="_blank">Etherscan </a></li>
 							</ol>
 						</div>
 					</li>						
