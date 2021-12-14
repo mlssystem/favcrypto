@@ -56,8 +56,14 @@ h2.font-20px {
 } 
 .comentario {
     border-left: 3px solid #1d9e04; 
-    color:#1d9e04;
     margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: #9dfd8a;
+}
+.comentario p {
+    margin-right: 12px; 
+    margin-left: 12px; 
+    border-left: none;
 }
 .lis-rfx {
     text-indent: 20px;

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>CDB e LC</title>
+	<meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="marcus">
+	<link rel="icon" href="imgs/logo_fav.ico"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css">
+        table.tbl-rend {
+            border-collapse: collapse;
+            border-radius: 1px;
+            text-align: center;
+            width: 50%;
+            margin-top: 07px;
+            margin-bottom: 07px;
+        }
+        .tbl-rend tr,td {
+            border: 1px solid;
+            padding: 5px;
+            background-color: #9dfd8a;
+        }
+        .tbl-rend th {
+            background-color: #1d9e04;
+            color: #fff;
+        }
+	</style>
+</head>
+
+<body>
+	<!--0b10f5/025afc-->
+	<header x-data="{ open: false, hidden: true }">
+		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">			
+		</div>
+		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
+			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
+				<div class="flex justify-end">
+					<button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+				</div>
+				<div class="flex flex-col flex-grow text-lg">
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="index.html">Mercado Crypto</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="mercado-tradicional.html">Mercado Tradicional</a>
+				</div>
+			</nav>
+		</aside>		
+		<div class="bg-green-78 relative z-30">
+			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">		
+			<a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
+			<div class="flex items-center">		
+			<div class="hidden lg:flex items-center space-x-6 text-base">
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
+			</div>		
+			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
+				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
+				<span>Renda Fixa</span>
+				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+				</button>
+				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">		
+					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="tesouro-direto.html">
+							<span class="ml-3" style="color: #5a5a5a;">Tesouro Direto</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">				
+							<span class="ml-3" style="color: #5a5a5a;">CDB e LC</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">				
+							<span class="ml-3 incluir" style="color: #5a5a5a;">CRI e CRA</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="lci-lca.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">LCI e LCA</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="debentures.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Debêntures</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="letra-financeira.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Letra Financeira</span>
+						</a>						
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="titulos-publicos.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Títulos públicos</span>
+						</a>
+					</div>
+				</div>
+			</div>	
+			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="overflow-x-hidden">
+		<section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
+			<div class="max-w-3xl text-center flex flex-col items-center"><h1 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #1d9e04;" id="font">CDB e LC</span></h1>
+			</div>
+			</div>
+		<article class="conteudo-mercado-tradicional">
+			<h2 class="font-20px">O que é CDB e qual o rendimento? Saiba como investir passo a passo</h2>
+			<h2 class="font-20px">O que é CDB?</h2>
+			<p>O Certificado de Depósito Bancário (CDB) é uma opção de investimento oferecida pelos bancos ou instituições financeiras, que oferece um rendimento em renda fixa.</p>
+
+			<p>De maneira simples, este investimento funciona como um “empréstimo” que o investidor faz ao banco, em troca de uma remuneração acrescida de juros.</p>
+
+			<p>Uma das características do CDB é a segurança que este investimento traz. Por ele é garantido ao investidor um ressarcimento de até R$ 250 mil, por CPF e instituição financeira, através do <strong>Fundo Garantidor de Crédito (FGC)</strong>, caso o banco declare falência.</p>
+
+			<p>O CDB tem se tornado um dos investimentos mais procurados, devido aos rendimentos maiores em relação à poupança.</p>
+
+			<h2 class="font-20px">Tipos de CDBs: como avaliar o rendimento</h2>
+			<p>Os rendimentos de um investimento em CDB estão relacionados às taxas de juros que cada instituição oferece, já que é o que atraem os investidores. O que se nota é que, quanto menor o banco maior a taxa de juros oferecida, e que em conjunto com o FGC, se torna um investimento muito rentável.</p>
+
+			<p>Para avaliar a rentabilidade de um investimento em CDB será preciso escolher entre as modalidades existentes: prefixado, pós-fixado ou híbrido.</p>
+
+			<p><strong>CDB Prefixado</strong></p>
+			<p>O pré-fixado é um tipo de CDB em que as taxas de juro são acordadas no momento da aplicação, como por exemplo, realizar um CDB combinado com o banco em 10% ao ano.</p>
+
+			<p>Este tipo é melhor escolhido quando as taxas de juro no mercado possuem previsão de queda, assim a taxa em acordo acaba por ser maior do que as taxas do mercado.</p>
+
+			<p>Outra indicação é a de não aplicar nesta modalidade durante um prazo muito longo, já que com a inflação o dinheiro investido pode perder uma grande quantia em termos de poder de compra.</p>
+
+			<p><strong>CDB Pós-fixado</strong></p>
+			<p>Nesta modalidade a rentabilidade é atrelada a algum índice, sendo o CDI e a taxa SELIC os mais utilizados. Por conta disso, a rentabilidade só é conhecida durante o período que estiver investido.</p>
+
+			<p>Por exemplo, se for acordado que o investimento será remunerado em 110% do CDI, e acontecer de este índice em um certo ano ficar em 10%, significa que a rentabilidade será:</p>
+
+			<p>• 1,10 x 0,1 = 0,11 ou 11% ao ano.</p>
+
+			<p>Esta modalidade é a mais indicada por acompanhar sempre a inflação e o investidor não perde seu poder de compra com o dinheiro investido.</p>
+
+			<p><strong>CDB Híbrido</strong></p>
+			<p>Quando o CDB é híbrido temos um misto dos dois anteriores: uma taxa de juro fixa somada com uma outra parte variável. Acontece, por exemplo, quando o título rende 5% + IPCA, o índice de inflação do Brasil.</p>
+
+			<h2 class="font-20px">Tributação sobre a rentabilidade do CDB</h2>
+			<p>Além destas modalidades, a rentabilidade também varia conforme o tempo que o dinheiro é aplicado. Isso acontece porque o imposto de renda é menor quanto mais tempo o dinheiro ficar investido, e que é cobrado ao final da aplicação ou caso o investidor queria retirar o dinheiro antes.</p>
+
+			<table class="tbl-rend">
+				<tr>
+					<th>Tempo de Aplicação</th>
+					<th>Porcentagem de tributação</th>
+				</tr>
+				<tr>
+					<td>Até 6 meses</td>
+					<td>22,5% sobre o rendimento</td>
+				</tr>
+				<tr>
+					<td>De 6 a 12 meses</td>
+					<td>20% sobre o rendimento</td>
+
+				</tr>
+				<tr>
+					<td>De 12 a 24 meses</td>
+					<td>17,5% sobre o rendimento</td>
+				</tr>
+				<tr>
+					<td>Acima de 24 meses</td>
+					<td>15% sobre o rendimento</td>
+				</tr>
+			</table>
+
+			<p>Além do Imposto de Renda, outra tributação que acontece é o IOF, mas a boa notícia é que ela só é tributada se a aplicação ser resgatada em 30 dias ou menos.</p>
+
+			<h2 class="font-20px">Como Investir em um CDB passo a passo</h2>
+			<p><strong>1. Avaliar todas as condições antes de investir</strong></p>
+			<p>Avalie com muito cuidado o quanto pretende investir, onde investir e o tempo que poderá deixar o dinheiro intocado. O mais recomendado é sempre procurar fazer um CDB de menos de R$ 250 mil, valor assegurado pelo FGC.</p>
+
+			<p>Se pretender investir uma quantia maior do que o FGC cobriria, em caso do banco declarar falência, <strong>é recomendado que se invista em mais de uma instituição, em no máximo R$ 250 mil cada</strong>. Existem, ainda, muitas corretoras que realizam com maior facilidade estas aplicações.</p>
+
+			<p>É preciso, também, estar atento se o título possui liquidez diária, pois caso não tenha, o dinheiro não poderá ser retirado antes do final da aplicação.</p>
+
+			<p><strong>2. Negociar corretamente os tipos e as taxas dos títulos que pretende adquirir</strong></p>
+			<p>Este é um investimento que a rentabilidade pode variar de um título para o outro, e isto depende das condições do mercado e da instituição onde se escolhe investir.</p>
+
+			<p>Por isso, analise e compare as opções de títulos disponíveis, pré-fixado ou pós-fixado, além de avaliar como tem se comportado a inflação no país, que nós explicaremos mais abaixo.</p>
+
+			<p>Além disso, é possível analisar outras opções de investimento disponíveis, como por exemplo outros investimentos de renda fixa, como as LCIs e o Tesouro Direto.</p>
+
+			<p><strong>3. Invista nas melhores corretoras</strong></p>
+			<p>Um outro fator que é sempre preciso analisar corretamente, é a instituição onde o investimento será feito. As melhores ainda são as corretoras, já que é preciso abrir apenas uma conta e é onde se reúnem as melhores opções de investimento.</p>
+
+			<p>Outra vantagem das corretoras é o auxílio que será proporcionado durante as aplicações, mesmo para quando precisar declarar ao imposto de renda os investimentos em CDB.</p>
+
+			<h2 class="font-20px">Vantagens e Desvantagens do CDB</h2>
+			<p>Nos últimos anos a maior parte dos investidores têm trocado a poupança por outros investimentos, sendo o CDB um deles. E isto é o que mostra uma das vantagens desta aplicação, além da proteção que o FGC oferece.</p>
+
+			<p>O CDB pode ser desvantajoso acerca de sua tributação, pois existem outras opções que não são tributáveis. Por exemplo, as LCIs e as LCAs são aplicações que também são de renda fixa mas isentos de Imposto de Renda.</p>
+
+			<h2 class="font-20px">Quando um LCI ou LCA é mais vantajoso que a CDB?</h2>
+			<p>Ao analisar as opções de investimentos é preciso estar atento às que são mais rentáveis. É possível fazer esse diagnóstico comparando as taxas que remuneram cada investimento, levando em conta que as LCIs e as LCAs são isentas de Imposto de Renda.</p>
+
+			<p>Se você se deparar com uma opção de CDB com taxa de 110% do CDI e pensa em realizar o investimento por cerca de 9 meses, sabemos que a tributação será de 20% sobre o rendimento. Com isso, o valor líquido para o CDB será de 80% (1 - 0,20).</p>
+
+			<p>Para sabermos a remuneração que o CDB realmente vai obter, basta que calculemos a porcentagem de CDI livre dos impostos. Para o exemplo anterior faríamos 80% de 110% que é igual a 88% (0,8 x 1,10). Neste caso, se existir uma opção de LCA que remunere em 85% de CDI, escolhemos o CDB, já que sua porcentagem líquida é maior.</p>
+
+			<hr>
+
+			<h2 class="font-20px">O que é LC?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por NU invest</sub></h2>
+			<p>A sigla LC significa Letra de Câmbio.</p>
+
+			<p>Esses títulos nominativos são vendidos como forma de captação de recursos. Funcionam como um empréstimo que o investidor faz a uma Financeira em troca de uma remuneração, que pode ser prefixada ou pós-fixada.</p>
+
+			<p>São investimentos que estão entre os mais rentáveis em Renda Fixa, que dão ao investidor a opção de saber exatamente quanto seu dinheiro vai render ou optar por acompanhar as taxas de juros do mercado. Além disso, ele possui a garantia pelo Fundo Garantidor de Créditos - FGC.</p>
+			<hr>
+
+			<h2 class="font-20px">O que é CDB? Quais são as suas vantagens e desvantagens?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Exame invest</sub></h2>
+			<p>O CDB, sigla para Certificado de Depósito Bancário, é um título emitido por bancos comerciais ou instituições financeiras para captar recursos para financiamento das suas atividades. É como se os investidores que aplicam nesses títulos emprestassem dinheiro para as instituições que emitem os CDBs.</p>
+
+			<p>Por serem emitidos por empresas reguladas pelo Banco Central, os CDBs são considerados uma opção segura de investimento. Existem opções de títulos prefixados e pós-fixados. Saiba mais sobre essas aplicações. </p>
+
+			<h2 class="font-20px">É seguro investir em CDB?</h2>
+			<p>Na prática, investir em um CDB é como virar credor de um banco. Em troca desse empréstimo, o banco, na data de vencimento, devolve o dinheiro mais o juro combinado no momento do investimento.</p>
+
+			<p>A segurança de um CDB vai depender de uma série de fatores, como a segurança do emissor do papel, a liquidez do investimento e a rentabilidade contratada, que pode ser uma taxa prefixada ou pós-fixada, normalmente atrelada a um percentual do CDI, ou híbrida.</p>
+
+			<p>A maioria dos títulos tem prazo de vencimento que varia de 1 mês a 6 anos. Existem ainda CDBs de liquidez diária, que podem ser resgatados a qualquer momento.</p>
+
+			<p>É importante atentar-se ao prazo de vencimento, pois os CDBs podem ter restrições para o resgate antecipado. O investidor que decide se desfazer do título antes do prazo estará, na verdade, repassando a aplicação no mercado secundário. Ou seja: a corretora buscará outro investidor interessado no papel.</p>
+
+			<p>A depender da taxa de rendimento e do vencimento, esse CDB pode ter procura limitada. Se a demanda for menor, é possível que o investidor perca todo o rendimento acumulado, ou até parte do que foi investido inicialmente. Por isso, resgatar um CDB antecipadamente não costuma ser bom negócio.</p>
+
+			<h2 class="font-20px">Quanto rende um CDB por mês?</h2>
+			<p>O retorno de um CDB pode ser definido por uma taxa prefixada ou por um valor pós-fixado. O investidor deve avaliar a opção mais vantajosa no momento de escolha do título.</p>
+
+			<p><strong>CDB prefixado</strong></p>
+			<p>O rendimento anual desses títulos é definido já no momento da aplicação. A taxa, apresentada como um percentual, não sofre nenhum tipo de alteração. Sendo assim, o investidor sabe, desde o princípio, quanto receberá no vencimento do CDB.</p>
+
+			<p><strong>Quanto rende 1.000 reais no CDB?</strong></p>
+			<p>Se o investidor aplicar 1.000 reais em um CDB prefixado que rende 6% ao ano e que vence em 12 meses, no final do período esse investidor terá um retorno bruto de 1.060 reais.</p>
+
+			<p>Essa é uma boa opção para momentos em que há perspectiva de queda da taxa básica de juros, a Selic. Como a Selic influencia diretamente o desempenho dos títulos pós-fixados, um cenário de redução dos juros básicos tende a beneficiar os títulos prefixados.</p>
+
+			<p><strong>CDB pós-fixados</strong></p>
+			<p>Há dois tipos de CDBs cujo rendimento é determinado posteriormente: os puramente pós-fixados e os híbridos.</p>
+
+			<p>Um título pós-fixado tem deu retorno integralmente definido por um indicador, como a taxa Selic, o CDI ou o IPCA, o índice oficial de inflação. Entretanto, a grande maioria dos CDBs tem o rendimento indexado ao CDI.</p>
+
+			<h2 class="font-20px">CDB prefixado ou pós-fixado? Qual é melhor?</h2>
+			<p>A diferença entre CDB prefixado e pós-fixado é a fórmula de rentabilidade. Enquanto a primeira opção tem um juro fixo ao ano combinado no momento do investimento, a segunda tem um rendimento atrelado ao CDI. A escolha de um ou de outro vai depender da expectativa para a taxa Selic e dos objetivos do investidor.</p>
+
+			<p>Um CDB prefixado terá uma rentabilidade congelada, que não se altera ao longo do investimento. Essa pode ser uma boa opção em um cenário de seguidas quedas na taxas de juros mas, por outro lado, pode perder para a inflação. Por isso, um CDB prefixado é considerado um investimento mais arriscado que o pós-fixado. </p>
+
+			<p>No caso do CDB pós-fixado, o rendimento é pago no vencimento é um percentual do CDI. Com a rentabilidade atrelada a um indexador que acompanha a taxa básica de juros, a Selic, o investimento flutuará junto com o cenário do mercado e dificilmente perderá para a inflação. </p>
+
+			<p><strong>Como escolher?</strong></p>
+			<p>Ambos contam com a garantia do FGC, mas alguns fatores como a instituição emissora, a liquidez ou o prazo do vencimento vão influenciar no nível de segurança do investimento.</p>
+
+			<p>Os dois tipos de CDBs também têm cobrança de IOF nos 30 primeiros dias. Os rendimentos também estão sujeitos a cobrança do Imposto de Renda, pago no resgate da aplicação. Portanto, os CDBs não são indicados para investimentos de curtíssimo prazo.</p>
+
+			<p>Existem dezenas de CDBs disponíveis no mercado com condições de prazos, rentabilidade e liquidez diferentes. Para tomar as melhores decisões, o investidor também deverá avaliar seu perfil de risco e objetivos.</p>
+
+			<h2 class="font-20px">Como investir em CDB?</h2>
+			<p>Para investir em um CDB é necessário ter conta em uma corretora ou banco. Em geral, as instituições financeiras exibem nas opções CDBs emitidos por elas mesmas (caso essa seja uma instituição emissora) e por outros bancos.</p>
+
+			<p>Para visualizar os CDBs disponíveis, basta navegar pelo homebroker da instituição em que o investidor tem conta. O passo seguinte é escolher um título e selecionar o valor a ser aplicado. É necessário que os recursos estejam na conta do banco ou corretora em que a aplicação está sendo feita.</p>
+
+			<p><strong>Existe um valor mínimo de aplicação para CDB?</strong></p>
+			<p>O valor mínimo a ser aplicado em um CDB costuma variar de acordo com o prazo de vencimento do título e com a taxa de retorno ofertada.</p>
+
+			<p>É possível encontrar opções no mercado com <strong>aplicações que partem de apenas 20 reais</strong>. Mas quanto menor o investimento mínimo menor tende a ser o rendimento do CDB.</p>
+
+			<h2 class="font-20px">CDB tem riscos?</h2>
+			<p>Como são emitidos por instituições financeiras, os CDBs contam com a cobertura do Fundo Garantidor de Crédito (FGC). O FGC é uma <strong>espécie de seguro que protege o investidor de perdas</strong>, em caso de falência das instituições emissoras dos títulos.</p>
+
+			<p>O FGC garante a restituição de valores de aplicações financeiras com valor de até 250 mil reais por CPF ou CNPJ.</p>
+
+			<p>A restituição inclui o valor inicial aplicado e a rentabilidade do título até o momento de falência da instituição financeira. Baseado nos últimos episódios em que o FGC foi acionado, o prazo para devolução do dinheiro aos investidores varia de 15 a 30 dias.</p>
+
+			<p>Embora o FGC cubra todas as aplicações em CDB, é recomendado que o investidor avalie o risco da instituição emissora. A melhor forma de fazer isso é observando o chamado Índice de Basileia.</p>
+
+			<h2 class="font-20px">O que é o Índice de Basiléia?</h2>
+			<p>O Índice de Basileia serve para avaliar a solvência dos bancos, financeiras e entidades de crédito. Com base nos dados operacionais divulgados pelas instituições, o Banco Central elabora uma "nota" para a situação financeira de cada uma delas.</p>
+
+			<p>Nessa conta, são levados em conta fatores como o volume de recursos emprestados, a quantidade de dinheiro em caixa e o perfil de risco das dívidas contratadas pelo banco. O resultado final será uma porcentagem que varia de 0% a 100%.</p>
+
+			<p>Explicando de maneira simplificada, <strong>quanto menor o percentual no Índice de Basileia, maior o risco de contratar um CDB</strong> ou qualquer outro título dessa instituição financeira.</p>
+
+			<p>O ideal é buscar bancos, financeiras e entidades de crédito que tenham um Índice de Basileia acima de 8%. O valor considerado ideal está entre 11% e 18%, que é a média da nota das instituições financeiras brasileiras no Índice de Basileia.</p>
+
+			<p>Vale lembrar, no entanto, que um Índice de Basileia muito alto significa que o banco tem poucos recursos emprestados, o que pode ser um obstáculo para a geração de caixa e até um sinal de outros problemas financeiros da instituição.</p>
+
+			<p>É possível encontrar o Índice de Basileia de cada instituição no site do <a style="color:blue;" href="https://www3.bcb.gov.br/ifdata/index.html" target="_blank">Banco Central</a> ou em plataformas de comparação de investimentos, como Yubb e Magnetis.</p>
+
+			<h2 class="font-20px">CDB tem imposto?</h2>
+			<p>Sim, as aplicações em CDB são tributadas principalmente de duas formas: pelo Imposto de Renda (IR) e o Imposto sobre Operações Financeiras (IOF).</p>
+
+			<p>Como é um investimento de renda fixa, a incidência do Imposto de Renda é por tabela regressiva. Quanto mais longo o prazo de resgate, menor imposto o investidor pagará. Veja as alíquotas do IR para os CDBs:</p>
+
+			<table class="tbl-rend">
+				<tr>
+					<th>Prazo de resgate</th>
+					<th>Alíquota</th>
+				</tr>
+				<tr>
+					<td>Até 180 dias</td>
+					<td>22,5%</td>
+				</tr>
+				<tr>
+					<td>Entre 180 e 360 dias</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Entre 360 e 720 dias</td>
+					<td>17,5%</td>
+				</tr>
+				<tr>
+					<td>Acima de 720 dias</td>
+					<td>15%</td>
+				</tr>
+			</table>
+
+			<p>Em caso de resgate nos 30 primeiros dias, existe também a cobrança do Imposto sobre Operações Financerias. A alíquota desse imposto é regressiva, e parte de 96% no primeiro dia após a aplicação, até 3% no 29º dia após a aplicação. Depois do 30º dia os investimentos ficam isentos de IOF.</p>
+
+			<p>É importante dizer que tanto o Imposto de Renda quanto o IOF incidem somente sobre os rendimentos e já são retidos na fonte. O valor inicial aplicado pelo investidor não é tributado. </p>
+
+			<h2 class="font-20px">O que é CDI e qual sua relação com o CDB?</h2>
+			<p>O CDI (Certificado de Depósito Interbancário) é um mecanismo de lastro (garantia) para operações realizadas diariamente por instituições financeiras. Ele reflete diretamente o custo dos empréstimos feitos entre os bancos, e por isso costuma acompanhar de perto a própria taxa Selic.</p>
+
+			<p>No mundo dos investimentos, o CDI se transforma em uma taxa que referencia o retorno de grande parte das aplicações em renda fixa.</p>
+
+			<p>Em geral, o rendimento dos CDBs é apresentado como um percentual do índice - por exemplo: 110% do CDI. Levando em conta o cenário atual, em que os juros básicos estão na casa dos 2%, uma aplicação cujo retorno é de 110% do CDI irá render 2,2% em um ano.</p>
+
+			<p>Já um CDB de rendimento híbrido conta com um indexador mais uma taxa fixa. Por exemplo: um CDB que renda 2% ao ano + 100% do CDI deve ter um retorno anual de aproximadamente 4%, considerando o valor atual da taxa Selic.</p>
+
+			<h2 class="font-20px">Qual o CDB mais vantajoso?</h2>
+			<p>Por causa da queda na taxa básica de juros brasileira, que atualmente encontra-se no menor patamar da história, o rendimento dos CDBs diminuiu ao longo dos últimos anos.</p>
+
+			<p>Para continuar atraindo investidores, as instituições emissoras dos títulos passaram a oferecer percentuais maiores de rendimento.</p>
+
+			<p>É possível encontrar títulos que pagam mais de 140% do CDI no mercado, algo que era raro até dois ou três anos atrás.</p>
+
+			<p>Mas antes de ceder aos encantos dos altos percentuais, vale lembrar que o CDI reflete a taxa básica de juros, a Selic, que está em 2% ao ano. Sendo assim, dez ou vinte pontos percentuais do CDI representam, no final das contas, menos de 1% a mais de retorno em uma aplicação anual.</p>
+
+			<p>Em geral, as instituições que oferecem percentuais maiores de retorno são as que têm um risco maior de crédito. É importante que o investidor avalie a relação de risco e retorno da aplicação, e que não atenha-se somente ao percentual do CDI ofertado."</p>
+
+			<h2 class="font-20px">CDB e Tesouro Direto</h2>
+			<p>Tanto o Tesouro Direto quanto os CDBs podem ser usados para compor a reserva de emergência ou até a fatia de renda fixa da carteira de um investidor. Para entender a opção mais vantajosa para você é importante saber quais são as diferenças entre essas opções.</p>
+
+			<p><strong>Risco</strong></p>
+			<p>Os títulos do Tesouro Direto são emitidos pelo governo federal, e por isso são considerados a aplicação mais segura do mercado. Mesmo os CDBs emitidos pelos maiores bancos brasileiros têm um risco maior do que qualquer título do Tesouro Direto.</p>
+
+			<p>Vale lembrar que os CDBs são cobertos pelo Fundo Garantidor de Crédito, proteção que não é dada para quem investe nos títulos públicos.</p>
+
+			<p><strong>Liquidez</strong></p>
+			<p>Embora tenham prazos de vencimento diversos, os títulos do Tesouro Direto são negociados diariamente. Isso significa que o investidor pode decidir vendê-los a qualquer momento, embora haja volatilidade no preço desses títulos. Sendo assim, é possível ter prejuízo vendendo um título do Tesouro Direto antes do vencimento.</p>
+
+			<p>Existem CDBs com liquidez diária, que pagam o retorno acumulado entre o dia da aplicação e o dia de resgate. Já os títulos que vencem em prazos maiores podem não ter liquidez, o que dificulta o resgate antecipado.</p>
+
+			<p><strong>Rendimento</strong></p>
+			<p>Assim como os CDBs, o Tesouro Direto também tem opções de títulos prefixados e pós-fixados. Os títulos públicos pós-fixados têm o rendimento calculado pela taxa Selic e pelos dois principais índices inflacionários do país: o Índice de Preços ao Consumidor Amplo (IPCA) e o Índice Geral de Preços ao Mercado (IGP-M).</p>
+
+			<p>Já os CDBs utilizam, em sua maioria, o CDI para referenciar o rendimento. Existem, ainda, opções de títulos privados que pagam o retorno de acordo com o IPCA.</p>
+
+			<p><strong>Tributação</strong></p>
+			<p>Tanto os CDBs quanto os títulos do Tesouro Direto têm descontos do Imposto de Renda e do IOF sobre o rendimento, de acordo com as regras mencionadas um pouco acima.</p>
+
+			<h2 class="font-20px">CDB e outros títulos de renda fixa (LCI, LCA, CRI, CRA e debêntures)</h2>
+
+			<p>Dentro da categoria de renda fixa, existem outras opções de títulos de crédito privado, além dos CDBs. São elas: Letras de Crédito Imobiliário (LCI), Letras de Crédito do Agronegócio (LCA), Certificados de Recebíveis Imobiliários (CRI), Certificados de Recebíveis do Agronegócio (CRA) e as debêntures.</p>
+
+			<p><strong>Risco</strong></p>
+			Os CDBs são emitidos exclusivamente por instituições financeiras, enquanto os LCIs, LCAs, CRIs, CRAs e debêntures podem ser emitidos por empresas que atuam em outras áreas da economia, como construção civil, agropecuária e infraestrutura.</p>
+
+			<p>Embora todos os emissores sejam continuamente monitorados pelas autoridades econômicas do país, não há um indicador como o Índice de Basileia para medir a solidez de empresas que não fazem parte do setor financeiro. Por isso, o investidor deve ser mais cauteloso ao aplicar em outros títulos de crédito privado.</p>
+
+			<p>É importante lembrar que as LCIs e LCAs também contam com a cobertura do FGC, assim como os CDBs. Já os CRIs, CRAs e debêntures não são cobertos pelo Fundo Garantidor de Crédito.</p>
+
+			<p><strong>Liquidez</strong></p>
+			<p>Assim como os CDBs, outras categorias de títulos de crédito privado têm liquidez limitada, o que torna o resgate antecipado mais complicado.</p>
+
+			<p>A melhor dica é planejar a aquisição do título com seus objetivos, para que o uso desses recursos não seja necessário antes do prazo de vencimento.</p>
+
+			<p><strong>Rendimento</strong></p>
+			<p>A maioria dos títulos de crédito tem o retorno referenciado pelo CDI, mas existem aplicações que remuneram de acordo com a Selic, com o IPCA e com o IGP-M.</p>
+
+			<p><strong>Tributação</strong></p>
+			<p>Todos os CDBs estão sujeitos ao pagamento de Imposto de Renda, assim como os CRIs, CRAs e as debêntures não-incentivadas.</p>
+
+			<p>No entanto, aplicações como LCIs, LCAs e debêntures incentivadas são isentas e não pagam IR sobre o rendimento. Em contrapartida, esses títulos costumam oferecer um percentual do CDI menor como retorno.</p>
+
+			<h2 class="font-20px">CDB e poupança</h2>
+			<p>A caderneta de poupança ainda é uma das aplicações financeiras mais conhecidas dos brasileiros, mas nos últimos anos os CDBs têm ganhado espaço nas preferências dos investidores, principalmente por contar com um rendimento maior. Veja abaixo as diferenças entre as duas aplicações:</p>
+
+			<p><strong>Risco</strong></p>
+			<p>O risco de investir em um CDB e na poupança é bastante similar, já que os bancos e instituições financeiras estão por trás de ambas as aplicações. Além disso, tanto a caderneta quanto os CDBs são protegidos pelo Fundo Garantidor de Crédito.</p>
+
+			<p><strong>Liquidez</strong></p>
+			<p>Os CDBs possuem prazos de vencimento variados, enquanto a caderneta de poupança oferece liquidez diária. No entanto, existe uma diferença importante na forma com que os rendimentos das duas aplicações são calculados.</p>
+
+			<p>Os recursos da poupança só têm rendimento nos aniversários. Ou seja: o investidor só vai colher os lucros a cada 30 dias, a partir da aplicação dos recursos. Se ele decidir sacar os recursos no 29º dia, por exemplo, nenhum rendimento será registrado.</p>
+
+			<p>Já o rendimento dos CDBs é pago proporcionalmente, de acordo com o período de rendimento.</p>
+
+			<p><strong>Rendimento</strong></p>
+			<p>Como já mencionamos, o rendimento dos CDBs costuma ser calculado de acordo com o CDI, índice que também é usado para referenciar o retorno da caderneta de poupança.</p>
+
+			<p>Contudo, o rendimento dos CDBs costuma partir de 80% do CDI, sendo que a maioria das instituições costuma pagar ao menos 100% do CDI. Já a poupança tem um retorno fixo de 70% do CDI + a Taxa Referencial, que é definida pelo Banco Central e que atualmente está zerada.</p>
+
+			<p><strong>Tributação</strong></p>
+			<p>Os rendimentos da caderneta de poupança são isentos da cobrança de Imposto de Renda, enquanto os CDBs são tributados de acordo com a tabela regressiva do IR.</p>
+
+			<h2 class="font-20px">Resumo: vantagens e desvantagens do CDB</h2>
+			<p>Como se trata de um investimento de renda fixa, o CDB oferece previsibilidade nos rendimentos, que podem ser tanto pós-fixados quanto prefixados. Esse também é um investimento que conta com uma segurança extra, já que é garantido pelo FGC.</p> 
+
+			<p>A principal desvantagem desse investimento é a incidência do Imposto de Renda. A alíquota de cobrança é determinada pela tabela regressiva. Se o resgate acontecer antes de se completar os 30 primeiros dias, existe ainda a cobrança do IOF. Mas é importante lembrar que esses impostos serão cobrados somente sobre os rendimentos e já são retidos na fonte.</p>
+
+			<p>Outra desvantagem de alguns CDBs é a liquidez baixa e o aporte mínimo alto, o que inviabiliza o investimento para algumas pessoas. Mas existem muitas opções disponíveis no mercado com aporte mínimo baixo e até liquidez diária.</p>
+
+			<div>
+				<h2 class="origem">Fontes:</h2>
+				<p><a class="origem" href="https://www.dicionariofinanceiro.com/cdb/" target="_blank">Dicionário Financeiro</a></p>
+				<p><a class="origem" href="#" target="_blank">Exame invest</a></p>
+				<p><a class="origem" href="#" target="_blank">NU invest</a></p>
+			</div>
+
+		</article>
+		</section>
+	</main>
+    
+<footer>
+ <div class="content-footer">
+   <div class="left box">
+     <div class="upper">
+       <div class="topic">Links</div>  
+          <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
+
+          <div class="banner-footer">
+              <p>
+              	<a href="index.html"><img alt="Páginas" src="imgs/logo-1.png"></a>
+				<a href="https://mlssystem.github.io/favcrypto/#noticias">Notícias</a>
+				<a href="https://mlssystem.github.io/favcrypto/#precos">Preços</a>
+				<a href="https://mlssystem.github.io/favcrypto/#exchanges">Exchanges</a>
+				<a href="https://mlssystem.github.io/favcrypto/#capitalizacao">Capitalização</a>
+				<a href="https://mlssystem.github.io/favcrypto/#arbitragem">Arbitragem</a>
+				<em>Outros Sites:</em>
+				<a href="https://mlssystem.github.io" target="_blank">MLSSystem</a>
+				<a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a>
+				<a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a>
+				<a href="https://mlssystem.github.io/linksuteis" target="_blank">Links Úteis</a>
+				<a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a>
+              </p>
+          </div>
+     </div>
+   </div>
+   <div class="middle box">
+     <div class="topic">Favoritos</div>
+     	<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html"><img alt="Páginas" src="imgs/logo-favoritos-64.PNG"></a></div>
+		<div><a href="renda-fixa.html" target="_blank">Renda Fixa</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-variavel" target="_blank">Renda Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#fixa-variavel" target="_blank">Fixa e Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#perfil" target="_blank">Perfil do Investidor</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#indices" target="_blank">Índices</a></div>
+		<em>Outros Sites:</em>
+		<div><a href="https://mlssystem.github.io" target="_blank">MLSSystem</a></div>
+		<div><a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a></div>
+		<div><a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a></div>
+		<div><a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a></div>
+   </div>
+   <div class="right box">
+     <div class="topic">Inscreva-se</div>
+     <form action="#">
+       <input type="text" placeholder="Em desenvolvimento">
+       <input type="submit" name="" value="Inativo">
+       <div class="media-icons">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       </div>
+     </form>
+     <div class="lower">
+       <div class="topic">Contato</div>
+       <div class="phone">
+         <a href="#"><i class="fas fa-phone-volume"></i>+55 DD 98765 4321</a>
+       </div>
+       <div class="email">
+         <a href="#"><i class="fas fa-envelope"></i>abc@email.com</a>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="bottom">
+   <p>Copyright © 2021 <a href="https://github.com/mlssystem">MLSSystem</a> Todos direitos reservados</p>
+ </div>
+</footer>
+</body>
+</html>
