@@ -11,7 +11,7 @@
 	<link rel="icon" href="imgs/logo_fav.ico"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com/">
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<style type="text/css">
@@ -38,7 +38,7 @@
 <body>
 	<!--0b10f5/025afc-->
 	<header x-data="{ open: false, hidden: true }">
-		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">			
+		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">
 		</div>
 		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
 			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
@@ -50,47 +50,47 @@
 					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="mercado-tradicional.html">Mercado Tradicional</a>
 				</div>
 			</nav>
-		</aside>		
+		</aside>
 		<div class="bg-green-78 relative z-30">
-			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">		
+			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">
 			<a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
-			<div class="flex items-center">		
+			<div class="flex items-center">
 			<div class="hidden lg:flex items-center space-x-6 text-base">
 				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
 				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
-			</div>		
+			</div>
 			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
 				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
 				<span>Renda Fixa</span>
 				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
 				</button>
-				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">		
-					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">						
+				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">
+					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="tesouro-direto.html">
 							<span class="ml-3" style="color: #5a5a5a;">Tesouro Direto</span>
 						</a>
-						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">				
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">
 							<span class="ml-3" style="color: #5a5a5a;">CDB e LC</span>
-						</a>						
-						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">				
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">CRI e CRA</span>
-						</a>						
+						</a>
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="lci-lca.html" title="Telegram">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">LCI e LCA</span>
-						</a>						
+						</a>
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="debentures.html" title="Telegram">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">Debêntures</span>
-						</a>						
+						</a>
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="letra-financeira.html" title="Telegram">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">Letra Financeira</span>
-						</a>						
+						</a>
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="titulos-publicos.html" title="Telegram">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">Títulos públicos</span>
 						</a>
 					</div>
 				</div>
-			</div>	
-			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>	
+			</div>
+			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
 					</div>
 				</div>
 			</div>
@@ -198,14 +198,6 @@
 
 			<p>Para sabermos a remuneração que o CDB realmente vai obter, basta que calculemos a porcentagem de CDI livre dos impostos. Para o exemplo anterior faríamos 80% de 110% que é igual a 88% (0,8 x 1,10). Neste caso, se existir uma opção de LCA que remunere em 85% de CDI, escolhemos o CDB, já que sua porcentagem líquida é maior.</p>
 
-			<hr>
-
-			<h2 class="font-20px">O que é LC?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por NU invest</sub></h2>
-			<p>A sigla LC significa Letra de Câmbio.</p>
-
-			<p>Esses títulos nominativos são vendidos como forma de captação de recursos. Funcionam como um empréstimo que o investidor faz a uma Financeira em troca de uma remuneração, que pode ser prefixada ou pós-fixada.</p>
-
-			<p>São investimentos que estão entre os mais rentáveis em Renda Fixa, que dão ao investidor a opção de saber exatamente quanto seu dinheiro vai render ou optar por acompanhar as taxas de juros do mercado. Além disso, ele possui a garantia pelo Fundo Garantidor de Créditos - FGC.</p>
 			<hr>
 
 			<h2 class="font-20px">O que é CDB? Quais são as suas vantagens e desvantagens?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Exame invest</sub></h2>
@@ -405,28 +397,55 @@
 			<p>Os rendimentos da caderneta de poupança são isentos da cobrança de Imposto de Renda, enquanto os CDBs são tributados de acordo com a tabela regressiva do IR.</p>
 
 			<h2 class="font-20px">Resumo: vantagens e desvantagens do CDB</h2>
-			<p>Como se trata de um investimento de renda fixa, o CDB oferece previsibilidade nos rendimentos, que podem ser tanto pós-fixados quanto prefixados. Esse também é um investimento que conta com uma segurança extra, já que é garantido pelo FGC.</p> 
+			<p>Como se trata de um investimento de renda fixa, o CDB oferece previsibilidade nos rendimentos, que podem ser tanto pós-fixados quanto prefixados. Esse também é um investimento que conta com uma segurança extra, já que é garantido pelo FGC.</p>
 
 			<p>A principal desvantagem desse investimento é a incidência do Imposto de Renda. A alíquota de cobrança é determinada pela tabela regressiva. Se o resgate acontecer antes de se completar os 30 primeiros dias, existe ainda a cobrança do IOF. Mas é importante lembrar que esses impostos serão cobrados somente sobre os rendimentos e já são retidos na fonte.</p>
 
 			<p>Outra desvantagem de alguns CDBs é a liquidez baixa e o aporte mínimo alto, o que inviabiliza o investimento para algumas pessoas. Mas existem muitas opções disponíveis no mercado com aporte mínimo baixo e até liquidez diária.</p>
 
+			<hr>
+			<h2 class="font-20px">O que é LC?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por NU invest</sub></h2>
+			<p>A sigla LC significa Letra de Câmbio.</p>
+
+			<p>Esses títulos nominativos são vendidos como forma de captação de recursos. Funcionam como um empréstimo que o investidor faz a uma Financeira em troca de uma remuneração, que pode ser prefixada ou pós-fixada.</p>
+
+			<p>São investimentos que estão entre os mais rentáveis em Renda Fixa, que dão ao investidor a opção de saber exatamente quanto seu dinheiro vai render ou optar por acompanhar as taxas de juros do mercado. Além disso, ele possui a garantia pelo Fundo Garantidor de Créditos - FGC.</p>
+
+			<hr>
+			<h2 class="font-20px">O que é LC?<sub style="color: #2cd00c; font-size: 12px;">XPI</sub></h2>
+			<p><strong>Carta de crédito.</strong></p>
+
+
+			<p>Instrumento de captação das financeiras, com o objetivo de financiar suas atividades. Você empresta dinheiro às financeiras em troca de uma rentabilidade preestabelecida.
+
+			<p><strong>Características</strong></p>
+			<ul>
+			<li class="lis-rfx">• A remuneração pode ser em % do CDI, CDI + spread, Índices de preços (ex: IGP-M, IPCA) ou Taxa Prefixada;</li>
+			<p><li class="lis-rfx">• Aplicação garantida pelo Fundo Garantidor de Créditos (FGC) para valores até o limite de R$ 250mil por CPF ou CNPJ, por conjunto de depósitos e investimentos em cada instituição ou conglomerado financeiro, limitado a R$ 1.000.000,00 a cada período de 4 anos, para garantias pagas para cada CPF ou CNPJ. Para mais informações, acesse o site do FGC.</li></p>
+			<li class="lis-rfx">• Produto registrado na CETIP em nome do cliente (CPF/CNPJ);</li>
+			<li class="lis-rfx">• IOF para resgate antes de 30 dias;</li>
+			<li class="lis-rfx">• IR via tabela regressiva.</li>
+			</ul>
+
+			<p>¹ Cobertura engloba principal e juros.</p>
+
 			<div>
 				<h2 class="origem">Fontes:</h2>
 				<p><a class="origem" href="https://www.dicionariofinanceiro.com/cdb/" target="_blank">Dicionário Financeiro</a></p>
-				<p><a class="origem" href="#" target="_blank">Exame invest</a></p>
-				<p><a class="origem" href="#" target="_blank">NU invest</a></p>
+				<p><a class="origem" href="https://invest.exame.com/guia/o-que-e-cdb-quais-sao-as-suas-vantagens-e-desvantagens" target="_blank">Exame invest</a></p>
+				<p><a class="origem" href="https://ajuda.nuinvest.com.br/hc/pt-br/articles/227055127-O-que-%C3%A9-LC-" target="_blank">NU invest</a></p>
+				<p><a class="origem" href="https://www.xpi.com.br/investimentos/renda-fixa/lc/" target="_blank">XPI</a></p>
 			</div>
 
 		</article>
 		</section>
 	</main>
-    
+
 <footer>
  <div class="content-footer">
    <div class="left box">
      <div class="upper">
-       <div class="topic">Links</div>  
+       <div class="topic">Links</div>
           <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
 
           <div class="banner-footer">
