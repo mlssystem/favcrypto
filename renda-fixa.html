@@ -11,7 +11,7 @@
     <link rel="icon" href="imgs/logo_fav.ico"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com/">
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<style type="text/css">
@@ -26,7 +26,7 @@
 		    border-bottom: #999999 solid 1px;
 		    width: 100%;
 		    margin-bottom: 20px;
-		  }  
+		  }
 		.table th,
 		.table td {
 		    border-right: #999999 solid 1px;
@@ -67,7 +67,7 @@
 <body>
 	<!--0b10f5/025afc-->
 	<header x-data="{ open: false, hidden: true }">
-		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">			
+		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">
 		</div>
 		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
 			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
@@ -79,47 +79,47 @@
 					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="mercado-tradicional.html">Mercado Tradicional</a>
 				</div>
 			</nav>
-		</aside>		
+		</aside>
 		<div class="bg-green-78 relative z-30">
-			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">		
+			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">
 			<a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
-			<div class="flex items-center">		
+			<div class="flex items-center">
 			<div class="hidden lg:flex items-center space-x-6 text-base">
 				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
 				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
-			</div>		
+			</div>
 			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
 				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
 				<span>Renda Fixa</span>
 				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
 				</button>
-				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">		
-					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">						
+				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">
+					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="tesouro-direto.html">
 							<span class="ml-3" style="color: #5a5a5a;">Tesouro Direto</span>
 						</a>
-						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">				
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">
 							<span class="ml-3" style="color: #5a5a5a;">CDB e LC</span>
-						</a>						
-						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">				
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">CRI e CRA</span>
-						</a>						
+						</a>
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="lci-lca.html" title="Telegram">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">LCI e LCA</span>
-						</a>						
+						</a>
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="debentures.html" title="Telegram">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">Debêntures</span>
-						</a>						
+						</a>
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="letra-financeira.html" title="Telegram">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">Letra Financeira</span>
-						</a>						
+						</a>
 						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="titulos-publicos.html" title="Telegram">
 							<span class="ml-3 incluir" style="color: #5a5a5a;">Títulos públicos</span>
 						</a>
 					</div>
 				</div>
-			</div>	
-			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>	
+			</div>
+			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
 					</div>
 				</div>
 			</div>
@@ -142,22 +142,22 @@
 			<p>Até mesmo os investidores mais arrojados devem ter parte do seu dinheiro investido em aplicações de renda fixa. Como o próprio nome sugere, os investimentos dessa classe têm rendimento fixo e por isso apresentam menos volatilidade.</p>
 
 			<p>Neste artigo explicaremos o que são as aplicações de renda fixa e quais são os indicadores que influenciam o retorno desses investimentos.</p>
-			
+
 			<h2 class="font-20px">O que é renda fixa?</h2>
 			<p>Renda Fixa é um investimento com regras de remuneração definidas no momento da aplicação. É recomendada para quem busca um risco menor de perdas e funciona como um "empréstimo" ao contrário.
 			Vamos explicar: o investidor entrega seu dinheiro para o emissor do título de renda fixa e, em troca, recebe uma rentabilidade determinada.</p>
-			
+
 			<p>Quando o investidor compra um título de renda fixa, está emprestando dinheiro ao emissor do papel, que pode ser uma empresa, um banco ou o governo. Em troca, receberá seu dinheiro corrigido por uma taxa de juros no prazo determinado.</p>
-			
+
 			<p>Por exemplo: no CDB, que é um título de dívida bancário, é como se o investidor estivesse emprestando dinheiro para o banco.</p>
-			
+
 			<h2 class="font-20px">Como a renda fixa funciona?</h2>
 			<p>O investidor que compra um título de renda fixa recebe em troca uma rentabilidade pré-determinada, que pode ser definida de três formas: pós-fixada, pré-fixada ou híbrida.</p>
-			
+
 			<p>Na modalidade <strong>pós-fixada</strong>, a rentabilidade será paga em um percentual de algum indexador, como o Certificado de Depósito Interbancário <a style="color:#1d9e04; text-decoration: underline;" href="cdi.html">(CDI)</a>, a taxa básica de juros <a style="color:#1d9e04; text-decoration: underline;" href="selic.html">(Selic)</a> ou o Índice Nacional de Preços ao Consumidor Amplo <a style="color:#1d9e04; text-decoration: underline;" href="ipca.html">(IPCA)</a>.</p>
 
 			<p>Por exemplo, um CDB que pague o equivalente a 100% do CDI vai render exatamente a variação do CDI no período previsto para o investimento.</p>
-			
+
 			<p>Na versão <strong>prefixada</strong>, a rentabilidade total do investimento é definida no momento da aplicação. Por exemplo: um CDB prefixado com rentabilidade anual de 5% vai pagar exatamente esse percentual, mesmo que os indicadores (<a style="color:#1d9e04; text-decoration: underline;" href="selic.html">Selic</a>, <a style="color:#1d9e04; text-decoration: underline;" href="cdi.html">CDI</a> e <a style="color:#1d9e04; text-decoration: underline;" href="ipca.html">IPCA)</a> subam ou caiam no período.</p>
 
 			<p>Existem ainda os investimentos <strong>híbridos</strong>, que usam tanto uma taxa atrelada a algum indexador como um percentual prefixado. É o caso do Tesouro IPCA+, um dos títulos do Tesouro Direto.</p>
@@ -176,12 +176,12 @@
 				    <li class="lis-rfx">• Fundos de investimento;</li>
 				    <li class="lis-rfx">• Poupança.</li>
 			    </ul>
-			
+
 			<p>Cada aplicação possui uma característica específica, por isso é muito importante que o investidor entenda as condições de liquidez (prazo de resgate), volatilidade e rendimento de cada título. É possível, por exemplo, encontrar produtos de uma mesma categoria com condições completamente diversas.</p>
 
 			<h2 class="font-20px">Qual o rendimento da renda fixa?</h2>
 			<p>Como mencionamos, existem diversos indicadores que influenciam o desempenho dos investimentos de renda fixa. Os principais são: <a style="color:#1d9e04; text-decoration: underline;" href="selic.html">Selic</a>, CDI e IPCA. Historicamente, Selic e CDI têm um desempenho bastante próximo, enquanto o IPCA é um indicador que reage à dinâmica dos preços do país.</p>
-			
+
 			<p>Por ser baseado no custo básico do dinheiro, o CDI acompanha de perto a Selic. Já a inflação tem uma trajetória diferente, embora os preços dos produtos impactem diretamente a política do Banco Central para a composição dos juros básicos.</p>
 
 			<p><strong>Veja abaixo o histórico da <a style="color:#1d9e04; text-decoration: underline;" href="selic.html">Selic</a> e da inflação no Brasil:</strong></p>
@@ -212,23 +212,23 @@
 					<td>0,19%</td>
 				</tr>
 			</table>
-			
+
 			<h2 class="font-20px">Renda fixa é sempre segura?</h2>
-			Um título de renda fixa pode ser emitido por uma instituição pública ou privada, como bancos, empresas ou o governo. Portanto, a segurança de um título de renda fixa estará sempre atrelada a outras características do investimento, como os objetivos, o prazo, a rentabilidade, o risco e o seu emissor.</p>
+			<p>Um título de renda fixa pode ser emitido por uma instituição pública ou privada, como bancos, empresas ou o governo. Portanto, a segurança de um título de renda fixa estará sempre atrelada a outras características do investimento, como os objetivos, o prazo, a rentabilidade, o risco e o seu emissor.</p>
 
-			Alguns investimentos tradicionais em renda fixa, como os títulos do Tesouro Direto, são considerados mais seguros porque o emissor é o governo. Nessa categoria, alguns são considerados mais seguros, como o Tesouro Selic, porque a rentabilidade está atrelada à taxa básica de juros, a Selic.</p>
+			<p>Alguns investimentos tradicionais em renda fixa, como os títulos do Tesouro Direto, são considerados mais seguros porque o emissor é o governo. Nessa categoria, alguns são considerados mais seguros, como o Tesouro Selic, porque a rentabilidade está atrelada à taxa básica de juros, a Selic.</p>
 
-			Por essa razão, são títulos normalmente utilizados para formar a reserva de emergência, aquele montante que deve estar à disposição para acesso imediato em caso de algum evento atípico, como uma demissão ou um conserto de carro.</p>
+			<p>Por essa razão, são títulos normalmente utilizados para formar a reserva de emergência, aquele montante que deve estar à disposição para acesso imediato em caso de algum evento atípico, como uma demissão ou um conserto de carro.</p>
 
 			<h2 class="font-20px">O que são fundos de investimento em renda fixa?</h2>
 			Fundos de renda fixa são aqueles que devem ter uma carteira composta por, pelo menos, 80% dos seus ativos em títulos públicos ou privados de renda fixa. São fundos voltados para o investidor com perfil conservador, porque os riscos são mais baixos, mas, por outro lado, oferecem um potencial menor de retorno.</p>
 
-			Além da renda fixa, outra parte do portfólio do fundo pode ser investida em ativos diversos para aumentar a rentabilidade do fundo.</p>
+			<p>Além da renda fixa, outra parte do portfólio do fundo pode ser investida em ativos diversos para aumentar a rentabilidade do fundo.</p>
 
-			Como a maior parte do patrimônio é aplicada em ativos de renda fixa, esse é um tipo de investimento que pode oferecer maior segurança e um retorno acima do CDI, um dos principais indicadores de rentabilidade para a renda fixa.</p>
+			<p>Como a maior parte do patrimônio é aplicada em ativos de renda fixa, esse é um tipo de investimento que pode oferecer maior segurança e um retorno acima do CDI, um dos principais indicadores de rentabilidade para a renda fixa.</p>
 
 			<h2 class="font-20px">Por que <a style="color:#1d9e04; text-decoration: underline;" href="selic.html">Selic</a> e CDI influenciam a renda fixa?</h2>
-			Como a Selic é a taxa básica de juros da economia, ela serve de base para diversas taxas de abrangência nacional - não só as cobradas em empréstimos e financiamentos, mas também nas taxas de retorno em aplicações financeiras, como o CDI, que é o Certificado de Depósito Interbancário.</p>
+			<p>Como a Selic é a taxa básica de juros da economia, ela serve de base para diversas taxas de abrangência nacional - não só as cobradas em empréstimos e financiamentos, mas também nas taxas de retorno em aplicações financeiras, como o CDI, que é o Certificado de Depósito Interbancário.</p>
 
 			<p>O CDI é um mecanismo de lastro (garantia) para operações realizadas diariamente por instituições financeiras. Ele reflete diretamente o custo dos empréstimos feitos entre os bancos, e por isso costuma acompanhar de perto a própria taxa Selic.</p>
 
@@ -239,13 +239,13 @@
 			<p>Existem, ainda, ativos como os títulos do Tesouro Selic que são diretamente impactados pela variação da taxa básica de juros.</p>
 
 			<h2 class="font-20px">Por que a inflação influencia a renda fixa?</h2>
-			Por fim, como a Selic tem relação direta com a inflação, os investidores que aplicam em títulos cujo rendimento é calculado pelo indicador oficial de inflação, o Índice de Preços ao Consumidor Amplo (IPCA), devem observar as movimentações da taxa básica de juros.</p>
+			<p>Por fim, como a Selic tem relação direta com a inflação, os investidores que aplicam em títulos cujo rendimento é calculado pelo indicador oficial de inflação, o Índice de Preços ao Consumidor Amplo (IPCA), devem observar as movimentações da taxa básica de juros.</p>
 
 			<p>Alguns dos investimentos indexados pelo IPCA são o Tesouro IPCA+, debêntures, LCIs, LCAs, CRIs, CRAs e fundos de renda fixa.</p>
 
 			<h2 class="font-20px">Quais os tipos de investimentos em renda fixa?</h2>
 			<p>A renda fixa é uma grande classe de investimentos que reúne diferentes ativos e emissores, do setor privado e público, como instituições financeiras, empresas ou o governo. As categorias mais comuns são CDBs, títulos do Tesouro Direto, debêntures, CRIs, CRAs, LCIs e LCAs.</p>
-			
+
 			<p><strong>Principais tipos de investimentos em renda fixa</strong></p>
 			<ul>
 				<li>1. CDB</li>
@@ -277,9 +277,9 @@
 			<h2 class="font-20px">Segurança da renda fixa</h2>
 			<p>Alguns investimento em renda fixa são os mais seguros do mercado, porque são cobertos pelo FGC (Fundo Garantidor de Crédito). É um fundo privado formado com recursos das próprias instituições financeiras que cobre títulos privados emitidos por bancos, financeiras, sociedades de crédito, companhias hipotecárias e associações de poupança e empréstimo associados.</p>
 
-			<p>Isso significa que investimentos como CDB, RDB, Letra de Câmbio, LCI, LCA estão protegidos pelo FGC. Por outro lado, CRIs, CRAs, Letras Financeiras, Debêntures e títulos do Tesouro Direto não contam com a proteção do FGC.</p> 
+			<p>Isso significa que investimentos como CDB, RDB, Letra de Câmbio, LCI, LCA estão protegidos pelo FGC. Por outro lado, CRIs, CRAs, Letras Financeiras, Debêntures e títulos do Tesouro Direto não contam com a proteção do FGC.</p>
 
-			<hr class="hr-rfx">			
+			<hr class="hr-rfx">
 			<p>Rentabilidade garantida? Risco zero de perda? Você talvez esteja se perguntando o que é renda fixa, afinal. A resposta está em um conceito fácil de entender: nos investimentos em renda fixa, o cálculo da remuneração é previamente definido e conhecido desde o momento da aplicação.</p>
 
 			<p>Em linhas gerais, quem compra um título de renda fixa “empresta” dinheiro para alguém. Em troca, espera receber o valor aplicado de volta no futuro acrescido de juros, que são a remuneração pelo tempo em que o recurso ficou emprestado. As condições dessa transação – como prazos, taxas, índices de referência e detalhes quanto à negociação dos papéis – são acertadas desde o início.</p>
@@ -294,7 +294,7 @@
 			<div class="comentario">
 			<p>Além da segurança, a Renda Fixa tem ótima rentabilidade. Como todo mundo já sabe, a poupança rende muito pouco.</p>
 			</div>
-			
+
 			<table id="tbl-comp-rfx" style="height: 503px; width: 100%; border-width: 0px; margin-bottom: 20px; margin-top: 20px;" width="100%" cellspacing="8">
 					<tbody>
 							<tr style="height: 47px;">
@@ -415,10 +415,10 @@
 			<p><strong>4. Fundos de Renda Fixa: conte com gestores profissionais</strong></p>
 			<p>Por fim, o investidor também tem a oportunidade de investir na Renda Fixa por meio dos <strong>Fundos de Investimentos</strong>. Esse veículo de investimento funciona como um condomínio com vários cotistas que formam o patrimônio total do Fundo. Então, o gestor e administradora do Fundo investirá esse patrimônio em produtos de Renda Fixa.</p>
 
-			<p>Desse modo, o investidor ganha tanto com o retorno das aplicações como com a valorização das cotas que possui ao participar do Fundo de Investimento.</p> 
+			<p>Desse modo, o investidor ganha tanto com o retorno das aplicações como com a valorização das cotas que possui ao participar do Fundo de Investimento.</p>
 
 			<p>A vantagem desse tipo de estratégia é contar com os gestores e administradores profissionais do Fundo para escolher e aplicar o seu dinheiro nas melhores alternativas da Renda Fixa do mercado. Isto é, você não terá nenhum trabalho em realizar análises, comparativos e montagem das posições, tudo isso fica a cargo do gestor, que é o responsável por se dedicar 100% ao mercado para localizar as melhore oportunidades para os cotistas de acordo com a política do Fundo.</p>
-			
+
 			<hr class="hr-rfx">
 			<p>A Renda Fixa é um tipo de investimento considerado mais seguro e que envolve opções muito conhecidas como poupança e CDB.</p>
 
@@ -428,7 +428,7 @@
 			<p>Isso acontece porque a renda fixa pode ser:</p>
 			    <p><li class="lis-rfx"><strong>Prefixada</strong> — ou seja, logo que você decide fazer esse investimento é possível saber exatamente qual será o retorno lá no futuro, no fim da aplicação. Por exemplo: um rendimento de 6% ao ano.</li></p>
 			    <p><li class="lis-rfx"><strong>Pós fixada</strong> – quando o rendimento dela é atrelado a algum outro índice da economia. Por exemplo, um rendimento de 100% do CDI (uma taxa comum usada pelos bancos). Nesse caso, o investidor sabe que seu dinheiro vai render conforme algo específico – mas não sabe exatamente quanto porque esse indicador tem suas flutuações.</li></p>
-			</ul>    
+			</ul>
 			<p>Os prefixados apresentam menos riscos para o investidor – mas, no geral, os pós-fixados também são considerados investimentos muito seguros.
 			Muitos investimentos em renda fixa também têm liquidez diária, o que significa que o dinheiro colocado nele pode ser resgatado a qualquer momento. Isso é muito interessante para quem está criando uma reserva de emergência, por exemplo.</p>
 			<p>A Renda Fixa oferece rendimentos constantes e estáveis, o que dá mais tranquilidade ao investidor, principalmente quando se pensa em longo prazo.
@@ -441,16 +441,16 @@
 			Quando você compra um título do Tesouro está emprestando dinheiro ao governo, que te retornará essa quantia com um juros posteriormente.</p>
 			<p>Os títulos podem ser com taxas de juros pré ou pós-fixada. No caso da prefixada, o investidor já sabe qual será a taxa de rendimento no momento da aplicação e quanto receberá no vencimento do título.</p>
 			<p>Já a pós-fixada é atrelada a algum índice, como a Selic ou o IPCA. Ou seja, você receberá o valor emprestado mais os juros de acordo com a variação de um desses índices. Não se sabe, portanto, o quanto receberá no vencimento do título, já que os índices variam.</p>
-			
+
 			<p><strong>CDBs</strong></p>
 			<p>Enquanto no Tesouro você empresta dinheiro ao governo, no CDB, ou Certificado de Depósito Bancário, emprestará dinheiro aos bancos.</p>
 			<p>Os bancos possuem operações comerciais de empréstimos, como cheque especial, crédito direto a correntistas e financiamento de automóveis, por exemplo. Para viabilizar essas operações e atender aos clientes que precisam de crédito, os bancos também tomam dinheiro emprestado pagando juros.</p>
 			<p>Os CDBs são os títulos dessas dívidas, que você poderá adquirir e receber um rendimento pelo tempo do empréstimo. Esses ativos também podem vir com juros pré ou pós-fixados.</p>
-			
+
 			<p><strong>LCA e LCI</strong></p>
 			<p>As Letras de Crédito do Agronegócio (LCA) e Letras de Crédito Imobiliário (LCI) são títulos de dívida em que o investidor empresta dinheiro ao mercado do agronegócio ou imobiliário.</p>
 			<p>Os títulos são emitidos por bancos, que trabalham como intermediários nessa operação. Uma das vantagens desses dois investimentos de Renda Fixa é que não há incidência de imposto de renda. Aqui, o investidor também poderá encontrar títulos com taxas pré ou pós-fixadas.</p>
-			
+
 			<p><strong>Fundos de investimento</strong></p>
 			<p>Os fundos de investimento são grupos de investidores que se juntam sob uma gestora para investir em uma mesma carteira de ativos. Essa administradora vende as chamadas “cotas”, e o investidor terá o rendimento da carteira proporcional ao número de cotas que possui.</p>
 			<p>Os fundos são uma boa opção para quem não tem tanto tempo para acompanhar os investimentos, mas fique atento: eles requerem certo conhecimento.</p>
@@ -469,12 +469,12 @@
 		</article>
 		</section>
 	</main>
-    
+
 <footer>
  <div class="content-footer">
    <div class="left box">
      <div class="upper">
-       <div class="topic">Links</div>  
+       <div class="topic">Links</div>
           <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
 
           <div class="banner-footer">
