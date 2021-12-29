@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>CRI e CRA</title>
+	<meta name="description" content="CRI e CRA são títulos de renda fixa que significam, respectivamente, Certificado de Recebíveis Imobiliários e Certificado de Recebíveis do Agronegócio. Esses certificados são, no geral, uma forma que determinadas empresas utilizam para captar recursos.">
+    <meta name="keywords" content="cri e cra">
+    <meta name="author" content="marcus">
+	<link rel="icon" href="imgs/logo_fav.ico"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css">
+        table.tbl-rend {
+            border-collapse: collapse;
+            border-radius: 1px;
+            text-align: center;
+            width: 50%;
+            margin-top: 07px;
+            margin-bottom: 07px;
+        }
+        .tbl-rend tr,td {
+            border: 1px solid;
+            padding: 5px;
+            background-color: #9dfd8a;
+        }
+        .tbl-rend th {
+            background-color: #1d9e04;
+            color: #fff;
+        }
+	</style>
+</head>
+
+<body>
+	<!--0b10f5/025afc-->
+	<header x-data="{ open: false, hidden: true }">
+		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">
+		</div>
+		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
+			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
+				<div class="flex justify-end">
+					<button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+				</div>
+				<div class="flex flex-col flex-grow text-lg">
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="index.html">Mercado Crypto</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="mercado-tradicional.html">Mercado Tradicional</a>
+				</div>
+			</nav>
+		</aside>
+		<div class="bg-green-78 relative z-30">
+			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">
+			<a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
+			<div class="flex items-center">
+			<div class="hidden lg:flex items-center space-x-6 text-base">
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
+			</div>
+			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
+				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
+				<span>Renda Fixa</span>
+				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+				</button>
+				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">
+					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="tesouro-direto.html">
+							<span class="ml-3" style="color: #5a5a5a;">Tesouro Direto</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">
+							<span class="ml-3" style="color: #5a5a5a;">CDB e LC</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">
+							<span class="ml-3" style="color: #5a5a5a;">CRI e CRA</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="lci-lca.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">LCI e LCA</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="debentures.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Debêntures</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="letra-financeira.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Letra Financeira</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="titulos-publicos.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Títulos públicos</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="overflow-x-hidden">
+		<section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
+			<div class="max-w-3xl text-center flex flex-col items-center"><h1 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #1d9e04;" id="font">CRI e CRA</span></h1> 
+			</div>
+			</div>
+		<article class="conteudo-mercado-tradicional">
+			<h2 class="font-20px">O QUE É CRI E CRA E COMO INVESTIR<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Blog Orama</sub></h2>
+			<p>CRI e CRA são títulos de renda fixa que significam, respectivamente, Certificado de Recebíveis Imobiliários e Certificado de Recebíveis do Agronegócio. Esses certificados são, no geral, uma forma que determinadas empresas utilizam para captar recursos.</p>
+
+			<p>É bem simples! Por exemplo: uma empresa do setor imobiliário ou do agronegócio, ao realizar suas atividades, fez vendas parceladas, mas precisa do dinheiro à vista. Para isso, uma companhia securitizadora vai estruturar a dívida do cliente final, transformando os créditos a receber em títulos negociáveis no mercado.</p> 
+
+			<p>Sendo assim, os CRIs são lastreados em direitos creditórios do mercado imobiliário, já os CRAs são lastreados em recebíveis dos negócios realizados entre produtores rurais e terceiros, que englobam empréstimos e financiamentos relacionados a projetos do agronegócio, nas fases de produção, industrialização e comercialização.</p>
+
+			<p>Portanto, ao investir em um CRI ou em um CRA, você está comprando pagamentos futuros acrescidos de juros, isso tudo dentro de um prazo estipulado no momento da compra do título.</p>
+
+			<h2 class="font-20px">Características dos Certificados de Recebíveis</h2>
+			<p>Esses títulos são emitidos exclusivamente por companhias securitizadoras, que são instituições não financeiras. Assim, os certificados não têm garantia do FGC, mas, por serem lastreados em créditos do setor imobiliário ou do agronegócio, acabam por ter garantias reais.</p>    
+
+			<p>Os Certificados de Recebíveis são investimentos para o médio e longo prazos e costumam ter vencimentos a partir de 3 anos. Além disso, são ideais para perfis moderados e para investidores qualificados. Outra característica dessas aplicações é que você só pode resgatar o dinheiro investido na data de vencimento do título. Por conta disso, essa modalidade de investimentos é sugerida para investidores que já têm uma reserva de emergência e, por isso, não precisarão resgatar esses recursos em situações não previstas, de urgência.</p>
+
+			<p>Ambas as modalidades de investimentos são isentas de imposto de renda e podem ser tão ou mais rentáveis que poupança, LCI e LCA.</p>
+
+			<h2 class="font-20px">Diferença entre LCI/LCA e CRI/CRA</h2>
+			<p>Embora CRI e CRA tenham semelhança com LCI e LCA, é necessário ressaltar que são investimentos que funcionam de forma diferente. Tanto as LCIs, Letras de Crédito Imobiliário, quanto as LCAs, Letras de Crédito do Agronegócio, investem nos mesmos setores, respectivamente, que os CRIs e os CRAs, porém, a diferença entre esses  tipos de investimento é que, ao passo que as LCIs e LCAs são emitidas por bancos e financeiras, os CRIs e CRAs são emitidos por securitizadoras.</p>
+
+			<p>As quatro aplicações são isentas de imposto de renda, no entanto as LCIs e LCAs não são isentas do IOF, como acontece com os CRIs e CRAs.</p> 
+
+			<p>Por outro lado, as LCIs e LCAs possuem a garantia do FGC, característica que os CRIs e CRAs não possuem.</p>
+
+			
+			<h2 class="font-20px">Vantagens do CRI e do CRA</h2>
+			<p>Dentre as vantagens oferecidas por esses investimentos, podemos ressaltar:</p>
+
+			<p>Previsibilidade: por ser um investimento de Renda FIxa, há uma maior previsibilidade da rentabilidade do título.</p> 
+			
+			<p>Isenção de tributação: não há cobrança de imposto de renda nem incidência de IOF sobre esses investimentos.</p>
+			
+			<h2 class="font-20px">Possibilidade de recebimentos periódicos</h2>
+			<p>Os recebíveis são separados do patrimônio das securitizadoras através de um regime fiduciário. Isso significa que, caso a empresa esteja enfrentando algum tipo de dificuldade financeira, o pagamento para os investidores não será afetado.</p>
+
+			<h2 class="font-20px">Rentabilidade do CRI e do CRA</h2>
+			<p>Em se tratando de rentabilidade, os CRIs e CRAs podem ser:</p>
+
+			<p>Pós-fixados: o rendimento é indexado ao CDI, e a rentabilidade é expressa por meio de um percentual desse indexador. Um exemplo: CRI com retorno de 90% do CDI.</p>
+
+			<p>Prefixados: quando o retorno é conhecido no momento da aplicação, ou seja, você tem um retorno fixo. Sendo assim, a movimentação de qualquer indicador, como o CDI ou a Selic, não interfere na rentabilidade do investimento, pois o retorno já foi determinado e já é conhecido no momento que o investidor adquire o título.</p> 
+
+			<h2 class="font-20px">Por exemplo: CRA de 9% ao ano.</h2>
+			<p>Híbridos/atrelados à inflação: investimentos híbridos têm um componente prefixado e outro pós-fixado. Desta forma, uma parte da rentabilidade é estabelecida no momento da aplicação e a outra é atrelada a um índice econômico, que costuma ser o IPCA. Por exemplo: CRI com IPCA + 6%.</p>
+			
+			<h2 class="font-20px">Riscos e como se proteger</h2>
+			<p>Como todos os investimentos, CRI e CRA também possuem riscos. É importante saber quais são eles para que, dessa forma, você possa se prevenir.</p> 
+
+			<p>Primeiramente, existe o risco de liquidez. Isso acontece porque esses investimentos têm prazo de resgate apenas no vencimento do título, e o mercado secundário é pouco desenvolvido no Brasil. Com isso, para que você consiga transformar o ativo em dinheiro quando desejar, torna-se necessário pagar uma taxa de resgate por isso.</p> 
+
+			<p>Sobre o risco de crédito do emissor, apesar de CRIs e CRAs não serem garantidos pelo FGC*, esse tipo de risco é minimizado. Isso ocorre pois é comum que seja instituído o regime fiduciário, ou seja, os recebíveis são separados do patrimônio da securitizadora e destinados exclusivamente à liquidação dos títulos. Dessa forma, caso a securitizadora tenha dificuldades financeiras, o fluxo de pagamento para os investidores não será afetado.</p> 
+
+			<p>*FGC: o Fundo Garantidor de Créditos é uma entidade que, em caso de problemas com a instituição financeira, cobre o seu investimento, mais o rendimento obtido, em até R$ 250 mil por CPF e por emissor, valor limitado a R$ 1.000.000 a cada 4 anos.</p> 
+
+			<p>Contudo, há ainda o risco inerente ao fato que originou o título. Se, por exemplo, a pessoa que financiou um apartamento (parte do CRI) deixar de pagar as parcelas, toda uma cadeia pode ficar prejudicada. Assim, observar e avaliar a origem do lastro também é importante.</p> 
+
+			<h2 class="font-20px">E como se proteger dos riscos?</h2>
+			<p>Análise de Rating: O rating é equivalente a uma nota de confiabilidade da empresa, e é realizado por agências especializadas. Então, quanto melhor for o rating, mais segura é a emissão e menor o risco de calote.</p>
+
+			<p>Diversificação da carteira: Não coloque todo o seu dinheiro em CRI e CRA. Ao diversificar sua carteira com diferentes investimentos, você está diminuindo o risco de concentração do seu dinheiro.</p>
+
+			<h2 class="font-20px">Custos e tributações</h2>
+			<p>Normalmente existem custos como taxa de administração ao se investir nos Certificados de Recebíveis. Aqui na Órama, no entanto, você não paga taxa ou custo algum para investir em CRI e CRA. Além disso, esses investimentos não possuem cobrança de IOF ou imposto de renda. Contudo, fique atento ao valor mínimo para aplicação, que pode variar, mas costuma ser a partir de R$1.000.</p>
+
+			<h2 class="font-20px">Conclusão</h2>
+			<p>Agora que você já sabe o que são CRI e CRA, suas rentabilidades, vantagens e características, pondere e veja se esses investimentos se enquadram no seu perfil de investidor e nos seus projetos futuros – afinal, diversos investimentos se tornam atrativos à primeira vista, mas é necessário saber se eles são a melhor escolha para que você consiga concretizar suas metas.</p> 
+
+			<p>E, claro, vale lembrar novamente da importância de diversificar a sua carteira para que você obtenha melhores resultados nos seus investimentos.</p> 
+
+			<p>Esperamos que este texto tenha sanado suas dúvidas. Caso ainda esteja com alguma, comente aqui ou entre em contato com o nosso setor de Atendimento. Nós estamos a postos para resolvê-las! Para mais informações, confira o nosso site.</p>
+
+			<hr>
+
+			<h2 class="font-20px">O que são CRI e CRA? Quais as vantagens e desvantagens?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Exame invest</sub></h2>
+			<p>Os títulos de crédito são uma opção de investimento em renda fixa que pode entregar mais retorno do que aplicações tradicionais, como o Tesouro Direto, os CDBs e até a poupança. Alguns desses investimentos foram criados para fomentar o crescimento de determinados setores da economia. Assim, os CRIs e CRAs são exemplos de títulos de crédito que podem trazer mais rendimento para a carteira do investidor.</p>
+
+			<h2 class="font-20px">O que são CRIs e CRAs?</h2>
+			<p>CRI (Certificados de Recebíveis Imobiliários) e CRA (Certificados de Recebíveis do Agronegócio) são títulos de renda fixa lastreados em créditos imobiliários, como financiamentos e contratos de aluguel de longo prazo, e crédito agrícolas, como financiamentos para custeio de produção agropecuária.</p>
+
+			<p>Quem investe em um desses papéis ajudará a financiar o mercado de imóveis ou o setor do agronegócio, respectivamente, comprando a promessa de um pagamento futuro.</p>
+
+			<p>Na prática, o investidor que adquire um CRI ou um CRA está se tornando credor de um projeto imobiliário ou agrícola.</p>
+
+			<p>Tomando como exemplo um CRI de um condomínio residencial: o construtor desse condomínio pode emitir títulos de CRI no mercado para custear a obra daquelas casas ou apartamentos. Conforme as unidades residenciais forem vendidas, o construtor colherá lucro sobre aquele projeto e fará o pagamento dos investidores que compraram o CRI.</p>
+
+			<p>A renda fixa morreu? Nada disso, mas conhecimento nunca foi tão importante. Saiba mais no Manual do Investidor da EXAME Academy.</p>
+
+			<h2 class="font-20px">Qual a diferença entre CRIs e LCIs?</h2>
+			<p>O CRI é muito parecido com a LCI (Letra de Crédito Imobiliário), também lastreada no mercado imobiliário. A principal diferença é o emissor do papel. Enquanto a LCI é emitida por uma instituição financeira, o CRI é emitido por companhias securitizadoras de recebíveis imobiliários.</p>
+
+			<p>São essas empresas as responsáveis por adquirir os créditos imobiliários e transformá-los em títulos líquidos. Dessa forma, do ponto de vista do emissor, o CRI é um instrumento de captação de recursos para financiar transações e projetos do mercado imobiliário.</p>
+
+			<p>Já do ponto de vista do investidor, o CRI é uma forma de entrar no mercado imobiliário com aporte mínimo menor.</p>
+
+			<h2 class="font-20px">Vantagens e desvantagens de investir em CRI</h2>
+			<p>O CRI é um investimento de renda fixa, por isso as formas mais comuns de rentabilidade desse investimento são taxas prefixadas ou pós-fixadas atreladas a um percentual do CDI, do IPCA ou até o IGP-M.</p>
+
+			<p>Assim como o CRA, a LCI e a LCA, o CRI tem uma vantagem sobre outros investimentos da renda fixa: é isento de Imposto de Renda. Por outro lado, como são emitidos por securitizadoras imobiliárias - e não instituições financeiras, como é o caso das LCIs - os CRIs não contam com a garantia do FGC.</p>
+
+			<h2 class="font-20px">Como investir em CRIs?</h2>
+			<p>É possível investir em CRIs por meio de uma corretora, comprando diretamente os papeis. Também é possível investir em fundos de investimento que investem em CRIs, os chamados Fundos de Investimento Imobiliário, ou FIIs.</p>
+
+			<p>Para investir nesses ativos, o primeiro passo é abrir uma conta em uma corretora, porque a corretora é a instituição responsável por executar as ordens de compra e venda, mesmo que elas sejam feitas pela internet.</p>
+
+			<p>Em seguida, o investidor deverá preencher um questionário de suitability, que serve para descobrir qual é seu perfil de risco. O questionário apresenta perguntas sobre os objetivos do investidor, a sua tolerância às perdas e os prazos para resgate das aplicações.</p>
+
+			<p>No fim, o investidor descobrirá se tem perfil conservador, moderado ou arrojado. O perfil sugere a adesão a diferentes aplicações, sendo as de maior risco indicadas para os perfis moderados e arrojados.</p>
+
+			<p>Uma vez que o investidor já sabe o seu perfil de risco, basta navegar pelas categorias de ativos para acompanhar as cotações e as posições de investimentos.</p>
+
+			<h2 class="font-20px">O que é CRA?</h2>
+			<p>O CRA, ou Certificado de Recebíveis do Agronegócio, é um título de renda fixa lastreado em dívidas do setor agrícola. Assim, quem investe em um desses papéis está comprando o rendimento de créditos concedidos para o financiamento do agronegócio. Em outras palavras, está ajudando a financiar a atividade agropecuária.</p>
+
+			<p>O CRA é muito parecido com a LCA, também lastreada no agronegócio. A principal diferença é o emissor do papel. Enquanto a LCA é emitida por uma instituição financeira, o CRA é emitido por companhias securitizadoras. Por isso, não conta com a garantia do FGC. Com isso, o risco pode ser maior que o de investir em uma LCA, mas a rentabilidade também.</p>
+
+			<h2 class="font-20px">Qual a diferença entre CRAs e LCAs?</h2>
+			<p>Os CRAs e LCAs (Letras de Crédito do Agronegócio) se diferem da mesma forma que os CRIs e LCIs. As LCAs são emitidas por instituições financeiras e têm o propósito de custear projetos do setor agrícola.</p>
+
+			<p>Os CRAs, embora tenham o mesmo propósito de fomento ao setor, são emitidos por companhias securitizadoras de recebíveis agrícolas.</p>
+
+			<p>Ou seja: ao comprar um LCA, o investidor estará "emprestando" dinheiro para uma instituição financeira, que repassará os recursos para um produtor ou empresário ligado ao setor agrícola. Já quando o investidor compra um CRA, seu credor é diretamente o produtor ou empresário em questão.</p>
+
+			<h2 class="font-20px">Vantagens e desvantagens de investir em CRA</h2>
+			<p>O CRA é um investimento de renda fixa, por isso, as formas mais comuns de rentabilidade desse investimento são taxas prefixadas, pós-fixadas atreladas a um percentual de um indexador como CDI ou do IPCA, ou rendimento híbrido, que reúne uma taxa prefixada e uma pós-fixada.</p>
+
+			<p>Assim como o CRI, a LCI e a LCA, o CRA tem uma vantagem sobre outros investimentos da renda fixa: é isento de imposto de renda.</p>
+
+			<h2 class="font-20px">Como investir em CRA?</h2>
+			<p>É possível investir em CRAs por meio de uma corretora, comprando os papéis na sua palataforma. Também é possível investir em CRA comprando o título diretamente do emissor ou de outros investidores, no mercado secundário.</p>
+
+			<hr>
+
+			<h2 class="font-20px">O que é CRI?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Nubank</sub></h2>
+
+			<p>O mundo dos investimentos é feito de siglas enigmáticas: LCI pra cá, RDB pra lá, taxa CDI e por aí vai. Entender o que elas significam é importante para quem quer começar a investir o seu dinheiro. Neste artigo, você vai  entender o que é CRI e se faz sentido para o seu perfil de investidor.</p>
+
+			<h2 class="font-20px">O que significa CRI?</h2>
+			<p>CRI é a sigla para Certificado de Recebíveis Imobiliário, um produto de investimento que funciona de forma simples: trata-se de um título de renda fixa que representa a promessa de um pagamento futuro referente a imóveis.</p>
+
+			<p>Quando falamos em imóveis, logo vem à cabeça a imagem de prédios ou casas residenciais. Mas vale lembrar que o Certificado de Recebíveis imobiliários (CRIs) antecipa o crédito ao incorporador que também irá construir galpões logísticos, prédios comerciais ou escritórios, por exemplo.</p>
+
+			<h2 class="font-20px">Quem emite CRI?</h2>
+			<p>Os Certificados de Recebíveis Imobiliários (CRIs) são emitidos exclusivamente por companhias Securitizadoras, diferente das LCIs, que são emitidas somente por instituições financeiras.</p>
+
+			<p>Vamos supor que uma construtora decide erguer um prédio, vende suas unidades e os compradores financiam seus apartamentos na planta. A empresa receberá o pagamento total ao longo de alguns anos, mas precisa de dinheiro agora para seguir com suas operações.</p>
+
+			<p>Assim, ela vai atrás de uma companhia securitizadora, que, de forma resumida, vai transformar essas vendas a prazo em títulos negociáveis no mercado.</p>
+
+			<p>Esses títulos – os CRIs – nada mais são do que pedaços da dívida que podem ser comprados por investidores.</p>
+
+			<p>Em outras palavras, o investidor que compra o CRI está ajudando a financiar o imóvel ao antecipar o valor que será recebido mais para frente, e vai receber juros em troca disso.</p>
+
+			<p>Isso vale para diversas situações no setor imobiliário, de financiamentos e construções a aluguéis de longo prazo.</p>
+
+			<h2 class="font-20px">CRI tem FGC?</h2>
+			<p>Diferentemente de boa parte dos produtos em renda fixa, os Certificados de Recebíveis Imobiliários (CRI) são investimentos sem proteção do Fundo Garantidor de Crédito (FGC). Ou seja, são mais arriscados. Os investidores dependem da capacidade de pagamento da empresa que tomou o financiamento – uma construtora ou incorporadora, por exemplo.</p>
+
+			<h2 class="font-20px">O que é investimento em CRI?</h2>
+			<p>O Certificado de Recebíveis Imobiliários (CRI) é, portanto, uma aplicação em renda fixa ligada ao setor imobiliário. Uma importante característica, e que deve ser levada em consideração antes de investir em CRIs, é que os vencimentos costumam ser longos, na faixa de 3 a 5 anos – há casos em que podem levar mais de 10 anos.</p>
+
+			<p>Isso acontece porque os empreendimentos que dão origem aos papéis são de longo prazo (como a construção de um edifício) e os papéis, portanto, têm baixa liquidez.</p>
+
+			<p>Ou seja: essa não é uma aplicação para quem busca rendimentos a curto prazo. Quem decidir resgatar seu dinheiro antecipadamente corre o risco de perder os rendimentos.</p>
+
+			<h2 class="font-20px">Rentabilidade</h2>
+			<p>Em termos de remuneração, os Certificados de Recebíveis Imobiliários (CRI) seguem o padrão da maior parte dos investimentos de renda fixa, com uma relativa previsão de quanto o dinheiro irá render.</p>
+
+			<p>Os recebíveis imobiliários costumam seguir um desses modelos de remuneração:</p>
+
+			<h2 class="font-20px">Pré-fixada</h2>
+			<p>Nesse formato, a taxa de juros é travada no momento da compra. Ou seja, o investidor sabe desde o início que seu investimento renderá aquele X% ao ano até o vencimento.</p>
+
+			<h2 class="font-20px">Pós-fixada</h2>
+			<p>Já neste caso, a rentabilidade é atrelada a um indicador específico – como a Taxa Selic ou o CDI, por exemplo. Isso significa que, se houver mudança no indicador, o retorno da aplicação sofrerá variação para mais ou menos.</p>
+
+			<p>Além disso, também têm rendimento pós-fixado os CRIs que estão atrelados a um índice, como o de inflação (IPCA). Neste tipo, uma parcela de remuneração é pré-fixada (uma taxa mínima de rendimento) e outra pós-fixada (atrelada ao índice).</p>
+
+			<h2 class="font-20px">Imposto de Renda</h2>
+			<p>Assim como outros investimentos em renda fixa (LCI e LCA), os rendimentos dos Certificados de Recebíveis Imobiliários (CRIs) são isentos de Imposto de Renda. Ou seja, o valor da rentabilidade será igual ao valor líquido de retorno do seu investimento.</p>
+
+			<h2 class="font-20px">O que é FII CRI?</h2> 
+			<p>FII é a sigla para Fundo de Investimento Imobiliário. Essa é uma categoria de investimento coletivo, também livre de imposto de renda, em que várias pessoas colocam seu capital em um mesmo fundo. Ele, por sua vez, é administrado por uma empresa especializada em gestão de fundos.</p>  
+
+			<p>Dessa forma, o FII CRI é um fundo de investimento imobiliário que coloca grande parte do seu capital em recebíveis imobiliários, com o objetivo de balancear a carteira de investimentos. Ou seja: em vez de você investir diretamente em um CRI, o gestor do fundo distribuirá seu investimento entre vários CRIs de diferentes setores do mercado imobiliário.</p> 
+
+			<h2 class="font-20px">Resumindo: CRIs valem a pena?</h2>
+			<p>Como em quase tudo no mercado financeiro, a resposta é: depende. Ao tomar essa decisão, vale a pena lembrar dos principais pontos que caracterizam o Certificado de Recebíveis Imobiliários (CRI):</p>
+
+			<p>• São investimentos de renda fixa;</p>
+			<p>• Não têm proteção do FGC;</p>
+			<p>• São isentos de Imposto de Renda e IOF;</p>
+			<p>• Costumam ter baixa liquidez;</p>
+			<p>• Podem ter rendimentos nos formatos pré-fixado, pós-fixado ou atrelado à inflação.</p>
+			<p>• A baixa liquidez é o principal ponto de atenção: CRI não são aplicações indicadas para quem pode precisar desse dinheiro. Neste caso, vale mais a pena deixá-lo rendendo em um investimento de baixo risco e com liquidez diária ou imediata.</p>
+
+			<hr>
+
+			<h2 class="font-20px">O que é CRA?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Nubank</sub></h2>
+			<p>Saiba tudo sobre o título de renda fixa que financia o agronegócio, e que pode ser uma boa opção de investimento a longo prazo.</p>
+
+			<p>CRA, CRI, Fundos, Fundos de fundos, Fundos de Investimento Imobiliário…. são tantas opções que você possivelmente fica confuso na hora de investir caso sejam os seus primeiros passos nesse novo mundo.</p>
+
+			<p>O CRA, ou Certificado de Recebíveis do Agronegócio, financia um dos setores econômicos mais importantes do Brasil: o agronegócio. Tanto é que no ano passado, por meio da Lei 13.986, passou-se a permitir a emissão de CRAs também fora do Brasil.</p>
+
+			<p>Entenda como funciona e como investir em CRAs.</p>
+
+			<h2 class="font-20px">O que significa CRA?</h2>
+			<p>CRA é a sigla para Certificado de Recebíveis do Agronegócio, um tipo de investimento que funciona de maneira similar ao Certificado de Recebíveis Imobiliários (CRI). A diferença está no setor: o CRA é um título de renda fixa que representa a promessa de um pagamento futuro referente ao setor do agronegócio.</p>
+
+			<h2 class="font-20px">O que é um investimento CRA?</h2>
+			<p>Imagine uma empresa, do setor agropecuário, que precisa levantar capital para investir em maquinários, industrializar seus produtos ou até mesmo aumentar sua comercialização. Para financiar o projeto, ela contrata uma empresa securitizadora para adiantar o valor – como um empréstimo.</p>
+
+			<p>A securitizadora transformará essa dívida em papéis, e depois irá ofertá-los no mercado para serem comprados pelos investidores, que esperam retornos financeiros em troca. Esses papéis recebem o nome de Certificado de Recebíveis do Agronegócio (CRA).</p>
+
+			<p>Os tipos de estrutura de um CRA também podem variar e impactar de formas diferentes o risco do seu investimento. O investimento com estrutura pulverizada tem risco vinculado a uma carteira de crédito de diversos devedores, como os agricultores. Já a estrutura corporativa vincula o risco a uma empresa que utilizou da emissão para financiar a sua operação.</p>
+
+			<h2 class="font-20px">Rentabilidade</h2>
+			<p>Os Certificados de Recebíveis do Agronegócio (CRA) possuem uma relativa previsão de quanto o dinheiro irá render no ato da compra do título, assim como a maioria dos investimentos em renda fixa. Para isso, existem tipos diferentes de remuneração:</p>
+
+			<h2 class="font-20px">Pré-fixada</h2>
+			<p>Nessa modalidade você sabe exatamente, desde a compra do título, o quanto receberá de rendimento lá na frente, quando chegar a data de vencimento do investimento.</p>
+
+			<h2 class="font-20px">Pós-fixada</h2>
+			<p>Da mesma forma que na pré-fixada, o investidor tem uma previsão de quanto irá receber na data de vencimento do título. Mas, nesse caso, é necessário atrelar a rentabilidade desse investimento a um índice econômico, como o Certificado de Depósito Interbancário (CDI), o Índice Nacional de Preços ao Consumidor Amplo (IPCA), ou até mesmo ser vinculado ao dólar.</p>
+
+			<p>Assim como outros investimentos em renda fixa, quanto maior o tempo de vencimento do título, maior será a rentabilidade e, logo, maior será o ganho.</p>
+
+			<h2 class="font-20px">CRA tem imposto de renda?</h2>
+			<p>Um dos principais atrativos dos Certificados de Recebíveis do Agronegócio (CRA) é o fato de serem isentos de imposto de renda e IOF para Pessoas Físicas. Ou seja, são aplicações com rentabilidade líquida, sem descontos, algo pouco comum em investimentos de renda fixa.</p>
+
+			<p>Já os impostos para Pessoas Jurídicas segue uma tabela regressiva:</p>
+
+			<table class="tbl-rend">
+				<tr>
+					<th>Prazo de resgate</th>
+					<th>Alíquota</th>
+				</tr>
+				<tr>
+					<td>Até 180 dias</td>
+					<td>22,5%</td>
+				</tr>
+				<tr>
+					<td>Entre 180 e 360 dias</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Entre 360 e 720 dias</td>
+					<td>17,5%</td>
+				</tr>
+				<tr>
+					<td>Acima de 720 dias</td>
+					<td>15%</td>
+				</tr>
+			</table>
+			
+			<p>Ou seja, o CRA será uma boa opção de investimento para pessoas jurídicas caso esse título seja resgatado em um longo prazo.</p> 
+
+			<h2 class="font-20px">CRA tem FGC?</h2>
+			<p>Essa é uma das desvantagens em investir em Certificados de Recebíveis do Agronegócio (CRA), em comparação com a Letra de Crédito do Agronegócio (LCA), por exemplo. O CRA não tem cobertura FGC.</p>
+
+			<p>Basicamente, o Fundo Garantidor de Crédito (FGC) protege o patrimônio de investidores em até R$ 250 mil caso a instituição financeira, a qual você comprou um título de dívida, venha a quebrar. Como o CRA não é emitido por bancos e instituições financeiras, e sim por empresas privadas (em sua maioria securitizadoras), o investimento em CRA não é contemplado pelo FGC.</p> 
+
+			<h2 class="font-20px">É seguro investir em CRA?</h2>
+			<p>Todo investimento possui seus riscos, alguns mais, outros menos. Investimentos em renda fixa tem um menor risco, como é caso do CRA. Caso avalie que investir em CRA é uma boa opção para o seu perfil de investidor, vale a pena consultar as agências de rating e entender a classificação de risco daquele título que você pretende investir. Isso vai te trazer maior segurança em suas escolhas.</p> 
+
+			<p>Este conteúdo faz parte da missão do Nubank de devolver às pessoas o controle sobre a sua vida financeira. Ainda não conhece o Nubank? Saiba mais sobre nossos produtos e a nossa história.</p> 
+
+			<div>
+				<h2 class="origem">Fontes:</h2>
+				<p><a class="origem" href="https://blog.orama.com.br/2019/08/21/o-que-e-cri-e-cra-e-como-investir/" target="_blank">Blog Orama</a></p>
+				<p><a class="origem" href="https://invest.exame.com/guia/o-que-e-cdb-quais-sao-as-suas-vantagens-e-desvantagens" target="_blank">Exame invest</a></p>
+				<p><a class="origem" href="https://blog.nubank.com.br/cri/" target="_blank">Nubank | CRI</a></p>
+				<p><a class="origem" href="https://blog.nubank.com.br/o-que-e-cra/" target="_blank">Nubank | CRA</a></p>
+			</div>
+
+		</article>
+		</section>
+	</main>
+
+<footer>
+ <div class="content-footer">
+   <div class="left box">
+     <div class="upper">
+       <div class="topic">Links</div>
+          <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
+
+          <div class="banner-footer">
+              <p>
+              	<a href="index.html"><img alt="Páginas" src="imgs/logo-1.png"></a>
+				<a href="https://mlssystem.github.io/favcrypto/#noticias">Notícias</a>
+				<a href="https://mlssystem.github.io/favcrypto/#precos">Preços</a>
+				<a href="https://mlssystem.github.io/favcrypto/#exchanges">Exchanges</a>
+				<a href="https://mlssystem.github.io/favcrypto/#capitalizacao">Capitalização</a>
+				<a href="https://mlssystem.github.io/favcrypto/#arbitragem">Arbitragem</a>
+				<em>Outros Sites:</em>
+				<a href="https://mlssystem.github.io" target="_blank">MLSSystem</a>
+				<a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a>
+				<a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a>
+				<a href="https://mlssystem.github.io/linksuteis" target="_blank">Links Úteis</a>
+				<a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a>
+              </p>
+          </div>
+     </div>
+   </div>
+   <div class="middle box">
+     <div class="topic">Favoritos</div>
+     	<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html"><img alt="Páginas" src="imgs/logo-favoritos-64.PNG"></a></div>
+		<div><a href="renda-fixa.html" target="_blank">Renda Fixa</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-variavel" target="_blank">Renda Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#fixa-variavel" target="_blank">Fixa e Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#perfil" target="_blank">Perfil do Investidor</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#indices" target="_blank">Índices</a></div>
+		<em>Outros Sites:</em>
+		<div><a href="https://mlssystem.github.io" target="_blank">MLSSystem</a></div>
+		<div><a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a></div>
+		<div><a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a></div>
+		<div><a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a></div>
+   </div>
+   <div class="right box">
+     <div class="topic">Inscreva-se</div>
+     <form action="#">
+       <input type="text" placeholder="Em desenvolvimento">
+       <input type="submit" name="" value="Inativo">
+       <div class="media-icons">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       </div>
+     </form>
+     <div class="lower">
+       <div class="topic">Contato</div>
+       <div class="phone">
+         <a href="#"><i class="fas fa-phone-volume"></i>+55 DD 98765 4321</a>
+       </div>
+       <div class="email">
+         <a href="#"><i class="fas fa-envelope"></i>abc@email.com</a>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="bottom">
+   <p>Copyright © 2021 <a href="https://github.com/mlssystem">MLSSystem</a> Todos direitos reservados</p>
+ </div>
+</footer>
+</body>
+</html>
