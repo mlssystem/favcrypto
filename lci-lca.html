@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>LCI e LCA</title>
+	<meta name="description" content="Investir em renda fixa vai muito além da poupança, dos Certificados de Depósitos Bancários (CDBs) e do Tesouro Direto.">
+    <meta name="keywords" content="lci e lca">
+    <meta name="author" content="marcus">
+	<link rel="icon" href="imgs/logo_fav.ico"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css">
+        table.tbl-rend {
+            border-collapse: collapse;
+            border-radius: 1px;
+            text-align: center;
+            width: 50%;
+            margin-top: 07px;
+            margin-bottom: 07px;
+        }
+        .tbl-rend tr,td {
+            border: 1px solid;
+            padding: 5px;
+            background-color: #232526;
+						color: #8c8c8c;
+        }
+        .tbl-rend th {
+            background-color: #3b3a3a;
+            color: #fff;
+        }
+	</style>
+</head>
+
+<body>
+	<!--0b10f5/025afc-->
+	<header x-data="{ open: false, hidden: true }">
+		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">
+		</div>
+		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
+			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
+				<div class="flex justify-end">
+					<button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+				</div>
+				<div class="flex flex-col flex-grow text-lg">
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="index.html">Mercado Crypto</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="mercado-tradicional.html">Mercado Tradicional</a>
+				</div>
+			</nav>
+		</aside>
+		<div class="bg-green-78 relative z-30">
+			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">
+			<a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
+			<div class="flex items-center">
+			<div class="hidden lg:flex items-center space-x-6 text-base">
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
+			</div>
+			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
+				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
+				<span>Renda Fixa</span>
+				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+				</button>
+				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">
+					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="tesouro-direto.html">
+							<span class="ml-3" style="color: #5a5a5a;">Tesouro Direto</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">
+							<span class="ml-3" style="color: #5a5a5a;">CDB e LC</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">
+							<span class="ml-3" style="color: #5a5a5a;">CRI e CRA</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="lci-lca.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">LCI e LCA</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="debentures.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Debêntures</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="letra-financeira.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Letra Financeira</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="titulos-publicos.html" title="Telegram">
+							<span class="ml-3 incluir" style="color: #5a5a5a;">Títulos públicos</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="overflow-x-hidden">
+		<section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
+			<div class="max-w-3xl text-center flex flex-col items-center"><h1 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #8c8c8c;" id="font">CRI e CRA</span></h1>
+			</div>
+			</div>
+		<article class="conteudo-mercado-tradicional">
+			<h2 class="font-20px">O que são LCI e LCA? Quais as vantagens e as desvantagens?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Exame invest</sub></h2>
+			<p>Investir em renda fixa vai muito além da poupança, dos Certificados de Depósitos Bancários (CDBs) e do Tesouro Direto. Existem outros títulos de crédito que podem compor a carteira do investidor e oferecer melhores alternativas de rentabilidade e liquidez.</p>
+
+			<p>Uma dessas alternativas são as letras de crédito. As principais são as Letras de Crédito Imobiliário (LCI) e as Letras de Crédito do Agronegócio (LCA).</p>
+
+			<h2 class="font-20px">O que é LCI e LCA?</h2>
+			<p>As Letras de Crédito Imobiliário (LCI) e as Letras de Crédito do Agronegócio (LCA) são dois investimentos da renda fixa que se popularizaram nos últimos anos. Elas são recomendadas para o investidor que deseja um rendimento próximo ao Certificado de Depósito Interbancário (CDI) com segurança e isenção de impostos.</p>
+
+			<h2 class="font-20px">O que é LCI?</h2>
+			<p>A LCI é um título de renda fixa lastreado em crédito imobiliário, emitido por bancos e instituições financeiras para financiar o setor. Um banco pode emitir uma LCI, por exemplo, para custear uma linha de crédito para uma construtora que deseja desenvolver um empreendimento residencial.</p>
+
+			<p>A LCI remunera o investidor com uma taxa pré-determinada no vencimento do título. Em geral, esses títulos acompanham o desempenho do CDI, o principal indicador da renda fixa. Ou seja: o investidor encontrará a rentabilidade da LCI em forma de um percentual do CDI.</p>
+
+			<p>Uma LCI que rende 98% do CDI vai entregar ao investidor um rendimento bem próximo da taxa Selic do período.</p>
+
+			<h2 class="font-20px">O que é LCA?</h2>
+			<p>A LCA é um título de renda fixa emitido por bancos e instituições financeiras com o objetivo de captar recursos para o agronegócio. Quem investe em uma LCA está emprestando dinheiro para que o banco financie o agronegócio. Um banco pode, por exemplo, emitir uma LCA para liberar recursos para o custeio de uma safra de grãos.</p>
+
+			<p>Assim como a LCI, a LCA tem, em geral, o rendimento atrelado ao CDI e apresentado em pontos percentuais.</p>
+
+			<h2 class="font-20px">LCI e LCA: quais as diferenças?</h2>
+			<p>As LCIs e as LCAs possuem muitas semelhanças: são emitidas por instituições financeiras, são isentas da cobrança Imposto de Renda, são garantidas pelo Fundo Garantidor de Crédito (FGC) até o limite de 250 mil reais e os recursos captados por meio dessas aplicações só podem ser destinados para áreas específicas.</p>
+
+			<p>Essa é a principal diferença entre as duas: os recursos da LCI são destinados ao mercado imobiliário, e os da LCA, para o agronegócio.</p> 
+
+			<p>Isso não significa que o investidor está aplicando diretamente no mercado imobiliário ou no agronegócio, mas que está, de certa forma, ajudando a financiar esses dois setores importantes da economia nacional.</p>
+
+			<p>Nos demais aspectos, como liquidez, rendimento e tributação, as LCIs e as LCAs são bem semelhantes.</p>
+
+			<h2 class="font-20px">Quanto rende a LCI e LCA?</h2>
+			<p>O rendimento desses títulos vai variar caso a caso, mas ela pode ser prefixada, pós-fixada -- atrelada a um indexador, como o CDI -- ou híbrida, cujo rendimento prevê uma taxa fixa mais uma variação que pode ser um índice d3>O que é investimento prefixado, pós-fixado e híbrido?</p>
+			<p>Veja abaixo os três principais tipos de cálculo de rentabilidade dos investimentos em renda fixa:</p>
+
+			<p><strong>Prefixado</h3></strong></p>
+			<p>As aplicações prefixadas têm o seu retorno totalmente determinado já no momento da contratação. Em geral, esses investimentos apresentam uma taxa fixa de rendimento anual. Por exemplo: um CBD prefixado que rende 5% ao ano.</p>
+
+			<p>Nesse caso, o rendimento será exatamente aquele determinado no início, mesmo que outras variáveis (como inflação, CDI ou taxa Selic) mudem no meio do caminho. Isso pode ser bom, quando esses indicadores que influenciam os investimentos ficam menores, ou pode ser ruim quando há uma reversão de cenário e esses indicadores aumentam.</p>
+
+			<p>Para entender melhor o que essa reversão de cenário significa, é importante entender o que é investimento pós-fixado.</p>
+
+			<p><strong>Pós-fixado</h3></strong></p>
+			<p>Os investimentos pós-fixados têm o retorno influenciado diretamente por um indicador. Esse indicador pode ser o CDI (taxa que acompanha os juros básicos do país), o IPCA (principal índice de inflação brasileiro) ou a própria taxa Selic.</p>
+
+			<p>Isso significa que quem investe em um título pós-fixado não consegue saber com exatidão o rendimento no período, ou a cada ano. Mas existem estimativas feitas por economistas, como as que são apontadas no Boletim Focus, do Banco Central, que permitem ter uma ideia do desempenho futuro desses indicadores.</p>
+
+			<p>As aplicações pós-fixadas geralmente apresentam um percentual do indicador de referência, por exemplo: um CDB que rende 120% do CDI.</p>
+
+			<p><strong>Híbrido</h3></strong></p>
+			<p>Como o próprio nome sugere, o rendimento híbrido é uma mistura do pós-fixado com o prefixado. Ele se apresenta por uma taxa fixa, em percentual, somada ao desempenho de um indicador.</p>
+
+			<p>Um bom exemplo são os títulos do Tesouro Direto da classe IPCA+, cujo rendimento é um percentual fixo mais a inflação acumulada -- por exemplo: IPCA + 3% ao ano.</p>
+
+			<h2 class="font-20px">Vantagens de investir em LCI e LCA</h2>
+			<p>As LCIs e as LCAs são um investimento de renda fixa muito procurados por investidores porque oferecem um benefício fiscal importante: são isentas de Imposto de Renda. Isso significa que toda a rentabilidade obtida já é líquida. É uma característica que as distinguem de outros investimentos de renda fixa, como CDBs, títulos do Tesouro Direto e debêntures.</p>
+
+			<p>Uma vantagem extra é que, como a LCI e a LCA são emitidas por bancos e instituições financeiras, contam com a garantia do FGC, o Fundo Garantidor de Crédito, em caso de quebra do emissor.</p>
+
+			<h2 class="font-20px">Desvantagens de investir em LCI e LCA</h2>
+			<p>A liquidez com restrições é considerada a principal desvantagem de LCIs e LCAs. Em geral, é preciso esperar o vencimento do papel, em prazos como um ano, para resgatar o investimento e transformá-lo em recursos que podem ser acessados em sua conta.</p>
+
+			<p>O investidor pode tentar resgatar o título antes do prazo, mas em geral os bancos e corretoras cobram uma espécie de multa, que pode zerar a rentabilidade acumulada ou até fazer o dono do título perder parte do que investiu inicialmente.</p>
+
+			<h2 class="font-20px">LCI ou LCA: qual escolher?</h2>
+			<p>Como a rentabilidade de cada título vai depender do emissor do título, a escolha sobre o investimento mais adequado vai depender de uma análise do rendimento e do prazo de vencimento, aliada ao perfil de investidor e ao objetivo financeiro de cada aplicação.</p>
+
+			<h2 class="font-20px">É seguro investir em LCI e LCA?</h2>
+			<p>Um título de renda fixa pode ser emitido por uma instituição pública ou privada, como bancos, empresas ou o governo. Portanto, a segurança de um título de renda fixa estará sempre atrelada a outras características do investimento, como os objetivos, o prazo, a rentabilidade, o risco e o seu emissor. No caso da LCI e LCA, o emissor sempre será uma instituição financeira.</p>
+
+			<p>Cada instituição financeira possui uma nota de crédito, que indica a capacidade de endividamento e pagamento. Bancos pequenos e médios tendem a ter uma nota de crédito menor, mas também tendem a oferecer retornos maiores nas LCIs e LCAs. Bancos maiores, por outro lado, têm um risco de crédito menor, mas oferecem prêmios menores nos títulos.</p>
+
+			<p>É importante dizer, de novo, que quem investe em LCI ou LCA está coberto pelo Fundo Garantidor de Crédito (FGC), que garante a devolução do dinheiro caso a instituição emissora do título deixe de pagar. O limite para essa restituição é de 250 mil reais por investidor.</p>
+
+			<h2 class="font-20px">Qual a diferença entre LCIs e CRIs?</h2>
+			<p>O Certificado de Recebíveis Imobiliários é muito parecido com a LCI, também lastreada no mercado imobiliário. A principal diferença é o emissor do papel. Enquanto a LCI é emitida por uma instituição financeira, o CRI é emitido por companhias securitizadoras de recebíveis imobiliários.</p>
+
+			<p>São essas empresas as responsáveis por adquirir os créditos imobiliários e transformá-los em títulos líquidos. Dessa forma, do ponto de vista do emissor, o CRI é um instrumento de captação de recursos para financiar transações e projetos do mercado imobiliário.</p>
+
+			<p>Tanto os CRIs quanto as LCIs são isentas de Imposto de Renda, mas há uma diferença fundamental entre os dois: por não ser emitido por bancos, os CRIs não têm cobertura do FGC -- portanto implicam em maior risco.</p>
+
+			<h2 class="font-20px">Qual a diferença entre LCAs e CRAs?</h2>
+			<p>Os Certificados de Recebíveis do Agronegócio e as LCAs se diferem da mesma forma que os CRIs e LCIs. As LCAs são emitidas por instituições financeiras e têm o propósito de custear projetos do setor agrícola.</p>
+
+			<p>Os CRAs, embora tenham o mesmo propósito de fomento ao setor, são emitidos por companhias securitizadoras de recebíveis agrícolas.</p>
+
+			<p>Ou seja: ao comprar um LCA, o investidor estará "emprestando" dinheiro para uma instituição financeira, que repassará os recursos para um produtor ou empresário ligado ao setor agrícola. Já quando o investidor compra um CRA, seu credor é diretamente o produtor ou empresário em questão.</p>
+
+			<p>Assim como as LCIs, LCAs e CRIs, os CRAs são isentos de Imposto de Renda e não têm cobertura do FGC.</p>
+
+			<h2 class="font-20px">LCI e LCA ou CDB?</h2>
+			<p>Os CDBs são títulos bem parecidos com os LCIs e LCAs, pois também são emitidos por instituições financeiras e bancos. Por isso, o risco é bastante similar. É importante lembrar que as LCIs e LCAs também contam com a cobertura do FGC, assim como os CDBs.</p>
+
+			<p>A diferença fundamental entre os dois é a tributação. Enquanto os LCIs e LCAs são isentos de Imposto de Renda, os CDBs são tributados de acordo com a tabela regressiva da renda fixa. Veja abaixo:</p>
+
+			<table class="tbl-rend">
+				<tr>
+					<th>Prazo de resgate</th>
+					<th>Alíquota</th>
+				</tr>
+				<tr>
+					<td>Até 180 dias</td>
+					<td>22,5%</td>
+				</tr>
+				<tr>
+					<td>Entre 180 e 360 dias</td>
+					<td>20%</td>
+				</tr>
+				<tr>
+					<td>Entre 360 e 720 dias</td>
+					<td>17,5%</td>
+				</tr>
+				<tr>
+					<td>Acima de 720 dias</td>
+					<td>15%</td>
+				</tr>
+			</table>
+
+			LCI e LCA ou Tesouro Direto?
+			<p>Os títulos do Tesouro Direto nada mais são do que títulos da dívida do governo federal. Por serem emitidos pelo Tesouro Nacional, são considerados a aplicação mais segura disponível no mercado.</p>
+
+			<p>Ainda que as instituições financeiras sejam sólidas, o risco de calote da União é menor do que o risco de falência por um grande banco. Então mesmo sendo aplicações consideradas seguras, as LCIs e LCAs implicam em um risco maior que o do investimento no Tesouro Direto.</p>
+
+			<p>Por outro lado, os rendimentos dos títulos públicos sofrem tributação do Imposto de Renda, também de acordo com a tabela regressiva.</p>
+
+			LCI e LCA ou poupança?
+			<p>A caderneta de poupança ainda é uma das aplicações financeiras mais conhecidas dos brasileiros, mas o seu rendimento tem ficado abaixo, inclusive, da inflação nos últimos meses. Isso porque a regra da poupança nova determina que a caderneta tenha um rendimento de 70% da taxa Selic (que, lembrando, é referência para o CDI).</p>
+
+			<p>O rendimento é, portanto, a primeira diferença fundamental entre as LCIs, LCAs e a poupança. As letras de crédito costumam render mais de 90% do CDI, o que gera, no final das contas, um retorno melhor que o da caderneta. Como tanto as LCIs, LCAs e a poupança são isentas de Imposto de Renda, esse percentual pode ser comparado com mais facilidade.</p>
+
+			<p>Por fim, investir em uma letra de crédito ou na poupança oferece um risco bastante similar, já que os bancos e instituições financeiras estão por trás de ambas as aplicações. Além disso, tanto a caderneta quanto as LCIs e LCAs são protegidos pelo Fundo Garantidor de Crédito.</p>
+
+			<div>
+				<h2 class="origem">Fontes:</h2>
+				<p><a class="origem" href="https://invest.exame.com/guia/o-que-sao-lci-e-lca-quais-as-vantagens-e-as-desvantagens" target="_blank">Exame invest</a></p>
+			</div>
+
+		</article>
+		</section>
+	</main>
+
+<footer>
+ <div class="content-footer">
+   <div class="left box">
+     <div class="upper">
+       <div class="topic">Links</div>
+          <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
+
+          <div class="banner-footer">
+              <p>
+              	<a href="index.html"><img alt="Páginas" src="imgs/logo-1.png"></a>
+				<a href="https://mlssystem.github.io/favcrypto/#noticias">Notícias</a>
+				<a href="https://mlssystem.github.io/favcrypto/#precos">Preços</a>
+				<a href="https://mlssystem.github.io/favcrypto/#exchanges">Exchanges</a>
+				<a href="https://mlssystem.github.io/favcrypto/#capitalizacao">Capitalização</a>
+				<a href="https://mlssystem.github.io/favcrypto/#arbitragem">Arbitragem</a>
+				<em>Outros Sites:</em>
+				<a href="https://mlssystem.github.io" target="_blank">MLSSystem</a>
+				<a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a>
+				<a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a>
+				<a href="https://mlssystem.github.io/linksuteis" target="_blank">Links Úteis</a>
+				<a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a>
+              </p>
+          </div>
+     </div>
+   </div>
+   <div class="middle box">
+     <div class="topic">Favoritos</div>
+     	<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html"><img alt="Páginas" src="imgs/logo-favoritos-64.PNG"></a></div>
+		<div><a href="renda-fixa.html" target="_blank">Renda Fixa</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-variavel" target="_blank">Renda Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#fixa-variavel" target="_blank">Fixa e Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#perfil" target="_blank">Perfil do Investidor</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#indices" target="_blank">Índices</a></div>
+		<em>Outros Sites:</em>
+		<div><a href="https://mlssystem.github.io" target="_blank">MLSSystem</a></div>
+		<div><a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a></div>
+		<div><a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a></div>
+		<div><a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a></div>
+   </div>
+   <div class="right box">
+     <div class="topic">Inscreva-se</div>
+     <form action="#">
+       <input type="text" placeholder="Em desenvolvimento">
+       <input type="submit" name="" value="Inativo">
+       <div class="media-icons">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       </div>
+     </form>
+     <div class="lower">
+       <div class="topic">Contato</div>
+       <div class="phone">
+         <a href="#"><i class="fas fa-phone-volume"></i>+55 DD 98765 4321</a>
+       </div>
+       <div class="email">
+         <a href="#"><i class="fas fa-envelope"></i>abc@email.com</a>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="bottom">
+   <p>Copyright © 2021 <a href="https://github.com/mlssystem">MLSSystem</a> Todos direitos reservados</p>
+ </div>
+</footer>
+</body>
+</html>
