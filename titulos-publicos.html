@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Títulos públicos</title>
+	<meta name="description" content="Títulos Públicos são investimentos emitidos pelo Tesouro Nacional com o objetivo de financiar a dívida pública. Ou seja, você empresta dinheiro para o governo recebendo rentabilidade em troca.">
+    <meta name="keywords" content="Títulos Públicos">
+    <meta name="author" content="marcus">
+	<link rel="icon" href="imgs/logo_fav.ico"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer=""></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css">
+        table.tbl-rend {
+            border-collapse: collapse;
+            border-radius: 1px;
+            text-align: center;
+            width: 50%;
+            margin-top: 07px;
+            margin-bottom: 07px;
+        }
+        .tbl-rend tr,td {
+            border: 1px solid;
+            padding: 5px;
+            background-color: #9dfd8a;
+        }
+        .tbl-rend th {
+            background-color: #1d9e04;
+            color: #fff;
+        }
+	</style>
+</head>
+
+<body>
+	<!--0b10f5/025afc-->
+	<header x-data="{ open: false, hidden: true }">
+		<div x-show="open" @click="{open = !open,hidden = !hidden}" x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="top-0 left-0 main-nav-bg absolute w-full h-full z-40 bg-black bg-opacity-80 lg:hidden" style="display: none;">
+		</div>
+		<aside x-show="open" x-transition:enter="transition duration-200" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition duration-200" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="main-nav right-0 top-0 h-full w-full max-w-xs bg-white overflow-y-auto transform translate-x-0 fixed transition-transform pl-8 pr-4 z-50 lg:hidden" aria-labelledby="menu-button" :aria-hidden="hidden.toString()" aria-hidden="true" style="display: none;">
+			<nav class="flex flex-col flex-grow py-6" aria-label="Main Menu">
+				<div class="flex justify-end">
+					<button class="rounded-lg focus:outline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Close menu"><svg fill="currentcolor" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414.0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+				</div>
+				<div class="flex flex-col flex-grow text-lg">
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="index.html">Mercado Crypto</a>
+					<a @click="{open = !open,hidden = !hidden}" class="py-2 mt-1.5 font-medium hover:text-gray-900 focus:text-gray-900 focus:outline-none" href="mercado-tradicional.html">Mercado Tradicional</a>
+				</div>
+			</nav>
+		</aside>
+		<div class="bg-green-78 relative z-30">
+			<div class="container flex flex-row items-center justify-between py-4 lg:py-5">
+			<a href="mercado-tradicional.html" class="focus:outline-none"><img src="imgs/logo-2.png" class="w-auto h-10 lg:h-14" alt="FavCrypto"></a>
+			<div class="flex items-center">
+			<div class="hidden lg:flex items-center space-x-6 text-base">
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="index.html">Mercado Cripto</a>
+				<a class="text-gray-800 hover:text-gray-900 focus:text-gray-900 focus:outline-none border-b-2 border-transparent hover:border-yellow-400 -mb-0.5 font-medium" href="mercado-tradicional.html">Mercado Tradicional</a>
+			</div>
+			<div class="flex items-center space-x-2 lg:ml-6"><div @click.away="open = false" class="relative" x-data="{ open: false }">
+				<button @click="open = !open" class="flex flex-shrink-0 items-center bg-white transform hover:translate-y-0.5 px-2.5 md:px-4 py-2 md:py-2.5 text-xs md:text-sm font-medium rounded-full border-2 border-gray-900 button-shadow focus:outline-none">
+				<span>Renda Fixa</span>
+				<svg fill="currentcolor" viewBox="0 0 20 20" :class="{&#39;rotate-180&#39;: open, &#39;rotate-0&#39;: !open}" class="inline w-4 h-4 ml-1 lg:w-5 lg:h-5 lg:ml-1.5 transition-transform duration-200 transform rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+				</button>
+				<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 mt-4 origin-top-right rounded-lg shadow-lg w-48 z-30 text-left" style="display: none;">
+					<div class="px-2 py-2 bg-white rounded-md shadow space-y-1.5">
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="tesouro-direto.html">
+							<span class="ml-3" style="color: #5a5a5a;">Tesouro Direto</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cdb-lc.html" title="Twitter">
+							<span class="ml-3" style="color: #5a5a5a;">CDB e LC</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="cri-cra.html" title="Twitter">
+							<span class="ml-3" style="color: #5a5a5a;">CRI e CRA</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="lci-lca.html" title="Telegram">
+							<span class="ml-3" style="color: #5a5a5a;">LCI e LCA</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="debentures.html" title="Telegram">
+							<span class="ml-3" style="color: #5a5a5a;">Debêntures</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="letras-financeiras.html" title="Telegram">
+							<span class="ml-3" style="color: #5a5a5a;">Letras Financeiras</span>
+						</a>
+						<a class="px-2 md:px-5 py-1.5 md:py-2.5 text-base font-medium bg-transparent rounded-lg text-gray-800 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline flex items-center" href="titulos-publicos.html" title="Telegram">
+							<span class="ml-3" style="color: #5a5a5a;">Títulos públicos</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<button class="rounded-lg lg:hidden focus:outsline-none focus:shadow-outline text-gray-700" @click="{open = !open,hidden = !hidden}" aria-label="Open menu" aria-controls="menu" :aria-expanded="open.toString()" id="menu-button" aria-expanded="false"><svg fill="#d4b4fd" viewBox="0 0 20 20" class="w-6 h-6"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm6 5a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="overflow-x-hidden">
+		<section class="py-12 md:py-20 lg:py-28 xl:py-32 mx-auto" id="faq"><div class="container flex items-center flex-col">
+			<div class="max-w-3xl text-center flex flex-col items-center"><h1 class="text-3xl md:text-4xl xl:text-5xl font-display font-semibold mb-3 md:mb-4 lg:mb-5"><span style="color: #1d9e04;" id="font">Títulos Públicos</span></h1>
+			</div>
+			</div>
+		<article class="conteudo-mercado-tradicional">
+			<h2 class="font-20px">O que são?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Bolg Nubank</sub></h2>
+
+ 			<p>Títulos Públicos são investimentos emitidos pelo Tesouro Nacional com o objetivo de financiar a dívida pública. Ou seja, você empresta dinheiro para o governo recebendo rentabilidade em troca.</p>
+
+			<h2 class="font-20px">Como funcionam os Títulos Públicos?</h2>
+			<p>Assim como no Tesouro Direto, os Títulos Públicos também são seguros pelo Tesouro Nacional.</p> 
+
+			<h2 class="font-20px">Qual a diferença entre Tesouro Direto e Título Público?</h2>
+			<p>A diferença é muito simples! No Tesouro Direto são títulos que o próprio Tesouro está negociando (para compra e venda).</p>
+
+			<p>Bancos e outras instituições financeiras podem comprar títulos do Tesouro Nacional e revender aos seus clientes.</p>
+			
+			<p>Estes são os Títulos Públicos e são negociados no mercado secundário, ou seja, são outras pessoas que estão negociando para compras e vendas, e não o Tesouro.</p>
+
+			<p>As principais diferenças são as taxas (não existe a taxa de 0,25% cobrada pela B3, por exemplo) e os prazos de vencimento de cada título.</p>
+
+			<h2 class="font-20px">O que são títulos públicos?<sub style="color: #2cd00c; font-size: 12px;">&nbsp;por Par Mais</sub></h2>
+
+			<p>Títulos públicos são papéis emitidos pelo Tesouro Nacional, que representam uma forma de financiar a dívida pública e permitem que os investidores “emprestem” dinheiro para o governo, recebendo em troca uma determinada rentabilidade.</p>
+
+			<p>Um título público é diferente de uma aplicação em CDB, por exemplo, na qual estamos “emprestando” dinheiro para o banco, que na maioria das vezes é uma instituição privada. Os títulos acessíveis ao investidor em geral no Brasil pertencem à esfera federal do governo.</p>
+
+			<p>Nos últimos anos o governo incentivou muito as aplicações nesses ativos para pessoas físicas e realizou uma série de mudanças, como a redução do valor mínimo necessário para realizar aplicações, o aumento do valor máximo para compra e a implementação da opção por investimentos programados.</p>
+
+			<p>Hoje, com menos de R$ 100,00 já é possível comprar uma fração de um título, com remuneração indexada à inflação. O mínimo para aquisição de um título público é de 10% do valor do ativo, o qual varia conforme a escolha da taxa de juros (pré ou pós fixada) e conforme o vencimento, e de no máximo R$ 1.000.000,00 por mês.</p>
+
+			<h2 class="font-20px">Quem emite títulos públicos no Brasil?</h2>
+			<p>No Brasil o órgão responsável pela administração e planejamento da dívida mobiliária interna e pela emissão de títulos públicos é a Secretaria do Tesouro Nacional, a qual pertence ao Ministério da Fazenda e foi criada em 1986.</p>
+
+			<p>Em 2002 foi lançado o programa Tesouro Direto: um sistema que permite a venda de títulos públicos a cidadãos, como incentivo à formação de poupança. A partir dessa data os títulos começaram a ser amplamente utilizados nas carteiras dos investidores brasileiros.</p>
+
+			<p>Atualmente, com o avanço da internet e com integrações entre as plataformas das corretoras de valores e o Tesouro Direto é possível comprar títulos públicos com muita facilidade por meio dos sites de corretoras e bancos.</p>
+
+			<p>Mas e qual é o papel do Banco Central (BACEN)? Após a emissão dos títulos pelo Tesouro Nacional, o BACEN executa a política monetária por meio de operações de compra e venda desses títulos no mercado aberto (open market). Na política monetária o Banco Central regula a quantidade de moeda disponível em um país.</p>
+
+			<p>Curiosidade: se o BACEN compra títulos públicos ele entrega dinheiro em troca de títulos, favorecendo um aumento na inflação. Já se o BACEN vende títulos, então ele entrega títulos e recebe dinheiro, induzindo a uma redução na inflação.</p>
+
+			<h2 class="font-20px">Compras programadas de títulos públicos</h2>
+			<p>Para aqueles que possuem títulos públicos em suas carteiras de investimentos uma opção interessante é a possibilidade de compras programadas. O investimento programado funciona para compras periódicas, para reinvestimento dos títulos no vencimento e também para reinvestimento dos juros semestrais pagos pelos títulos – os chamados cupons –, quando for o caso.</p>
+
+			<p>No caso da opção de reinvestimento dos títulos no vencimento é preciso ter cuidado, pois o reinvestimento é feito automaticamente no mesmo ativo e, como alguns títulos possuem vencimentos muito longos, esta pode não ser a melhor opção.</p>
+
+			<p>Já para o caso dos títulos que pagam juros semestrais, o reinvestimento torna-se uma boa opção, pois assim não se corre o risco de gastar os valores dos juros, que são creditados na conta corrente do investidor.</p>
+
+			<h2 class="font-20px">Risco dos títulos públicos</h2>
+			<p>Agora que você já sabe o que são os Títulos Públicos, deve estar se perguntando, por que alguém emprestaria dinheiro para o governo?</p>
+
+			<p>Porque o risco de um governo quebrar é muito baixo! Podemos comparar o governo a uma grande e sólida empresa com a vantagem de que o governo tem a sua disposição muito mais artifícios e possibilidades para suprir suas obrigações do que qualquer empresa.</p>
+
+			<p>Os títulos públicos são os ativos financeiros com menor risco dentro de um país. No Brasil são 100% garantidos pelo Tesouro Nacional. Em suma, se um país vier a quebrar, os grandes bancos privados já teriam quebrado primeiro e o sistema financeiro estaria em colapso.</p>
+
+			<p>Curiosidade: em análises financeiras complexas os títulos do tesouro são utilizados como referência para o que se chama de “ativo livre de risco”. Por isso, é comum que títulos públicos façam parte da carteira de investimentos de investidores enquadrados em variados perfis de risco: desde os mais conservadores até os mais expostos ao risco.</p>
+
+			<h2 class="font-20px">Tipos de títulos públicos</h2>
+			<p>Título Público é um investimento da categoria “renda fixa”. Isso quer dizer que a sua rentabilidade pode ser definida no momento da compra. A rentabilidade dos títulos públicos pode ser pré-fixada (já definida no ato da compra) ou atrelada às oscilações de algum indicador, como a SELIC ou o IPCA.</p>
+
+			<p>Porém, para garantir a rentabilidade é preciso que o investidor permaneça posicionado no título até o vencimento. Caso contrário, o preço do título pode sofrer oscilações de mercado, fazendo com que a rentabilidade não seja garantida ao investidor.</p>
+
+			<p>Veja a seguir os tipos de títulos públicos existentes e suas principais características quanto à rentabilidade e à forma de pagamento dos juros em cada tipo.</p>
+
+			<h2 class="font-20px">TESOURO SELIC (Ex-LFT)</h2>
+			<ul>
+				<li class="lis-rfx">• Como é determinada a rentabilidade: taxa de juros baseada somente na SELIC.</li>
+				<li class="lis-rfx">• O título paga ao investidor: no vencimento, só que é possível resgatar antes, sem perder a rentabilidade.</li>
+				<li class="lis-rfx">• Indicado para quem que está montando uma reserva de segurança, investidores de curto e médio prazo e para quem aposta na alta da SELIC.</li>
+			</ul>
+
+			<h2 class="font-20px">TESOURO IPCA + (Ex-NTN-B Principal)</h2>
+			<ul>
+				<li class="lis-rfx">• Como é determinada a rentabilidade: variação do IPCA (inflação) +  taxa de juros determinada.</li>
+				<li class="lis-rfx">• O título paga ao investidor: apenas no vencimento.</li>
+				<li class="lis-rfx">• Indicado para quem deseja se proteger das variações da inflação, garantindo um  juro real. O investidor não perderá seu poder de compra.</li>
+			</ul>
+
+			<h2 class="font-20px">TESOURO IPCA + JUROS SEMESTRAIS  (Ex-NTN-B)</h2>
+			<ul>
+				<li class="lis-rfx">• Como é determinada a rentabilidade: variação do IPCA (inflação)  + taxa de juros determinada.</li>
+				<li class="lis-rfx">• O título paga ao investidor: paga os juros a cada 6 meses e no vencimento todo o valor investido corrigido pela inflação.</li>
+				<li class="lis-rfx">• Indicado para quem quer viver de renda! Pois o investidor tem liberdade de gastar como quiser o juros que recebe a cada seis meses.</li>
+			</ul>
+
+			<h2 class="font-20px">TESOURO PREFIXADO (Ex-LTN)</h2>
+			<ul>
+				<li class="lis-rfx">• Como é determinada a rentabilidade: taxa de juros baseada, entre outros fatores, pela SELIC e pela expectativa do mercado.</li>
+				<li class="lis-rfx">• O título paga ao investidor: só no vencimento.</li>
+				<li class="lis-rfx">• Indicado para quem está acumulando recursos, e aposta na queda da SELIC.</li>
+			</ul>
+
+			<h2 class="font-20px">TESOURO PREFIXADO COM JUROS SEMESTRAIS (Ex- NTN-F)</h2>
+			<p>Como é determinada a rentabilidade: taxa de juros baseada, entre outros fatores, pela SELIC e pela expectativa do mercado.</p>
+
+			<p>O título paga ao investidor: paga os juros a cada 6 meses e no vencimento paga o valor investido.</p>
+
+			<p>Indicado para quem quer viver de renda e aposta na redução da taxa de juros.</p>
+
+			<h2 class="font-20px">Títulos públicos para cada momento da sua vida</h2>
+			<p>É importante o investidor escolher o tipo ideal de título público para cada momento da sua vida. Dependendo do objetivos do investidor, alguns tipos de títulos públicos são mais recomendados do que outros em função da sua característica. Abaixo estão os tipos de títulos públicos mais indicados para quem quer acumular renda, manter o patrimônio ou viver de renda.</p>
+
+			<p><strong>Acumulação</strong></p>
+			<ul>
+				<li class="lis-rfx">• Tesouro IPCA+</li>
+				<li class="lis-rfx">• Tesouro Prefixado</li>
+				<li class="lis-rfx">• Tesouro Selic</li>
+			</ul>
+
+			<p><strong>Manutenção</strong></p>
+			<ul>
+				<li class="lis-rfx">• Tesouro Selic</li>
+				<li class="lis-rfx">• Tesouro IPCA +</li>
+			</ul>
+
+			<p><strong>Viver de Renda</strong></p>
+			<ul>
+				<li class="lis-rfx">• Tesouro IPCA+ com juros semestrais</li>
+				<li class="lis-rfx">• Tesouro Prefixado com juros semestrais</li>
+			</ul>
+
+			<h2 class="font-20px">Custo e tributação para investir em títulos públicos</h2>
+			<p>É muito importante lembrar que todos os Títulos Públicos possuem a mesma regra de tributação para Imposto de Renda, seguindo a chamada tabela regressiva: alíquota de 22,5% para aplicações com prazo de até 180 dias, 20% para aplicações com prazo de 181 dias até 360 dias, 17,5% para aplicações com prazo de 361 dias até 720 dias e de 15% para aplicações com prazo acima de 720 dias.</p>
+
+			<h2 class="font-20px">Tributação títulos públicos</h2>
+			<p>Além da tributação, investir em títulos do tesouro gera a cobrança de uma taxa de custódia de 0,30% ao ano sobre o valor dos títulos, referente aos serviços de guarda dos títulos e às informações e movimentações dos saldos. Essa taxa é cobrada até o saldo de R$1.500.000,00 por conta de custódia.</p>
+
+			<p>A própria instituição financeira também pode cobrar uma taxa dos seus clientes, a qual é livremente acordada entre o cliente e a instituição. O site do Tesouro Direto mantém um ranking com as taxas praticadas pelos bancos e corretoras no mercado brasileiro. A média das taxas praticadas é de aproximadamente 0,30% ao ano.</p>
+
+			<h2 class="font-20px">Conclusão: o que são títulos públicos?</h2>
+			<p>Este artigo mostrou em detalhes o que são títulos públicos, seus principais tipos e custos, entre outras informações. Os títulos públicos representam o investimento mais seguro da economia brasileira (mais seguros até mesmo que a poupança!). Porém, é preciso ter alguns cuidados, pois se um título for vendido antes do vencimento, então a rentabilidade inicial não é garantida.</p>
+
+			<p>Como foi visto, os títulos públicos possuem 5 tipos. Cada tipo é mais indicado para determinadas situações e objetivos específicos. Devido a essa diversidade, os títulos públicos representam uma boa opção de alocação para parte da carteira de investidores de diferentes perfis.</p>
+
+			<p>Para conhecer mais sobre qual tipo de título público se enquadra no seu perfil de investidor e como você pode tirar proveito da rentabilidade dos títulos públicos para alcançar seus objetivos entre em contato com a ParMais.</p>
+
+
+			<div>
+				<h2 class="origem">Fontes:</h2>
+				<p><a class="origem" href="https://www.nuinvest.com.br/titulos-publicos.html" target="_blank">NU Invest</a></p>
+				<p><a class="origem" href="https://www.parmais.com.br/blog/o-que-sao-titulos-publicos/" target="_blank">Par Mais</a></p>
+			</div>
+
+		</article>
+		</section>
+	</main>
+
+<footer>
+ <div class="content-footer">
+   <div class="left box">
+     <div class="upper">
+       <div class="topic">Links</div>
+          <p class="meditar-refletir">Para meditar e refletir&nbsp; <strong><a href="https://bibliasagrada.github.io/antigo_testamento/jeremias/jeremias-9.html"><span style="color:#fff;">Jeremias 9:23-24</span></a></strong></p>
+
+          <div class="banner-footer">
+              <p>
+              	<a href="index.html"><img alt="Páginas" src="imgs/logo-1.png"></a>
+				<a href="https://mlssystem.github.io/favcrypto/#noticias">Notícias</a>
+				<a href="https://mlssystem.github.io/favcrypto/#precos">Preços</a>
+				<a href="https://mlssystem.github.io/favcrypto/#exchanges">Exchanges</a>
+				<a href="https://mlssystem.github.io/favcrypto/#capitalizacao">Capitalização</a>
+				<a href="https://mlssystem.github.io/favcrypto/#arbitragem">Arbitragem</a>
+				<em>Outros Sites:</em>
+				<a href="https://mlssystem.github.io" target="_blank">MLSSystem</a>
+				<a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a>
+				<a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a>
+				<a href="https://mlssystem.github.io/linksuteis" target="_blank">Links Úteis</a>
+				<a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a>
+              </p>
+          </div>
+     </div>
+   </div>
+   <div class="middle box">
+     <div class="topic">Favoritos</div>
+     	<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html"><img alt="Páginas" src="imgs/logo-favoritos-64.PNG"></a></div>
+		<div><a href="renda-fixa.html" target="_blank">Renda Fixa</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#renda-variavel" target="_blank">Renda Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#fixa-variavel" target="_blank">Fixa e Variável</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#perfil" target="_blank">Perfil do Investidor</a></div>
+		<div><a href="https://mlssystem.github.io/favcrypto/mercado-tradicional.html#indices" target="_blank">Índices</a></div>
+		<em>Outros Sites:</em>
+		<div><a href="https://mlssystem.github.io" target="_blank">MLSSystem</a></div>
+		<div><a href="https://mlssystem.github.io/bitblockdig" target="_blank">BitBlockDig</a></div>
+		<div><a href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank">TrabaladoresSeara</a></div>
+		<div><a href="https://bibliasagrada.github.io/" target="_blank">Bíblia Sagrada</a></div>
+   </div>
+   <div class="right box">
+     <div class="topic">Inscreva-se</div>
+     <form action="#">
+       <input type="text" placeholder="Em desenvolvimento">
+       <input type="submit" name="" value="Inativo">
+       <div class="media-icons">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       </div>
+     </form>
+     <div class="lower">
+       <div class="topic">Contato</div>
+       <div class="phone">
+         <a href="#"><i class="fas fa-phone-volume"></i>+55 DD 98765 4321</a>
+       </div>
+       <div class="email">
+         <a href="#"><i class="fas fa-envelope"></i>abc@email.com</a>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="bottom">
+   <p>Copyright © 2021 <a href="https://github.com/mlssystem">MLSSystem</a> Todos direitos reservados</p>
+ </div>
+</footer>
+</body>
+</html>
